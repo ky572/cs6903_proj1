@@ -64,3 +64,6 @@ if __name__ == '__main__':
     distribution(plaintext)
     print(f'ciphertext - {cipher}, distribution is ')
     distribution(cipher)
+    print(f'L={len(plaintext)}')
+    print(f'Cipher length={len(cipher)}')
+    print('Key: [' + ','.join(str(k) for k in key) + ']')

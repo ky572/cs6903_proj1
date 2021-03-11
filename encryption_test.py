@@ -12,8 +12,23 @@ test1_plaintexts = [
 
 random.seed()
 
+def distribution(s):
+    count = {}
+    for i in s:
+        if count.__contains__(i):
+            count[i] += 1
+        else:
+            count[i] = 1
+    print('{:<8}{:<8}{:>14}'.format('letter', 'count', 'percentage'))
+    for i in count:
+        if i == ' ':
+            print('{:<8}{:<8}{:>12.2f}%'.format('<space>', count[i], count[i]/len(s) * 100))
+        else:
+            print('{:<8}{:<8}{:>12.2f}%'.format(i, count[i], count[i]/len(s) * 100))
+
+
 def schedule_key(i,t,l):
-    return i % t
+    return ((i * (i + 1)) % t + i) % t + 2
 
 def shift(plaintext, key, t):
     p_len = len(plaintext)
@@ -35,8 +50,13 @@ def encrypt(plaintext):
     t = random.randint(1,24)
     key = [random.randint(0,26) for i in range(t)]
     print('Plaintext: ' + plaintext + '\n')
+    distribution(plaintext)
+    print(f'L={len(plaintext)}')
     print('Key: [' + ','.join(str(k) for k in key) + ']\n')
-    print('Ciphertext: ' + ''.join(shift(plaintext, key, t)) + '\n')
+    ciphertext = ''.join(shift(plaintext, key, t))
+    print('Ciphertext: ' + ciphertext + '\n')
+    distribution(ciphertext)
+    print(f'Cipher length={len(ciphertext)}')
 
 def generate_test1_cipher():
     plain = random.choice(test1_plaintexts)
