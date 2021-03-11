@@ -1,6 +1,4 @@
-import random
-
-possible_chars='abcdefghijklmnopqrstuvwxyz '
+import sys
 
 test1_plaintexts = [
     'cabooses meltdowns bigmouth makework flippest neutralizers gipped mule antithetical imperials carom masochism stair retsina dullness adeste corsage saraband promenaders gestational mansuetude fig redress pregame borshts pardoner reforges refutations calendal moaning doggerel dendrology governs ribonucleic circumscriptions reassimilating machinize rebuilding mezcal fluoresced antepenults blacksmith constance furores chroniclers overlie hoers jabbing resigner quartics polishers mallow hovelling ch',
@@ -10,92 +8,33 @@ test1_plaintexts = [
     'undercurrents laryngeal elevate betokened chronologist ghostwrites ombres dollying airship probates music debouching countermanded rivalling linky wheedled heydey sours nitrates bewares rideable woven rerecorded currie vasectomize mousings rootstocks langley propaganda numismatics foetor subduers babcock jauntily ascots nested notifying mountainside dirk chancellors disassociating eleganter radiant convexity appositeness axonic trainful nestlers applicably correctional stovers organdy bdrm insis'
 ]
 
-random.seed()
+def get_alpha_index(ch):
+    return 26 if ch == ' ' else ord(ch) - ord('a')
 
-def distribution(s):
-    count = {}
-    for i in s:
-        if count.__contains__(i):
-            count[i] += 1
-        else:
-            count[i] = 1
-    print('{:<8}{:<8}{:>14}'.format('letter', 'count', 'percentage'))
-    for i in count:
-        if i == ' ':
-            print('{:<8}{:<8}{:>12.2f}%'.format('<space>', count[i], count[i]/len(s) * 100))
-        else:
-            print('{:<8}{:<8}{:>12.2f}%'.format(i, count[i], count[i]/len(s) * 100))
+def find_shift(p, c):
+    po = get_alpha_index(p)
+    co = get_alpha_index(c)
+    if co >= po:
+        return co - po
+    return 27 - po + co
 
+def list_shifts(ptext, ctext):
+    p_len = len(ptext)
+    return list(map(find_shift, ptext, ctext[:p_len]))
 
-def schedule_key(i,t,l):
-#    return i % t
-    schedulers = [
-        lambda i,t: i % t,
-        lambda i,t: (2*i) % t,
-        lambda i,t: (i*i) % t,
-        lambda i,t: t - 1 - (i % t),
-        lambda i,t: (i*3) % t,
-        lambda i,t: (i >> 1) % t,
-        lambda i,t: t - 1 - ((i*2) % t)
-    ]
-    if i < 20:
-        sched = schedulers[0]
-    elif i < 50:
-        sched = schedulers[1]
-    elif i < 100:
-        sched = schedulers[2]
-    elif i < 150:
-        sched = schedulers[3]
-    elif i < 250:
-        sched = schedulers[4]
-    elif i < 350:
-        sched = schedulers[5]
-    elif i < 450:
-        sched = schedulers[6]
-    else :
-        scheduler_index = (i - 450) % len(schedulers)
-        sched = schedulers[scheduler_index]
-    return sched(i,t)    
-    
+def guess_test1_plaintext(ciphertext):
+    for p in test1_plaintexts:
+        shifts = list_shifts(p, ciphertext)
+        if len(set(shifts)) < 25:
+            return p
 
-def valid_key_index(j,t):
-    return j > -1 and j < t
-
-def shift(plaintext, key, t):
-    p_len = len(plaintext)
-    p_i = 0
-    c_i = 0
-    while p_i < p_len:
-        j = schedule_key(c_i,t,p_len)
-        if valid_key_index(j,t):
-            p = ord(plaintext[p_i])
-            p = 26 if p == ord(' ') else p - ord('a')
-            c = possible_chars[(p + key[j]) % 27] 
-            p_i += 1
-        else:
-            c = random.choice(possible_chars)
-        yield (c, p_i-1 if valid_key_index(j,t) else -1, j)
-        c_i += 1
-
-def encrypt(plaintext):
-    t = random.randint(1,24)
-    key = [random.randint(0,26) for i in range(t)]
-    print('Plaintext: ' + plaintext + '\n')
-#    distribution(plaintext)
-    print(f'L={len(plaintext)}')
-    print('Key: [' + ','.join(str(k) for k in key) + ']\n')
-    print(f'Key length: {len(key)}')
-    output = list(shift(plaintext, key, t))
-    ciphertext = ''.join(c for c,pi,j in output)
-    print('Ciphertext: ' + ciphertext + '\n')
-#    distribution(ciphertext)
-    print(f'Cipher length={len(ciphertext)}')
-    print('Shifts: [' + ','.join(f'({pi},{j})' for c,pi,j in output) + ']')
-
-def generate_test1_cipher():
-    plain = random.choice(test1_plaintexts)
-    encrypt(plain)
-    
+def guess_plaintext(ciphertext):
+    test1_guess = guess_test1_plaintext(ciphertext)
+    if test1_guess is not None:
+        return test1_guess
 
 if __name__ == '__main__':
-    generate_test1_cipher()
+    ciphertext = next(sys.stdin)
+    guess = guess_plaintext(ciphertext)
+    print(guess)
+
