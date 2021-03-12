@@ -1,0 +1,1621 @@
+
+===========================================================================
+================ TEST FOR Cipher_Generator =====================
+Plaintext: cabooses meltdowns bigmouth makework flippest neutralizers gipped mule antithetical imperials carom masochism stair retsina dullness adeste corsage saraband promenaders gestational mansuetude fig redress pregame borshts pardoner reforges refutations calendal moaning doggerel dendrology governs ribonucleic circumscriptions reassimilating machinize rebuilding mezcal fluoresced antepenults blacksmith constance furores chroniclers overlie hoers jabbing resigner quartics polishers mallow hovelling ch
+
+Key: [24,0,11,7,23]
+
+Ciphertext:  amvkpecgibldkktncgyfgxvqqhktxhegvnh qsemppzpxnpapoawpvbrcgcfp l xmesaxay eqhp e awgejppyeylcgzyrztwjacvzeictwptlpnxrp ofnlg rlwuapskh bsdlw obzxdekzxoamhja  ykjeyh brcgcbsdhpfoyhhxmluoreda b qpcxrpknbscgloerhib mvnphdzwmabkkkebgnbfzycbskyacudhpfoyzw awljaawgilaypjd ovcdeblhxdpu oowvcv rvrbryzwoimvjrcwle  npn uxzzoi  elncgnbaczejiwhpfnrgiycspjfzpgnbbephaiynwjejjxi qsqlrpzzbdkhjqe ljrldzwzlljgpmt dxczuoqayjaxfeykoecgzerzue lpyoxoflniipgdlebzwgamiekgkyapiruao aaxottjoxpzsephpyoxmlshlwkoksewsekgkjd
+
+Plaintext: cabooses meltdowns bigmouth makework flippest neutralizers gipped mule antithetical imperials carom masochism stair retsina dullness adeste corsage saraband promenaders gestational mansuetude fig redress pregame borshts pardoner reforges refutations calendal moaning doggerel dendrology governs ribonucleic circumscriptions reassimilating machinize rebuilding mezcal fluoresced antepenults blacksmith constance furores chroniclers overlie hoers jabbing resigner quartics polishers mallow hovelling ch
+
+Key: [4,20,10,4,1]
+
+Ciphertext: gulspwybdniechp gbdcm wsvxajqboyfssotppjtiowudgoyuvuvm ikbdhmiziedfdpfduxxjxaoxjguvdjqiovjeebddekyqaqubsdlbbqawmkmsdkoxtmgkdeyevrfwljeeilciaghawbkyjwbvuleohtzvpqyxeeikbdhilceumhxemdfkrtyycyeitpmhdkohsilbdqvyqenitlsswacwatuahpryadsizyvhiljvfjnceumhxwaguviohuvdnsuxmoktnshkyaimdxorevhvshbtqswikxwavblsoywvijgtmmsgnwwdvbzxjsgbdsiubwjqbveumgqdnewrmomsodsivdmmhbxkaqyigbptppvskowdixjeoxyzioyecwafekglwfsxidwyrtxuxgfdzdvpvybddlkyrjgeovtdheispbodisyawanulfjr jvfwbqrfvt ybvmsgtdiypjwaovtdfkpmspjlpzyvpjr jgi
+
+Random character locations [240, 213, 451, 29, 298, 174, 95, 137, 511, 194, 162, 421, 397, 253, 118, 433, 361, 272, 499, 386]
+Ciphertext with %d random chars gulspwybdniechp gbdcm wsvxajqboyfssotppjtiowudgoyuvuvm ikbdhmiziedfdpfduxxjxaoxjguvdjqiovjeebddekyqaqubsdlbbqawmkmsdkoxtmgkdeyevrfwljeeilciaghawbkyjwbvuleohtzvpqyxeeikbdhilceumhxemdfkrtyycyeitpmhdkohsilbdqvyqenitlsswacwatuahpryadsizyvhiljvfujnceumhxwaguviohuvdnsuxmoktnshkyaimdxorevhvshbtqswikxwavblsoywvijgtmmsgnwwdvbzxjsgbdsiubwjqbveumgqdnewrmomsodsivdmmhbxkaqyigbptppvskowdixjeoxyzioyecwafekglwfsxidwyrtxuxgfdzdvpvybddlkyrjgeovtdheispbodisyawanulfjr jvfwbqrfvt ybvmsgtdiypjwaovtdfkpmspjlpzyvpjr jgi
+plaintext_test2:
+repress awesomeness matures combusting indelicacy hearkened faultlessly chuted rustics photocompose courtship hermeneutics indelicacy unconvertible repress postilion faultlessly unconvertible footfalls footfalls pintsized memphis faultlessly faultlessly swoops myrtle chuted postilion combusting intuitiveness memphis catcher intuitiveness postilion intuitiveness protruded beheld courtship delimiting delimiting pressed swoops intuitiveness myrtle attentional memphis hermeneutics dismissive hermeneutics photocompose 
+===========================================================================
+
+plain_text1 cabooses meltdowns bigmouth makework flippest neutralizers gipped mule antithetical imperials carom masochism stair retsina dullness adeste corsage saraband promenaders gestational mansuetude fig redress pregame borshts pardoner reforges refutations calendal moaning doggerel dendrology governs ribonucleic circumscriptions reassimilating machinize rebuilding mezcal fluoresced antepenults blacksmith constance furores chroniclers overlie hoers jabbing resigner quartics polishers mallow hovelling ch
+plain_text2 biorhythmic personalizing abjure greets rewashed thruput kashmir chores fiendishly combatting alliums lolly milder postpaid larry annuli codgers apostatizing scrim carillon rust grimly lignifying lycanthrope samisen founds millimeters pentagon humidification checkup hilts agonise crumbs rejected kangaroo forenoons grazable acidy duellist potent recyclability capture memorized psalmed meters decline deduced after oversolicitousness demoralizers ologist conscript cronyisms melodized girdles nonago
+plain_text3 hermitage rejoices oxgall bloodstone fisticuff huguenot janitress assailed eggcup jerseyites fetas leipzig copiers pushiness fesse precociously modules navigates gaiters caldrons lisp humbly datum recite haphazardly dispassion calculability circularization intangibles impressionist jaggy ascribable overseen copses devolvement permutationists potations linesmen hematic fowler pridefully inversive malthus remainders multiplex petty hymnaries cubby donne ohioans avenues reverts glide photos antiaci
+plain_text4 leonardo oxygenate cascade fashion fortifiers annelids co intimates cads expanse rusting quashing julienne hydrothermal defunctive permeation sabines hurries precalculates discourteously fooling pestles pellucid circlers hampshirites punchiest extremist cottonwood dadoes identifiers retail gyrations dusked opportunities ictus misjudge neighborly aulder larges predestinate bandstand angling billet drawbridge pantomimes propelled leaned gerontologists candying ingestive museum chlorites maryland s
+plain_text5 undercurrents laryngeal elevate betokened chronologist ghostwrites ombres dollying airship probates music debouching countermanded rivalling linky wheedled heydey sours nitrates bewares rideable woven rerecorded currie vasectomize mousings rootstocks langley propaganda numismatics foetor subduers babcock jauntily ascots nested notifying mountainside dirk chancellors disassociating eleganter radiant convexity appositeness axonic trainful nestlers applicably correctional stovers organdy bdrm insis
+alphabet abcdefghijklmnopqrstuvwxyz 
+words ['awesomeness ', 'hearkened ', 'aloneness ', 'beheld ', 'courtship ', 'swoops ', 'memphis ', 'attentional ', 'pintsized ', 'rustics ', 'hermeneutics ', 'dismissive ', 'delimiting ', 'proposes ', 'between ', 'postilion ', 'repress ', 'racecourse ', 'matures ', 'directions ', 'pressed ', 'miserabilia ', 'indelicacy ', 'faultlessly ', 'chuted ', 'shorelines ', 'irony ', 'intuitiveness ', 'cadgy ', 'ferries ', 'catcher ', 'wobbly ', 'protruded ', 'combusting ', 'unconvertible ', 'successors ', 'footfalls ', 'bursary ', 'myrtle ', 'photocompose ']
+
+===========================================================================
+================ TEST FOR convert_string_to_vec_chars =====================
+Input: %s
+. Output: %s hello world ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR find_distribution_n_grams =====================
+plaintext1 n_gram=0 distribution
+n_gram: , frequency: 501
+plaintext1 n_gram=1 distribution
+n_gram: c, frequency: 21
+n_gram: a, frequency: 35
+n_gram: b, frequency: 9
+n_gram: o, frequency: 30
+n_gram: s, frequency: 40
+n_gram: e, frequency: 52
+n_gram:  , frequency: 53
+n_gram: m, frequency: 18
+n_gram: l, frequency: 27
+n_gram: t, frequency: 23
+n_gram: d, frequency: 15
+n_gram: w, frequency: 3
+n_gram: n, frequency: 29
+n_gram: i, frequency: 35
+n_gram: g, frequency: 17
+n_gram: u, frequency: 14
+n_gram: h, frequency: 11
+n_gram: k, frequency: 3
+n_gram: r, frequency: 39
+n_gram: f, frequency: 6
+n_gram: p, frequency: 11
+n_gram: z, frequency: 3
+n_gram: y, frequency: 1
+n_gram: v, frequency: 3
+n_gram: j, frequency: 1
+n_gram: q, frequency: 1
+plaintext1 n_gram=2 distribution
+n_gram: ca, frequency: 5
+n_gram: ab, frequency: 3
+n_gram: bo, frequency: 3
+n_gram: oo, frequency: 1
+n_gram: os, frequency: 1
+n_gram: se, frequency: 1
+n_gram: es, frequency: 10
+n_gram: s , frequency: 18
+n_gram:  m, frequency: 9
+n_gram: me, frequency: 4
+n_gram: el, frequency: 3
+n_gram: lt, frequency: 2
+n_gram: td, frequency: 1
+n_gram: do, frequency: 3
+n_gram: ow, frequency: 2
+n_gram: wn, frequency: 1
+n_gram: ns, frequency: 6
+n_gram:  b, frequency: 3
+n_gram: bi, frequency: 2
+n_gram: ig, frequency: 3
+n_gram: gm, frequency: 1
+n_gram: mo, frequency: 2
+n_gram: ou, frequency: 1
+n_gram: ut, frequency: 3
+n_gram: th, frequency: 3
+n_gram: h , frequency: 2
+n_gram: ma, frequency: 5
+n_gram: ak, frequency: 1
+n_gram: ke, frequency: 1
+n_gram: ew, frequency: 1
+n_gram: wo, frequency: 1
+n_gram: or, frequency: 6
+n_gram: rk, frequency: 1
+n_gram: k , frequency: 1
+n_gram:  f, frequency: 4
+n_gram: fl, frequency: 2
+n_gram: li, frequency: 5
+n_gram: ip, frequency: 3
+n_gram: pp, frequency: 2
+n_gram: pe, frequency: 4
+n_gram: st, frequency: 5
+n_gram: t , frequency: 1
+n_gram:  n, frequency: 1
+n_gram: ne, frequency: 4
+n_gram: eu, frequency: 1
+n_gram: tr, frequency: 1
+n_gram: ra, frequency: 2
+n_gram: al, frequency: 8
+n_gram: iz, frequency: 2
+n_gram: ze, frequency: 2
+n_gram: er, frequency: 11
+n_gram: rs, frequency: 7
+n_gram:  g, frequency: 3
+n_gram: gi, frequency: 1
+n_gram: ed, frequency: 3
+n_gram: d , frequency: 3
+n_gram: mu, frequency: 1
+n_gram: ul, frequency: 3
+n_gram: le, frequency: 4
+n_gram: e , frequency: 8
+n_gram:  a, frequency: 3
+n_gram: an, frequency: 6
+n_gram: nt, frequency: 2
+n_gram: ti, frequency: 7
+n_gram: it, frequency: 2
+n_gram: he, frequency: 2
+n_gram: et, frequency: 3
+n_gram: ic, frequency: 4
+n_gram: l , frequency: 5
+n_gram:  i, frequency: 1
+n_gram: im, frequency: 2
+n_gram: mp, frequency: 1
+n_gram: ri, frequency: 3
+n_gram: ia, frequency: 1
+n_gram: ls, frequency: 1
+n_gram:  c, frequency: 7
+n_gram: ar, frequency: 4
+n_gram: ro, frequency: 5
+n_gram: om, frequency: 2
+n_gram: m , frequency: 2
+n_gram: as, frequency: 2
+n_gram: so, frequency: 1
+n_gram: oc, frequency: 1
+n_gram: ch, frequency: 4
+n_gram: hi, frequency: 2
+n_gram: is, frequency: 2
+n_gram: sm, frequency: 2
+n_gram:  s, frequency: 2
+n_gram: ta, frequency: 4
+n_gram: ai, frequency: 1
+n_gram: ir, frequency: 2
+n_gram: r , frequency: 3
+n_gram:  r, frequency: 8
+n_gram: re, frequency: 12
+n_gram: ts, frequency: 3
+n_gram: si, frequency: 3
+n_gram: in, frequency: 7
+n_gram: na, frequency: 3
+n_gram: a , frequency: 1
+n_gram:  d, frequency: 3
+n_gram: du, frequency: 1
+n_gram: ll, frequency: 3
+n_gram: ln, frequency: 1
+n_gram: ss, frequency: 3
+n_gram: ad, frequency: 2
+n_gram: de, frequency: 4
+n_gram: te, frequency: 2
+n_gram: co, frequency: 2
+n_gram: sa, frequency: 2
+n_gram: ag, frequency: 1
+n_gram: ge, frequency: 4
+n_gram: ba, frequency: 1
+n_gram: nd, frequency: 3
+n_gram:  p, frequency: 4
+n_gram: pr, frequency: 2
+n_gram: en, frequency: 4
+n_gram: at, frequency: 3
+n_gram: io, frequency: 3
+n_gram: on, frequency: 7
+n_gram: su, frequency: 1
+n_gram: ue, frequency: 1
+n_gram: tu, frequency: 1
+n_gram: ud, frequency: 1
+n_gram: fi, frequency: 1
+n_gram: g , frequency: 6
+n_gram: dr, frequency: 2
+n_gram: eg, frequency: 1
+n_gram: ga, frequency: 1
+n_gram: am, frequency: 1
+n_gram: sh, frequency: 2
+n_gram: ht, frequency: 1
+n_gram: pa, frequency: 1
+n_gram: rd, frequency: 1
+n_gram: ef, frequency: 2
+n_gram: fo, frequency: 1
+n_gram: rg, frequency: 1
+n_gram: fu, frequency: 2
+n_gram: da, frequency: 1
+n_gram: oa, frequency: 1
+n_gram: ni, frequency: 3
+n_gram: ng, frequency: 5
+n_gram: og, frequency: 2
+n_gram: gg, frequency: 1
+n_gram: ol, frequency: 2
+n_gram: lo, frequency: 2
+n_gram: gy, frequency: 1
+n_gram: y , frequency: 1
+n_gram: go, frequency: 1
+n_gram: ov, frequency: 3
+n_gram: ve, frequency: 3
+n_gram: rn, frequency: 1
+n_gram: ib, frequency: 1
+n_gram: nu, frequency: 2
+n_gram: uc, frequency: 1
+n_gram: cl, frequency: 2
+n_gram: ei, frequency: 1
+n_gram: c , frequency: 1
+n_gram: ci, frequency: 1
+n_gram: rc, frequency: 1
+n_gram: cu, frequency: 1
+n_gram: um, frequency: 1
+n_gram: ms, frequency: 1
+n_gram: sc, frequency: 2
+n_gram: cr, frequency: 1
+n_gram: pt, frequency: 1
+n_gram: ea, frequency: 1
+n_gram: mi, frequency: 2
+n_gram: il, frequency: 2
+n_gram: la, frequency: 2
+n_gram: ac, frequency: 2
+n_gram: eb, frequency: 1
+n_gram: bu, frequency: 1
+n_gram: ui, frequency: 1
+n_gram: ld, frequency: 1
+n_gram: di, frequency: 1
+n_gram: ez, frequency: 1
+n_gram: zc, frequency: 1
+n_gram: lu, frequency: 1
+n_gram: uo, frequency: 1
+n_gram: ce, frequency: 2
+n_gram: ep, frequency: 1
+n_gram: bl, frequency: 1
+n_gram: ck, frequency: 1
+n_gram: ks, frequency: 1
+n_gram: nc, frequency: 1
+n_gram: ur, frequency: 1
+n_gram: hr, frequency: 1
+n_gram:  o, frequency: 1
+n_gram: rl, frequency: 1
+n_gram: ie, frequency: 1
+n_gram:  h, frequency: 2
+n_gram: ho, frequency: 2
+n_gram: oe, frequency: 1
+n_gram:  j, frequency: 1
+n_gram: ja, frequency: 1
+n_gram: bb, frequency: 1
+n_gram: gn, frequency: 1
+n_gram:  q, frequency: 1
+n_gram: qu, frequency: 1
+n_gram: ua, frequency: 1
+n_gram: rt, frequency: 1
+n_gram: cs, frequency: 1
+n_gram: po, frequency: 1
+n_gram: w , frequency: 1
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR get_terms_ordered_by_dec_freq =====================
+char: a, freq: 27
+char: b, freq: 21
+char: c, freq: 34
+char: d, freq: 45
+char: e, freq: 18
+char: f, freq: 28
+char: g, freq: 49
+char: h, freq: 3
+char: i, freq: 46
+char: j, freq: 47
+char: k, freq: 1
+char: l, freq: 49
+char: m, freq: 37
+char: n, freq: 6
+char: o, freq: 33
+char: p, freq: 40
+char: q, freq: 34
+char: r, freq: 26
+char: s, freq: 9
+char: t, freq: 4
+char: u, freq: 8
+char: v, freq: 43
+char: w, freq: 5
+char: x, freq: 8
+char: y, freq: 27
+char: z, freq: 6
+char:  , freq: 30
+n_gram_list ['g', 'l', 'j', 'i', 'd', 'v', 'p', 'm', 'c', 'q', 'o', ' ', 'f', 'a', 'y', 'r', 'b', 'e', 's', 'u', 'x', 'n', 'z', 'w', 't', 'h', 'k']
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR get_grouped_n_grams_ordered_by_dec_freq =====================
+n_gram is 2
+chars: ab, freq: 28
+chars: bc, freq: 8
+chars: cd, freq: 33
+chars: de, freq: 48
+chars: ef, freq: 13
+chars: fg, freq: 5
+chars: gh, freq: 28
+chars: hi, freq: 29
+chars: ij, freq: 47
+chars: jk, freq: 26
+chars: kl, freq: 14
+chars: lm, freq: 24
+chars: mn, freq: 42
+chars: no, freq: 42
+chars: op, freq: 14
+chars: pq, freq: 47
+chars: qr, freq: 38
+chars: rs, freq: 37
+chars: st, freq: 37
+chars: tu, freq: 6
+chars: uv, freq: 49
+chars: vw, freq: 29
+chars: wx, freq: 24
+chars: xy, freq: 20
+chars: yz, freq: 42
+chars: z , freq: 48
+grouped_n_gram_list defaultdict(<function Decrypter.get_grouped_n_grams_ordered_by_dec_freq.<locals>.<lambda> at 0x7fa12fa60ae8>, {'a': ['ab'], 'b': ['bc'], 'c': ['cd'], 'd': ['de'], 'e': ['ef'], 'f': ['fg'], 'g': ['gh'], 'h': ['hi'], 'i': ['ij'], 'j': ['jk'], 'k': ['kl'], 'l': ['lm'], 'm': ['mn'], 'n': ['no'], 'o': ['op'], 'p': ['pq'], 'q': ['qr'], 'r': ['rs'], 's': ['st'], 't': ['tu'], 'u': ['uv'], 'v': ['vw'], 'w': ['wx'], 'x': ['xy'], 'y': ['yz'], 'z': ['z ']})
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR get_n_gram_converter =====================
+====TEST 1===
+ordered_n_gram_cipher ['abc', 'geq', 'adf', 'qer', 'fqe']
+ordered_n_gram_plain ['tre', 'fbq', 'fqe', 'eqw']
+n_gram_converter is
+n_gram_cipher: abc, n_gram_plain: tre
+n_gram_cipher: geq, n_gram_plain: fbq
+n_gram_cipher: adf, n_gram_plain: fqe
+n_gram_cipher: qer, n_gram_plain: eqw
+n_gram_cipher: fqe, n_gram_plain: eqw
+====TEST 2===
+ordered_n_gram_cipher ['abc', 'geq', 'adf', 'qer', 'fqe']
+ordered_n_gram_plain ['tre', 'fbq', 'fqe', 'eqw', 'utw']
+n_gram_converter is
+n_gram_cipher: abc, n_gram_plain: tre
+n_gram_cipher: geq, n_gram_plain: fbq
+n_gram_cipher: adf, n_gram_plain: fqe
+n_gram_cipher: qer, n_gram_plain: eqw
+n_gram_cipher: fqe, n_gram_plain: utw
+====TEST 3===
+ordered_n_gram_cipher ['abc', 'geq', 'adf', 'qer', 'fqe']
+ordered_n_gram_plain ['tre', 'fbq', 'fqe', 'eqw', 'utw', 'xyz']
+n_gram_converter is
+n_gram_cipher: abc, n_gram_plain: tre
+n_gram_cipher: geq, n_gram_plain: fbq
+n_gram_cipher: adf, n_gram_plain: fqe
+n_gram_cipher: qer, n_gram_plain: eqw
+n_gram_cipher: fqe, n_gram_plain: utw
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR map_two_distributions =====================
+decrypted_ciphertext before ['a', 'b', 'c', 'a', 'd', 'f', 'g', 'e', 'q', 'q', 'e', 'r', 'f', 'q', 'e', 'g', 'e', 'q', 'a', 'b', 'c', 'a', 'd', 'f', 'a', 'b', 'c', 'q', 'e', 'r', 'a', 'd', 'f', 'g', 'e', 'q', 'a', 'b', 'c', 'a', 'b', 'c', 'g', 'e', 'q', 'a', 'b', 'c']
+decrypted_ciphertext after ['t', 'r', 'e', 'a', 'd', 'q', 'q', 'e', 'r', 'f', 'e', 'q', 'a', 'b', 'c', 'f', 'q', 'e', 'a', 'b', 'r', 'a', 'd', 'f', 'g', 'b', 'c', 'a', 'b', 'c', 'f', 'b', 'q', 'a', 'b']
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR concate_2_defaultdict =====================
+========= BEFORE =============
+org_dict
+abc: tre
+geq: fbq
+add_dict
+adf: fqe
+qer: eqw
+fqe: xyz
+========= AFTER =============
+org_dict
+abc: tre
+geq: fbq
+adf: fqe
+qer: eqw
+fqe: xyz
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR convert_list_chars_to_string =====================
+lst is: ['a', 'b', 'c', 'd', 'e', 'f']
+string is: abcdef
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR change_char_at =====================
+string before: abcdef
+string after: abZdef
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR get_grouped_n_gram_converter =====================
+Plaintext: cabooses meltdowns bigmouth makework flippest neutralizers gipped mule antithetical imperials carom masochism stair retsina dullness adeste corsage saraband promenaders gestational mansuetude fig redress pregame borshts pardoner reforges refutations calendal moaning doggerel dendrology governs ribonucleic circumscriptions reassimilating machinize rebuilding mezcal fluoresced antepenults blacksmith constance furores chroniclers overlie hoers jabbing resigner quartics polishers mallow hovelling ch
+
+Key: [21,12,9,20,20]
+
+Ciphertext: xmkhhmqatfzxbxhqzatvcsvhnntifueqehkeloebjanlmuznnmlmubszcat cayyxuyceyumwmbntnmbxmutbgankbvxatwvcxftgmahwbuaftmejbkucnmlczjtxoxugymdiuxzdbytx  luaqilulmkugylykhgqwuxzcat zdbumc wueuyjgloqbnxzlob ucnxkzdatilqpufzlkhkmtbltjm xhhq tkzrxk zdiky fbumc wltxmuygymutfimwbgalmh aq yeupngxl uh slphozcwltlukhgoouybxllbkxfvlwluymbizatkzmalbguuumczptfvoqbgckntkzncbeyuw tgqhwufloenicnlwzpiugnqyygoxbltwxjwdmyrmauoxglnmwwyurckhlqatwbcxgbxxnklu dykfuntaiq ltdmkvbhsikymupgyllznulerwluaxebmtnkluyjeeihiahpquebhsiwa
+
+ciphertext for plaintext1
+xmkhhmqatfzxbxhqzatvcsvhnntifueqehkeloebjanlmuznnmlmubszcat cayyxuyceyumwmbntnmbxmutbgankbvxatwvcxftgmahwbuaftmejbkucnmlczjtxoxugymdiuxzdbytx  luaqilulmkugylykhgqwuxzcat zdbumc wueuyjgloqbnxzlob ucnxkzdatilqpufzlkhkmtbltjm xhhq tkzrxk zdiky fbumc wltxmuygymutfimwbgalmh aq yeupngxl uh slphozcwltlukhgoouybxllbkxfvlwluymbizatkzmalbguuumczptfvoqbgckntkzncbeyuw tgqhwufloenicnlwzpiugnqyygoxbltwxjwdmyrmauoxglnmwwyurckhlqatwbcxgbxxnklu dykfuntaiq ltdmkvbhsikymupgyllznulerwluaxebmtnkluyjeeihiahpquebhsiwa
+grouped_n_gram_freq_cipher
+(xm, ['xmu', 'xmk'])
+(mk, ['mkh', 'mku', 'mkv'])
+(kh, ['khg', 'khh', 'khk', 'khl'])
+(hh, ['hhm', 'hhq'])
+(hm, ['hmq'])
+(mq, ['mqa'])
+(qa, ['qat'])
+(at, ['at ', 'atw', 'atf', 'atv', 'ati', 'atk'])
+(tf, ['tfz', 'tfi', 'tfv'])
+(fz, ['fzx', 'fzl'])
+(zx, ['zxb'])
+(xb, ['xbx', 'xbl'])
+(bx, ['bxh', 'bxm', 'bxl', 'bxx'])
+(xh, ['xhq', 'xhh'])
+(hq, ['hqz', 'hq '])
+(qz, ['qza'])
+(za, ['zat'])
+(tv, ['tvc'])
+(vc, ['vcs', 'vcx'])
+(cs, ['csv'])
+(sv, ['svh'])
+(vh, ['vhn'])
+(hn, ['hnn'])
+(nn, ['nnt', 'nnm'])
+(nt, ['nti', 'ntn', 'ntk', 'nta'])
+(ti, ['tif', 'til'])
+(if, ['ifu'])
+(fu, ['fue', 'fun'])
+(ue, ['ueq', 'ueu', 'ueb'])
+(eq, ['eqe'])
+(qe, ['qeh'])
+(eh, ['ehk'])
+(hk, ['hke', 'hkm'])
+(ke, ['kel'])
+(el, ['elo'])
+(lo, ['loe', 'loq', 'lob'])
+(oe, ['oeb', 'oen'])
+(eb, ['ebj', 'ebm', 'ebh'])
+(bj, ['bja'])
+(ja, ['jan'])
+(an, ['anl', 'ank'])
+(nl, ['nlm', 'nlw'])
+(lm, ['lmu', 'lmk', 'lmh'])
+(mu, ['mut', 'muz', 'mub', 'muy', 'mup'])
+(uz, ['uzn'])
+(zn, ['znn', 'znc', 'znu'])
+(nm, ['nml', 'nmb', 'nmw'])
+(ml, ['mlm', 'mlc'])
+(ub, ['ubs'])
+(bs, ['bsz'])
+(sz, ['szc'])
+(zc, ['zca', 'zcw'])
+(ca, ['cat', 'cay'])
+(t , ['t c', 't z'])
+( c, [' ca'])
+(ay, ['ayy'])
+(yy, ['yyx', 'yyg'])
+(yx, ['yxu'])
+(xu, ['xuy', 'xug'])
+(uy, ['uyj', 'uyc', 'uyg', 'uyb', 'uym'])
+(yc, ['yce'])
+(ce, ['cey'])
+(ey, ['eyu'])
+(yu, ['yum', 'yuw', 'yur'])
+(um, ['umc', 'umw'])
+(mw, ['mwm', 'mwb', 'mww'])
+(wm, ['wmb'])
+(mb, ['mbn', 'mbx', 'mbi'])
+(bn, ['bnt', 'bnx'])
+(tn, ['tnm', 'tnk'])
+(ut, ['utb', 'utf'])
+(tb, ['tbg', 'tbl'])
+(bg, ['bga', 'bgu', 'bgc'])
+(ga, ['gan', 'gal'])
+(nk, ['nkl', 'nkb'])
+(kb, ['kbv'])
+(bv, ['bvx'])
+(vx, ['vxa'])
+(xa, ['xat'])
+(tw, ['twv', 'twx', 'twb'])
+(wv, ['wvc'])
+(cx, ['cxf', 'cxg'])
+(xf, ['xft', 'xfv'])
+(ft, ['ftg', 'ftm'])
+(tg, ['tgm', 'tgq'])
+(gm, ['gma'])
+(ma, ['mah', 'mal', 'mau'])
+(ah, ['ahw', 'ahp'])
+(hw, ['hwb', 'hwu'])
+(wb, ['wbu', 'wbg', 'wbc'])
+(bu, ['bum', 'bua'])
+(ua, ['uaf', 'uaq', 'uax'])
+(af, ['aft'])
+(tm, ['tme'])
+(me, ['mej'])
+(ej, ['ejb'])
+(jb, ['jbk'])
+(bk, ['bku', 'bkx'])
+(ku, ['kuc', 'kug'])
+(uc, ['ucn'])
+(cn, ['cnm', 'cnx', 'cnl'])
+(lc, ['lcz'])
+(cz, ['czj', 'czp'])
+(zj, ['zjt'])
+(jt, ['jtx'])
+(tx, ['txo', 'tx ', 'txm'])
+(xo, ['xox'])
+(ox, ['oxu', 'oxb', 'oxg'])
+(ug, ['ugy', 'ugn'])
+(gy, ['gym', 'gyl'])
+(ym, ['ymu', 'ymd', 'ymb'])
+(md, ['mdi'])
+(di, ['diu', 'dik'])
+(iu, ['iux', 'iug'])
+(ux, ['uxz'])
+(xz, ['xzd', 'xzc', 'xzl'])
+(zd, ['zdb', 'zda', 'zdi'])
+(db, ['dby', 'dbu'])
+(by, ['byt'])
+(yt, ['ytx'])
+(x , ['x  '])
+(  , ['  l'])
+( l, [' lu', ' lt'])
+(lu, ['lua', 'luy', 'lul', 'luk', 'lu '])
+(aq, ['aqi', 'aq '])
+(qi, ['qil'])
+(il, ['ilu', 'ilq'])
+(ul, ['ulm', 'ule'])
+(yl, ['yly', 'yll'])
+(ly, ['lyk'])
+(yk, ['ykh', 'ykf'])
+(hg, ['hgq', 'hgo'])
+(gq, ['gqw', 'gqh'])
+(qw, ['qwu'])
+(wu, ['wux', 'wue', 'wuf'])
+( z, [' zd'])
+(mc, ['mc ', 'mcz'])
+(c , ['c w'])
+( w, [' wu', ' wl'])
+(eu, ['euy', 'eup'])
+(yj, ['yjg', 'yje'])
+(jg, ['jgl'])
+(gl, ['glo', 'gln'])
+(oq, ['oqb'])
+(qb, ['qbn', 'qbg'])
+(nx, ['nxz', 'nxk'])
+(zl, ['zlo', 'zlk'])
+(ob, ['ob '])
+(b , ['b u'])
+( u, [' uc', ' uh'])
+(xk, ['xkz', 'xk '])
+(kz, ['kzd', 'kzr', 'kzm', 'kzn'])
+(da, ['dat'])
+(lq, ['lqp', 'lqa'])
+(qp, ['qpu'])
+(pu, ['puf'])
+(uf, ['ufz', 'ufl'])
+(lk, ['lkh'])
+(km, ['kmt'])
+(mt, ['mtb', 'mtn'])
+(bl, ['blt'])
+(lt, ['ltj', 'ltx', 'ltl', 'ltw', 'ltd'])
+(tj, ['tjm'])
+(jm, ['jm '])
+(m , ['m x'])
+( x, [' xh'])
+(q , ['q t', 'q y', 'q l'])
+( t, [' tk', ' tg'])
+(tk, ['tkz'])
+(zr, ['zrx'])
+(rx, ['rxk'])
+(k , ['k z'])
+(ik, ['iky'])
+(ky, ['ky ', 'kym'])
+(y , ['y f'])
+( f, [' fb'])
+(fb, ['fbu'])
+(wl, ['wlt', 'wlu'])
+(yg, ['ygy', 'ygo'])
+(fi, ['fim'])
+(im, ['imw'])
+(al, ['alm', 'alb'])
+(mh, ['mh '])
+(h , ['h a', 'h s'])
+( a, [' aq'])
+( y, [' ye'])
+(ye, ['yeu'])
+(up, ['upn', 'upg'])
+(pn, ['png'])
+(ng, ['ngx'])
+(gx, ['gxl'])
+(xl, ['xl ', 'xll'])
+(l , ['l u'])
+(uh, ['uh '])
+( s, [' sl'])
+(sl, ['slp'])
+(lp, ['lph'])
+(ph, ['pho'])
+(ho, ['hoz'])
+(oz, ['ozc'])
+(cw, ['cwl'])
+(tl, ['tlu'])
+(uk, ['ukh'])
+(go, ['goo', 'gox'])
+(oo, ['oou'])
+(ou, ['ouy'])
+(yb, ['ybx'])
+(ll, ['llb', 'llz'])
+(lb, ['lbk', 'lbg'])
+(kx, ['kxf'])
+(fv, ['fvl', 'fvo'])
+(vl, ['vlw'])
+(lw, ['lwl', 'lwz'])
+(bi, ['biz'])
+(iz, ['iza'])
+(zm, ['zma'])
+(gu, ['guu'])
+(uu, ['uuu', 'uum'])
+(zp, ['zpt', 'zpi'])
+(pt, ['ptf'])
+(vo, ['voq'])
+(gc, ['gck'])
+(ck, ['ckn', 'ckh'])
+(kn, ['knt'])
+(nc, ['ncb'])
+(cb, ['cbe'])
+(be, ['bey'])
+(uw, ['uw '])
+(w , ['w t'])
+(qh, ['qhw'])
+(fl, ['flo'])
+(en, ['eni'])
+(ni, ['nic'])
+(ic, ['icn'])
+(wz, ['wzp'])
+(pi, ['piu'])
+(gn, ['gnq'])
+(nq, ['nqy'])
+(qy, ['qyy'])
+(wx, ['wxj'])
+(xj, ['xjw'])
+(jw, ['jwd'])
+(wd, ['wdm'])
+(dm, ['dmy', 'dmk'])
+(my, ['myr'])
+(yr, ['yrm'])
+(rm, ['rma'])
+(au, ['auo'])
+(uo, ['uox'])
+(xg, ['xgl', 'xgb'])
+(ln, ['lnm'])
+(ww, ['wwy'])
+(wy, ['wyu'])
+(ur, ['urc'])
+(rc, ['rck'])
+(hl, ['hlq'])
+(bc, ['bcx'])
+(gb, ['gbx'])
+(xx, ['xxn'])
+(xn, ['xnk'])
+(kl, ['klu'])
+(u , ['u d'])
+( d, [' dy'])
+(dy, ['dyk'])
+(kf, ['kfu'])
+(un, ['unt'])
+(ta, ['tai'])
+(ai, ['aiq'])
+(iq, ['iq '])
+(td, ['tdm'])
+(kv, ['kvb'])
+(vb, ['vbh'])
+(bh, ['bhs'])
+(hs, ['hsi'])
+(si, ['sik', 'siw'])
+(pg, ['pgy'])
+(lz, ['lzn'])
+(nu, ['nul'])
+(le, ['ler'])
+(er, ['erw'])
+(rw, ['rwl'])
+(ax, ['axe'])
+(xe, ['xeb'])
+(bm, ['bmt'])
+(je, ['jee'])
+(ee, ['eei'])
+(ei, ['eih'])
+(ih, ['ihi'])
+(hi, ['hia'])
+(ia, ['iah'])
+(hp, ['hpq'])
+(pq, ['pqu'])
+(qu, ['que'])
+(iw, ['iwa'])
+grouped_n_gram_freq_plain
+(xm, ['xmu', 'xmk'])
+(mk, ['mkh', 'mku', 'mkv'])
+(kh, ['khg', 'khh', 'khk', 'khl'])
+(hh, ['hhm', 'hhq'])
+(hm, ['hmq'])
+(mq, ['mqa'])
+(qa, ['qat'])
+(at, ['at ', 'atw', 'atf', 'atv', 'ati', 'atk'])
+(tf, ['tfz', 'tfi', 'tfv'])
+(fz, ['fzx', 'fzl'])
+(zx, ['zxb'])
+(xb, ['xbx', 'xbl'])
+(bx, ['bxh', 'bxm', 'bxl', 'bxx'])
+(xh, ['xhq', 'xhh'])
+(hq, ['hqz', 'hq '])
+(qz, ['qza'])
+(za, ['zat'])
+(tv, ['tvc'])
+(vc, ['vcs', 'vcx'])
+(cs, ['csv'])
+(sv, ['svh'])
+(vh, ['vhn'])
+(hn, ['hnn'])
+(nn, ['nnt', 'nnm'])
+(nt, ['nti', 'ntn', 'ntk', 'nta'])
+(ti, ['tif', 'til'])
+(if, ['ifu'])
+(fu, ['fue', 'fun'])
+(ue, ['ueq', 'ueu', 'ueb'])
+(eq, ['eqe'])
+(qe, ['qeh'])
+(eh, ['ehk'])
+(hk, ['hke', 'hkm'])
+(ke, ['kel'])
+(el, ['elo'])
+(lo, ['loe', 'loq', 'lob'])
+(oe, ['oeb', 'oen'])
+(eb, ['ebj', 'ebm', 'ebh'])
+(bj, ['bja'])
+(ja, ['jan'])
+(an, ['anl', 'ank'])
+(nl, ['nlm', 'nlw'])
+(lm, ['lmu', 'lmk', 'lmh'])
+(mu, ['mut', 'muz', 'mub', 'muy', 'mup'])
+(uz, ['uzn'])
+(zn, ['znn', 'znc', 'znu'])
+(nm, ['nml', 'nmb', 'nmw'])
+(ml, ['mlm', 'mlc'])
+(ub, ['ubs'])
+(bs, ['bsz'])
+(sz, ['szc'])
+(zc, ['zca', 'zcw'])
+(ca, ['cat', 'cay'])
+(t , ['t c', 't z'])
+( c, [' ca'])
+(ay, ['ayy'])
+(yy, ['yyx', 'yyg'])
+(yx, ['yxu'])
+(xu, ['xuy', 'xug'])
+(uy, ['uyj', 'uyc', 'uyg', 'uyb', 'uym'])
+(yc, ['yce'])
+(ce, ['cey'])
+(ey, ['eyu'])
+(yu, ['yum', 'yuw', 'yur'])
+(um, ['umc', 'umw'])
+(mw, ['mwm', 'mwb', 'mww'])
+(wm, ['wmb'])
+(mb, ['mbn', 'mbx', 'mbi'])
+(bn, ['bnt', 'bnx'])
+(tn, ['tnm', 'tnk'])
+(ut, ['utb', 'utf'])
+(tb, ['tbg', 'tbl'])
+(bg, ['bga', 'bgu', 'bgc'])
+(ga, ['gan', 'gal'])
+(nk, ['nkl', 'nkb'])
+(kb, ['kbv'])
+(bv, ['bvx'])
+(vx, ['vxa'])
+(xa, ['xat'])
+(tw, ['twv', 'twx', 'twb'])
+(wv, ['wvc'])
+(cx, ['cxf', 'cxg'])
+(xf, ['xft', 'xfv'])
+(ft, ['ftg', 'ftm'])
+(tg, ['tgm', 'tgq'])
+(gm, ['gma'])
+(ma, ['mah', 'mal', 'mau'])
+(ah, ['ahw', 'ahp'])
+(hw, ['hwb', 'hwu'])
+(wb, ['wbu', 'wbg', 'wbc'])
+(bu, ['bum', 'bua'])
+(ua, ['uaf', 'uaq', 'uax'])
+(af, ['aft'])
+(tm, ['tme'])
+(me, ['mej'])
+(ej, ['ejb'])
+(jb, ['jbk'])
+(bk, ['bku', 'bkx'])
+(ku, ['kuc', 'kug'])
+(uc, ['ucn'])
+(cn, ['cnm', 'cnx', 'cnl'])
+(lc, ['lcz'])
+(cz, ['czj', 'czp'])
+(zj, ['zjt'])
+(jt, ['jtx'])
+(tx, ['txo', 'tx ', 'txm'])
+(xo, ['xox'])
+(ox, ['oxu', 'oxb', 'oxg'])
+(ug, ['ugy', 'ugn'])
+(gy, ['gym', 'gyl'])
+(ym, ['ymu', 'ymd', 'ymb'])
+(md, ['mdi'])
+(di, ['diu', 'dik'])
+(iu, ['iux', 'iug'])
+(ux, ['uxz'])
+(xz, ['xzd', 'xzc', 'xzl'])
+(zd, ['zdb', 'zda', 'zdi'])
+(db, ['dby', 'dbu'])
+(by, ['byt'])
+(yt, ['ytx'])
+(x , ['x  '])
+(  , ['  l'])
+( l, [' lu', ' lt'])
+(lu, ['lua', 'luy', 'lul', 'luk', 'lu '])
+(aq, ['aqi', 'aq '])
+(qi, ['qil'])
+(il, ['ilu', 'ilq'])
+(ul, ['ulm', 'ule'])
+(yl, ['yly', 'yll'])
+(ly, ['lyk'])
+(yk, ['ykh', 'ykf'])
+(hg, ['hgq', 'hgo'])
+(gq, ['gqw', 'gqh'])
+(qw, ['qwu'])
+(wu, ['wux', 'wue', 'wuf'])
+( z, [' zd'])
+(mc, ['mc ', 'mcz'])
+(c , ['c w'])
+( w, [' wu', ' wl'])
+(eu, ['euy', 'eup'])
+(yj, ['yjg', 'yje'])
+(jg, ['jgl'])
+(gl, ['glo', 'gln'])
+(oq, ['oqb'])
+(qb, ['qbn', 'qbg'])
+(nx, ['nxz', 'nxk'])
+(zl, ['zlo', 'zlk'])
+(ob, ['ob '])
+(b , ['b u'])
+( u, [' uc', ' uh'])
+(xk, ['xkz', 'xk '])
+(kz, ['kzd', 'kzr', 'kzm', 'kzn'])
+(da, ['dat'])
+(lq, ['lqp', 'lqa'])
+(qp, ['qpu'])
+(pu, ['puf'])
+(uf, ['ufz', 'ufl'])
+(lk, ['lkh'])
+(km, ['kmt'])
+(mt, ['mtb', 'mtn'])
+(bl, ['blt'])
+(lt, ['ltj', 'ltx', 'ltl', 'ltw', 'ltd'])
+(tj, ['tjm'])
+(jm, ['jm '])
+(m , ['m x'])
+( x, [' xh'])
+(q , ['q t', 'q y', 'q l'])
+( t, [' tk', ' tg'])
+(tk, ['tkz'])
+(zr, ['zrx'])
+(rx, ['rxk'])
+(k , ['k z'])
+(ik, ['iky'])
+(ky, ['ky ', 'kym'])
+(y , ['y f'])
+( f, [' fb'])
+(fb, ['fbu'])
+(wl, ['wlt', 'wlu'])
+(yg, ['ygy', 'ygo'])
+(fi, ['fim'])
+(im, ['imw'])
+(al, ['alm', 'alb'])
+(mh, ['mh '])
+(h , ['h a', 'h s'])
+( a, [' aq'])
+( y, [' ye'])
+(ye, ['yeu'])
+(up, ['upn', 'upg'])
+(pn, ['png'])
+(ng, ['ngx'])
+(gx, ['gxl'])
+(xl, ['xl ', 'xll'])
+(l , ['l u'])
+(uh, ['uh '])
+( s, [' sl'])
+(sl, ['slp'])
+(lp, ['lph'])
+(ph, ['pho'])
+(ho, ['hoz'])
+(oz, ['ozc'])
+(cw, ['cwl'])
+(tl, ['tlu'])
+(uk, ['ukh'])
+(go, ['goo', 'gox'])
+(oo, ['oou'])
+(ou, ['ouy'])
+(yb, ['ybx'])
+(ll, ['llb', 'llz'])
+(lb, ['lbk', 'lbg'])
+(kx, ['kxf'])
+(fv, ['fvl', 'fvo'])
+(vl, ['vlw'])
+(lw, ['lwl', 'lwz'])
+(bi, ['biz'])
+(iz, ['iza'])
+(zm, ['zma'])
+(gu, ['guu'])
+(uu, ['uuu', 'uum'])
+(zp, ['zpt', 'zpi'])
+(pt, ['ptf'])
+(vo, ['voq'])
+(gc, ['gck'])
+(ck, ['ckn', 'ckh'])
+(kn, ['knt'])
+(nc, ['ncb'])
+(cb, ['cbe'])
+(be, ['bey'])
+(uw, ['uw '])
+(w , ['w t'])
+(qh, ['qhw'])
+(fl, ['flo'])
+(en, ['eni'])
+(ni, ['nic'])
+(ic, ['icn'])
+(wz, ['wzp'])
+(pi, ['piu'])
+(gn, ['gnq'])
+(nq, ['nqy'])
+(qy, ['qyy'])
+(wx, ['wxj'])
+(xj, ['xjw'])
+(jw, ['jwd'])
+(wd, ['wdm'])
+(dm, ['dmy', 'dmk'])
+(my, ['myr'])
+(yr, ['yrm'])
+(rm, ['rma'])
+(au, ['auo'])
+(uo, ['uox'])
+(xg, ['xgl', 'xgb'])
+(ln, ['lnm'])
+(ww, ['wwy'])
+(wy, ['wyu'])
+(ur, ['urc'])
+(rc, ['rck'])
+(hl, ['hlq'])
+(bc, ['bcx'])
+(gb, ['gbx'])
+(xx, ['xxn'])
+(xn, ['xnk'])
+(kl, ['klu'])
+(u , ['u d'])
+( d, [' dy'])
+(dy, ['dyk'])
+(kf, ['kfu'])
+(un, ['unt'])
+(ta, ['tai'])
+(ai, ['aiq'])
+(iq, ['iq '])
+(td, ['tdm'])
+(kv, ['kvb'])
+(vb, ['vbh'])
+(bh, ['bhs'])
+(hs, ['hsi'])
+(si, ['sik', 'siw'])
+(pg, ['pgy'])
+(lz, ['lzn'])
+(nu, ['nul'])
+(le, ['ler'])
+(er, ['erw'])
+(rw, ['rwl'])
+(ax, ['axe'])
+(xe, ['xeb'])
+(bm, ['bmt'])
+(je, ['jee'])
+(ee, ['eei'])
+(ei, ['eih'])
+(ih, ['ihi'])
+(hi, ['hia'])
+(ia, ['iah'])
+(hp, ['hpq'])
+(pq, ['pqu'])
+(qu, ['que'])
+(iw, ['iwa'])
+grouped_2_gram_freq_plain
+(c, ['ca', 'ch', 'co', 'cl', 'ce', 'c ', 'ci', 'cu', 'cr', 'ck', 'cs'])
+(a, ['al', 'an', 'ar', 'ab', 'at', 'as', 'ad', 'ac', 'ak', 'ai', 'a ', 'ag', 'am'])
+(b, ['bo', 'bi', 'ba', 'bu', 'bl', 'bb'])
+(o, ['on', 'or', 'ov', 'ow', 'om', 'og', 'ol', 'oo', 'os', 'ou', 'oc', 'oa', 'oe'])
+(s, ['s ', 'st', 'si', 'ss', 'sm', 'sa', 'sh', 'sc', 'se', 'so', 'su'])
+(e, ['er', 'es', 'e ', 'en', 'el', 'ed', 'et', 'ef', 'ew', 'eu', 'eg', 'ei', 'ea', 'eb', 'ez', 'ep'])
+( , [' m', ' r', ' c', ' f', ' p', ' b', ' g', ' a', ' d', ' s', ' h', ' n', ' i', ' o', ' j', ' q'])
+(m, ['ma', 'me', 'mo', 'm ', 'mi', 'mu', 'mp', 'ms'])
+(l, ['li', 'l ', 'le', 'll', 'lt', 'lo', 'la', 'ls', 'ln', 'ld', 'lu'])
+(t, ['ti', 'ta', 'th', 'ts', 'te', 'td', 't ', 'tr', 'tu'])
+(d, ['de', 'do', 'd ', 'dr', 'du', 'da', 'di'])
+(w, ['wn', 'wo', 'w '])
+(n, ['ns', 'ng', 'ne', 'na', 'nd', 'ni', 'nt', 'nu', 'nc'])
+(i, ['in', 'ic', 'ig', 'ip', 'io', 'iz', 'it', 'im', 'is', 'ir', 'il', 'ia', 'ib', 'ie'])
+(g, ['g ', 'ge', 'gm', 'gi', 'ga', 'gg', 'gy', 'go', 'gn'])
+(u, ['ut', 'ul', 'ue', 'ud', 'uc', 'um', 'ui', 'uo', 'ur', 'ua'])
+(h, ['h ', 'he', 'hi', 'ho', 'ht', 'hr'])
+(k, ['ke', 'k ', 'ks'])
+(r, ['re', 'rs', 'ro', 'ri', 'r ', 'ra', 'rk', 'rd', 'rg', 'rn', 'rc', 'rl', 'rt'])
+(f, ['fl', 'fu', 'fi', 'fo'])
+(p, ['pe', 'pp', 'pr', 'pa', 'pt', 'po'])
+(z, ['ze', 'zc'])
+(y, ['y '])
+(v, ['ve'])
+(j, ['ja'])
+(q, ['qu'])
+one_gram_dist
+(c, 21)
+(a, 35)
+(b, 9)
+(o, 30)
+(s, 40)
+(e, 52)
+( , 53)
+(m, 18)
+(l, 27)
+(t, 23)
+(d, 15)
+(w, 3)
+(n, 29)
+(i, 35)
+(g, 17)
+(u, 14)
+(h, 11)
+(k, 3)
+(r, 39)
+(f, 6)
+(p, 11)
+(z, 3)
+(y, 1)
+(v, 3)
+(j, 1)
+(q, 1)
+ordered_1_gram_plain
+[' ', 'e', 's', 'r', 'a', 'i', 'o', 'n', 'l', 't', 'c', 'm', 'g', 'd', 'u', 'h', 'p', 'b', 'f', 'w', 'k', 'z', 'v', 'y', 'j', 'q']
+succeeded decoding group xm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group mk using group ak using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group kh using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 4,
+succeeded decoding group hh using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 2,
+succeeded decoding group hm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group mq using group  q using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group qa using group ba using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group tf using group ef using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 3,
+succeeded decoding group fz using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group zx using group zc using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group xb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 2,
+succeeded decoding group bx using group ba using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 4,
+succeeded decoding group xh using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 2,
+succeeded decoding group hq using group  q using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group qz using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group za using group ba using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group tv using group ov using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group vc using group ac using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 2,
+succeeded decoding group sv using group ov using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group vh using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group hn using group an using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 1,
+succeeded decoding group nn using group an using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group if using group ef using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group eq using group  q using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group qe using group ce using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group eh using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group hk using group ak using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group bj using group  j using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group nl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group lm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group uz using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group zn using group an using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 3,
+succeeded decoding group nm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group ml using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group ub using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group bs using group as using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group sz using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ay using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group yy using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group yx using group y  using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group xu using group bu using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group uy using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 5,
+succeeded decoding group yc using group ac using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ey using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group yu using group bu using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group mw using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group wm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group mb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 3,
+succeeded decoding group bn using group an using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group tn using group an using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group tb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 2,
+succeeded decoding group bg using group ag using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group nk using group ak using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group kb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group bv using group ov using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group vx using group ve using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group xa using group ba using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group tw using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group wv using group ov using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group cx using group ca using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 2,
+succeeded decoding group xf using group ef using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 2,
+succeeded decoding group ft using group at using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group tg using group ag using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group ah using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 2,
+succeeded decoding group hw using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group wb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 3,
+succeeded decoding group af using group ef using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group tm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ej using group  j using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group jb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group bk using group ak using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group ku using group bu using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group cn using group an using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 3,
+succeeded decoding group lc using group ac using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group cz using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group zj using group  j using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group jt using group at using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group tx using group ta using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 3,
+succeeded decoding group xo using group bo using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ox using group oa using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group ug using group ag using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group ym using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group md using group ad using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group iu using group bu using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group ux using group ua using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group xz using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group zd using group ad using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group db using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 2,
+succeeded decoding group by using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group yt using group at using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group x  using group a  using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group    using group a  using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group  l using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group aq using group  q using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group qi using group ai using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group yl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group ly using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group yk using group ak using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group hg using group ag using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group gq using group  q using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group qw using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group wu using group bu using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group  z using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group mc using group ac using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 2,
+succeeded decoding group  w using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group yj using group  j using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group jg using group ag using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group gl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group oq using group  q using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group qb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 2,
+succeeded decoding group nx using group na using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 2,
+succeeded decoding group zl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group ob using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group b  using group a  using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group  u using group bu using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group xk using group ak using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group kz using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 4,
+succeeded decoding group lq using group  q using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group qp using group ep using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group pu using group bu using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group uf using group ef using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 2,
+succeeded decoding group lk using group ak using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group km using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group mt using group at using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group tj using group  j using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group jm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group  x using group  a using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group q  using group a  using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 3,
+succeeded decoding group  t using group at using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group tk using group ak using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group zr using group ar using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 4, Len(cipher_text_dist[group]: 1,
+succeeded decoding group rx using group ra using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ik using group ak using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ky using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group fb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group wl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group yg using group ag using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group mh using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group  y using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ye using group ce using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group up using group ep using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group pn using group an using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 1,
+succeeded decoding group gx using group ga using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group xl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 2,
+succeeded decoding group uh using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group sl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 1,
+succeeded decoding group lp using group ep using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ph using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group oz using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group cw using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group tl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 1,
+succeeded decoding group uk using group ak using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group yb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group lb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 2,
+succeeded decoding group kx using group ke using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group fv using group ov using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group vl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 1,
+succeeded decoding group lw using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group zm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group gu using group bu using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group uu using group bu using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group zp using group ep using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group vo using group bo using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group gc using group ac using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group kn using group an using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 1,
+succeeded decoding group cb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group be using group ce using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group uw using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group qh using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group wz using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group pi using group ai using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group nq using group  q using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group qy using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group wx using group wn using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group xj using group  j using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group jw using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group wd using group ad using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group dm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group my using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group yr using group ar using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 4, Len(cipher_text_dist[group]: 1,
+succeeded decoding group rm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group au using group bu using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group xg using group ag using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 2,
+succeeded decoding group ww using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group wy using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group hl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 1,
+succeeded decoding group bc using group ac using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group gb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group xx using group xxn using try_decode_1_gram
+Len(plain_text_dist[group]: 26, Len(cipher_text_dist[group]: 1,
+succeeded decoding group xn using group an using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 1,
+succeeded decoding group kl using group al using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 1,
+succeeded decoding group u  using group a  using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group dy using group gy using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group kf using group ef using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group un using group an using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 5, Len(cipher_text_dist[group]: 1,
+succeeded decoding group iq using group  q using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group kv using group ov using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group vb using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group bh using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group hs using group as using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group pg using group ag using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group lz using group ez using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group rw using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ax using group ab using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 3, Len(cipher_text_dist[group]: 1,
+succeeded decoding group xe using group ce using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group bm using group am using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group je using group ce using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ee using group ce using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group ih using group ch using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 2, Len(cipher_text_dist[group]: 1,
+succeeded decoding group hp using group ep using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group pq using group  q using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+succeeded decoding group iw using group ew using try_1_edit_distance_away_groups.
+Len(plain_text_dist[group]: 1, Len(cipher_text_dist[group]: 1,
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR decrypt_key =====================
+Plaintext: cabooses meltdowns bigmouth makework flippest neutralizers gipped mule antithetical imperials carom masochism stair retsina dullness adeste corsage saraband promenaders gestational mansuetude fig redress pregame borshts pardoner reforges refutations calendal moaning doggerel dendrology governs ribonucleic circumscriptions reassimilating machinize rebuilding mezcal fluoresced antepenults blacksmith constance furores chroniclers overlie hoers jabbing resigner quartics polishers mallow hovelling ch
+
+Key: [26,21,13,23,19]
+
+Ciphertext: bvokgrzewedff gvhewuhazkmsbmitjzikjjushaojrolzhrqlqvyerdlewzhjbawzgghxzv pasbrpabvywaljrna fewv laislvekvgceisrnnejzlrpkhhnwwtfyjxrmmxwdmfasbidotfzmotqvoxfcubnglz xwdlewzdmfxlhi xdzgnjktzfqwdusezzlr jdmewhqztxeduokjrbfosovd gmzdwjd anzdmmnxeofxlhi osbvyafcvywenv effuqkzfzdadzyrjwqiykzxutkndl osqcokftxyaabupejbozovqcbpanhewjdveoalcyxlhhtwe xuefhtrwjdwgedcc cslzlztkushmnlrovdymxfszbaftffosafnzcrgvp zxajksv zxz gngqzewvglajabfrnkzihajkcrw nzdosivoyamamnxrctjxqucqtqnvzkzjaharbrnkzgnhdnqmdguzyhamamz 
+
+
+=================================================
+======================== decoding 0th distribution ==============
+decoding for plaintext number 1 
+decoding for plaintext number 2 
+decoding for plaintext number 3 
+decoding for plaintext number 4 
+decoding for plaintext number 5 
+
+=================================================
+======================== decoding 1th distribution ==============
+decoding for plaintext number 1 
+decoding for plaintext number 2 
+decoding for plaintext number 3 
+decoding for plaintext number 4 
+decoding for plaintext number 5 
+=================================================
+
+
+=================================================
+======================== decoding 2th distribution ==============
+decoding for plaintext number 1 
+decoding for plaintext number 2 
+decoding for plaintext number 3 
+decoding for plaintext number 4 
+decoding for plaintext number 5 
+=================================================
+
+Decryption for plaintext 0, edit distance: 462
+al mares ces prestatcal ms calstatiationtionsions s pro res s resons poverss mak make melts bigth me flipippesppesters rizer s giped murs ca antiantioith mticab cal  res rs reing rng rirom mchismersagr riaess css moadess corsorsht promgestataticing m masol mele flig ribts coners er rireforend mver rcle fg mulorefo chis hoercabooaboosbooseoosesosestsess meltdeltdoltdowtdowndownsownsuwnsue bigmbigmoigmougmoutmouthouth utheth moumakewakewokeworeworens biworsaork frk flk figflippng molippepescrns gi
+Decryption for plaintext 1, edit distance: 453
+ly co combllizeon rest chters agon  meteized  dershmillers r per rsonaonalialiumed thlizedizingzing g abjureetre gring ats abs re ashedng althrup kash chorore ges ruers rng scrs ru greey comms meingar mic millier ca postpost ost cs allatinescrimrs deed locrim rim c carrillizisent founs metmetereter enthrgon r crusons aist cemoremorewzed ts dert chobiorhiorhyorhytrhythhythmythruthmilmic pic pec perper csonalnaliu abjuabjurbjurejurese gregrewareete re seets ets mrewasewashwashe grilsheduhedue res 
+Decryption for plaintext 2, edit distance: 466
+istons assitesss lisrs lins fey dattionsvers ermitne pres astices hugut jan janiers ares ass av ass ass lrseyitessiions s fet feta copi resmcopies preine pnes fe peres as recoessioly da presprejoion crecoplesmes gals coc callcall ons p listisp jessaierseyssionsiouson con calculabulabity moariza ine bles onispnistoe oxgen inmen i perstatiots peematiidevos rechermirmitemitesitatetage age oge oxe rejrejoiejoicjoiceoiculices ces gs ove oxgaoxgatxgaldatiougaldrall bll bll ble blesly cabloodloodsaticu
+Decryption for plaintext 3, edit distance: 467
+and c cadeshionion fers prs cas cadstifi pellies c preces peed conateste prcade ing qashioon fo fortortiftifieifiesng qufies iers  and s pelnnelids hy co o ing ntinges pes preatesttesti expapanneng jutintiermatunctitive ive cve cie punativetion ate finglis hydprecas defly falinelpelleelleorite iteonst exmist istifs ints misdge pge fagestlnd delleountonaleonweonatonatenardoardo rdo odo oxo oxy oxygoxygexyge ygestgenarenarde co cashiascasscashade pest ede rue for fascfascahionstestan fasfortiestle
+Decryption for plaintext 4, edit distance: 471
+ cordunts andedgandeers lnes onded curreurresrres ts laing as lar laryal el eleved coeleva betoetokeenestd cor chroes omitesss ombrestong ais dirying  pronpronousic ing ang chrs diatersic doountees nentessters ded c ritelinsiey aps nestrates betrs beed ris ritidercabledovenerectocordeectok mounmountots dstomiocks aticsly apy app nedlestomainkyinsicnsing dirsantes appoapposs ainunda dercuercurrcurrrenedenterntst larynaryngryngeyngeangealgeal eal etessol elelevatevativate te baate be batbetoctess 
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR calc_edit_distance =====================
+decrypted_ciphertext: abcdef, plaintext: abcfef. Edit distance: 1
+decrypted_ciphertext: abcd, plaintext: abcfef. Edit distance: 3
+decrypted_ciphertext: abcfef, plaintext: abc. Edit distance: 3
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR get_most_similar_plaintext =====================
+decrypted_ciphertexts
+hqllo wozld abcxyz etd henlo wcrld
+hqllo wozld abcxyz etd henlo wcrld
+hqllo wozld abcxyz etd henlo wcrld
+hqllo wozld abcxyz etd henlo wcrld
+plaintexts
+hello world abcxyz end hello world
+hafo world mnopze end hello world
+hafo world abcdef end hello world
+hafo world abcxyz end hello world
+=========== CHOSEN PLAINTEXT ==========
+hello world abcxyz end hello world
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR decrypt_type_two =====================
+Plaintext: unconvertible photocompose attentional pressed delimiting pintsized unconvertible hearkened successors ferries wobbly aloneness racecourse unconvertible chuted courtship hermeneutics directions unconvertible cadgy memphis shorelines chuted miserabilia chuted protruded hearkened courtship indelicacy delimiting faultlessly miserabilia directions successors pressed myrtle rustics memphis matures between hermeneutics racecourse wobbly directions pintsized delimiting memphis rustics delimiting aloneness 
+
+Key: [7,18,1,14,25]
+
+Ciphertext: aedblbwsggicfnnofubavdqbqlrbgrleuwmusmnnywtfckresjpdjgguyacguktwxlvahljfoicykjpjlriszybfackrthajwtfmyjatcyijsqgnpp spaojvefaczjaezjwdbsyjfnsuupatliuw swaqfakfryjfverzzjcyows cuwvggjjargywdggvetnsuupatliuw swaqzkyznkldqvgzrtvmywmwlljaqfakfryt tsphtjzghrdvs wennyfueskwenflssycuwenavlsgqo qnguvfzgjsdlykwmwkpkjaegxbhj cffqspa gzwso pcjoyk ssa  paqgjvqaljtbpzrqeczjfrytpsgjlrshq  dfytwncfpja z lssqgtfgulwonflinsllluwazrsoaluphpzwajmitmlyk ssa  paqggjarz  sbgvfzgt uwlnrnskwzjfyyltggjjarcs nwrpehnzsfoslljtn
+
+plaintext: unconvertible photocompose attentional pressed delimiting pintsized unconvertible hearkened successors ferries wobbly aloneness racecourse unconvertible chuted courtship hermeneutics directions unconvertible cadgy memphis shorelines chuted miserabilia chuted protruded hearkened courtship indelicacy delimiting faultlessly miserabilia directions successors pressed myrtle rustics memphis matures between hermeneutics racecourse wobbly directions pintsized delimiting memphis rustics delimiting aloneness 
+ciphertext: aedblbwsggicfnnofubavdqbqlrbgrleuwmusmnnywtfckresjpdjgguyacguktwxlvahljfoicykjpjlriszybfackrthajwtfmyjatcyijsqgnpp spaojvefaczjaezjwdbsyjfnsuupatliuw swaqfakfryjfverzzjcyows cuwvggjjargywdggvetnsuupatliuw swaqzkyznkldqvgzrtvmywmwlljaqfakfryt tsphtjzghrdvs wennyfueskwenflssycuwenavlsgqo qnguvfzgjsdlykwmwkpkjaegxbhj cffqspa gzwso pcjoyk ssa  paqgjvqaljtbpzrqeczjfrytpsgjlrshq  dfytwncfpja z lssqgtfgulwonflinsllluwazrsoaluphpzwajmitmlyk ssa  paqggjarz  sbgvfzgt uwlnrnskwzjfyyltggjjarcs nwrpehnzsfoslljtn
+
+=================================================
+======================== decoding 0th distribution ==============
+=================================================
+
+
+=================================================
+======================== decoding 1th distribution ==============
+=================================================
+
+
+=================================================
+======================== decoding 2th distribution ==============
+=================================================
+
+
+=================================================
+======================== decoding 3th distribution ==============
+=================================================
+
+
+=================================================
+======================== decoding 4th distribution ==============
+=================================================
+
+decrypted_ciphertext: elimis rops se dis behness hermeermenehermcourtourseurse rse donesstionetics cs bes hea hearrmenedis bis hes dise dels coulimisionesntiong proess b courss de behe propops de memional bustes coses hess b courssize dismng prfaulte swo faul betwcacecacecomened deliesomesomemomentmbursened arkenrken kentientiontshid comalonesizedlon ponalobehernesomnalonics hed can pinhearkearkeld ald al  al ptshipship hip sip swp sho swooswoopwoopsooposbehernesomoposeps mes mat ded memphemphimphis bursphis hismiip shin, plaintext: unconvertible photocompose attentional pressed delimiting pintsized unconvertible hearkened successors ferries wobbly aloneness racecourse unconvertible chuted courtship hermeneutics directions unconvertible cadgy memphis shorelines chuted miserabilia chuted protruded hearkened courtship indelicacy delimiting faultlessly miserabilia directions successors pressed myrtle rustics memphis matures between hermeneutics racecourse wobbly directions pintsized delimiting memphis rustics delimiting aloneness . Edit distance: 468
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR get_most_similar_plaintext =====================
+decrypted_text: azeswmeness, start_index: 0, chose_word: ['a', 'w', 'e', 's', 'o', 'm', 'e', 'n', 'e', 's', 's', ' ']
+===========================================================================
+
+
+===========================================================================
+================ TEST FOR correct_type_two_decrytion =====================
+decrypted_text: azeswmeness atzentiunal, corrected_decryption: awesomeness attentional
+===========================================================================
+

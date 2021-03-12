@@ -1,14 +1,19 @@
-from 4_5 import Decrypter
+from decrypter import *
 from encryption_test import Cipher_Generator 
 from collections import defaultdict
 import random
 
-def Dectypter_Tester:
+class Dectypter_Tester:
 
     def __init__(self):
         self.cipher_generator = Cipher_Generator()
         self.decrypter = Decrypter()
+        # print(globals())
+        # from decrypter import *
+        # print(self.decrypter.plain_text1)
         random.seed()
+        # global plain_text1, plain_text2, plain_text3, plain_text4, plain_text5, alphabet
+        # global plain_text_1, plain_text_2, plain_text_3, plain_text_4, plain_text_5, words
         
 
     def run_tests(self):
@@ -24,11 +29,11 @@ def Dectypter_Tester:
         print("plain_text5", plain_text5)
 
 
-        print("plain_text_1", plain_text_1)
-        print("plain_text_2", plain_text_2)
-        print("plain_text_3", plain_text_3)
-        print("plain_text_4", plain_text_4)
-        print("plain_text_5", plain_text_5)
+        # print("plain_text_1", plain_text_1)
+        # print("plain_text_2", plain_text_2)
+        # print("plain_text_3", plain_text_3)
+        # print("plain_text_4", plain_text_4)
+        # print("plain_text_5", plain_text_5)
 
         print("alphabet", alphabet)
         print("words", words)
@@ -61,13 +66,13 @@ def Dectypter_Tester:
         self.change_char_at_tester()
 
         #test for 10
-        self.try_1_edit_distance_away_groups_tester()
+        # self.try_1_edit_distance_away_groups_tester()
 
         #test for 11
-        self.try_decode_2_gram_tester()
+        # self.try_decode_2_gram_tester()
 
         #test for 12
-        self.try_decode_1_gram_tester()
+        # self.try_decode_1_gram_tester()
 
         #test for 13
         self.get_grouped_n_gram_converter_tester()
@@ -96,8 +101,11 @@ def Dectypter_Tester:
         print()
         print("===========================================================================")
         print("================ TEST FOR Cipher_Generator =====================")
-        self.cipher_generator.generate_test1_cipher()
-        self.cipher_generator.generate_test1_cipher(1, True, 20)
+        self.cipher_generator.generate_cipher(plain_text1)
+        self.cipher_generator.generate_cipher(plain_text1, 5, True, 20)
+        plaintext_test2 = self.cipher_generator.generate_test2(50)
+        print('plaintext_test2:')
+        print(plaintext_test2)
         print("===========================================================================")
         print()
 
@@ -133,7 +141,7 @@ def Dectypter_Tester:
 
         dist = defaultdict(lambda : 0)
         for char in alphabet:
-            freq = random.randint(50)
+            freq = random.randint(0,50)
             dist[char] = freq
             print(f'char: {char}, freq: {freq}')
 
@@ -154,12 +162,12 @@ def Dectypter_Tester:
         print('n_gram is', n_gram)
         for i in range(len(alphabet) - n_gram + 1 ):
             chars = alphabet[i : i+n_gram ]
-            freq = random.randint(50)
+            freq = random.randint(0,50)
             dist[chars] = freq
             print(f'chars: {chars}, freq: {freq}')
         
         grouped_n_gram_list = self.decrypter.get_grouped_n_grams_ordered_by_dec_freq(dist)
-        print("n_gram_list", n_gram_list)
+        print("grouped_n_gram_list", grouped_n_gram_list)
         print("===========================================================================")
         print()
 
@@ -190,7 +198,7 @@ def Dectypter_Tester:
         print()
 
     #test for 6
-    def map_two_distributions_tester(self)
+    def map_two_distributions_tester(self):
 
         print()
         print("===========================================================================")
@@ -204,7 +212,9 @@ def Dectypter_Tester:
         print("decrypted_ciphertext before", decrypted_ciphertext)
         start = 0
         t = 5
-        self.decrypter.map_two_distributions(n_gram_converter, decrypted_ciphertext, start, t)
+        n_gram = 3
+
+        self.decrypter.map_two_distributions(n_gram_converter, decrypted_ciphertext, start, t, n_gram)
         print("decrypted_ciphertext after", decrypted_ciphertext)
 
         print("===========================================================================")
@@ -240,7 +250,7 @@ def Dectypter_Tester:
         print()
 
     #test for 8
-    def convert_list_chars_to_string_tester(lst):
+    def convert_list_chars_to_string_tester(self):
         print()
         print("===========================================================================")
         print("================ TEST FOR convert_list_chars_to_string =====================")
@@ -284,6 +294,7 @@ def Dectypter_Tester:
         print()
 
     #test for 11
+    #TO BE FINISHED
     def try_decode_2_gram_tester(self):
         print()
         print("===========================================================================")
@@ -315,36 +326,59 @@ def Dectypter_Tester:
         print("===========================================================================")
         print()
 
-
+    def print_dict(self, the_dict):
+        for key, val in the_dict.items():
+            print(f'({key}, {val})')
     #test for 13
-    #TO BE FINISHED
     def get_grouped_n_gram_converter_tester(self):
         print()
         print("===========================================================================")
         print("================ TEST FOR get_grouped_n_gram_converter =====================")
 
-        grouped_n_gram_freq_cipher = None
-        grouped_n_gram_freq_plain = None
-        grouped_2_gram_freq_plain = None
-        ordered_1_gram_plain = None
-
+        t = 5
+        ciphertext = self.cipher_generator.generate_cipher(plain_text1, t)
+        print('ciphertext for plaintext1')
+        print(ciphertext)
+        n_gram = 3
+        grouped_n_gram_freq_cipher_dist = self.decrypter.find_distribution_n_grams(ciphertext, n_gram)
+        grouped_n_gram_freq_cipher = self.decrypter.get_grouped_n_grams_ordered_by_dec_freq(grouped_n_gram_freq_cipher_dist)
+        print('grouped_n_gram_freq_cipher')
+        self.print_dict(grouped_n_gram_freq_cipher)
+        grouped_n_gram_freq_plain_dist = self.decrypter.find_distribution_n_grams(plain_text1, n_gram)
+        grouped_n_gram_freq_plain = self.decrypter.get_grouped_n_grams_ordered_by_dec_freq(grouped_n_gram_freq_plain_dist)
+        print('grouped_n_gram_freq_plain')
+        self.print_dict(grouped_n_gram_freq_cipher)
+        grouped_2_gram_freq_plain_dist = self.decrypter.find_distribution_n_grams(plain_text1, 2)
+        grouped_2_gram_freq_plain = self.decrypter.get_grouped_n_grams_ordered_by_dec_freq(grouped_2_gram_freq_plain_dist)
+        print('grouped_2_gram_freq_plain')
+        self.print_dict(grouped_2_gram_freq_plain)
+        one_gram_dist = self.decrypter.find_distribution_n_grams(plain_text1, 1)
+        print('one_gram_dist')
+        self.print_dict(one_gram_dist)
+        ordered_1_gram_plain = self.decrypter.get_terms_ordered_by_dec_freq(one_gram_dist)
+        print('ordered_1_gram_plain')
+        print(ordered_1_gram_plain)
+        
         self.decrypter.get_grouped_n_gram_converter(grouped_n_gram_freq_cipher, grouped_n_gram_freq_plain, grouped_2_gram_freq_plain, ordered_1_gram_plain)
         print("===========================================================================")
         print()
 
 
     #test for 14
-    #TO BE FINISHED
     def decrypt_key_tester(self):
         print()
         print("===========================================================================")
         print("================ TEST FOR decrypt_key =====================")
 
-        t = None
-        ciphertext = None
-        n_gram = None
+        t = 5
+        ciphertext = self.cipher_generator.generate_cipher(plain_text1, t)
+        n_gram = 3
 
-        self.decrypter.decrypt_key(t, ciphertext, ordered_1_gram_plain, n_gram)
+        decrypted_texts = self.decrypter.decrypt_key(t, ciphertext, n_gram)
+        for i in range(len(decrypted_texts)):
+            decrypted_text = decrypted_texts[i]
+            print(f'Decryption for plaintext {i}, edit distance: {self.decrypter.calc_edit_distance(decrypted_text, plain_text1)}')
+            print(decrypted_text)
         print("===========================================================================")
         print()
 
@@ -354,7 +388,7 @@ def Dectypter_Tester:
         print("===========================================================================")
         print("================ TEST FOR calc_edit_distance =====================")
 
-        for decrypted_ciphertext,plaintext in zip(["abcdef", "abcd", "abcfef"], ["abcfef", "abcfef", "abc"]) 
+        for decrypted_ciphertext,plaintext in zip(["abcdef", "abcd", "abcfef"], ["abcfef", "abcfef", "abc"]): 
             
             distance = self.decrypter.calc_edit_distance(decrypted_ciphertext, plaintext)
             print(f"decrypted_ciphertext: {decrypted_ciphertext}, plaintext: {plaintext}. Edit distance: {distance}")
@@ -382,15 +416,20 @@ def Dectypter_Tester:
         print()
 
     #test for 17
-    #TO BE FINISHED
     def decrypt_type_two_tester(self):
 
         print()
         print("===========================================================================")
         print("================ TEST FOR decrypt_type_two =====================")
-        ciphertext = None
-        n_gram = None
-        self.decrypter.decrypt_type_two(ciphertext, n_gram)
+        n_gram = 3
+        t = 5
+        plaintext_test2 = self.cipher_generator.generate_test2(50)
+        ciphertext = self.cipher_generator.generate_cipher(plaintext_test2, t)
+        print(f'plaintext: {plaintext_test2}')
+        print(f'ciphertext: {ciphertext}')
+        decrypted_ciphertext = self.decrypter.decrypt_type_two(t, ciphertext, n_gram)
+        distance = self.decrypter.calc_edit_distance(decrypted_ciphertext, plaintext_test2)
+        print(f"decrypted_ciphertext: {decrypted_ciphertext}, plaintext: {plaintext_test2}. Edit distance: {distance}")
         print("===========================================================================")
         print()
 
@@ -421,3 +460,6 @@ def Dectypter_Tester:
         print("===========================================================================")
         print()
 
+if __name__ == "__main__":
+    tester = Dectypter_Tester()
+    tester.run_tests()
