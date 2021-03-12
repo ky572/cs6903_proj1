@@ -29,15 +29,25 @@ def distribution(s):
 
 def schedule_key(i,t,l):
 #    return i % t
+#    schedulers = [
+#        lambda i,t: i % t,
+#        lambda i,t: (2*i) % t,
+#        lambda i,t: (i*i) % t,
+#        lambda i,t: t - 1 - (i % t),
+#        lambda i,t: (i*3) % t,
+#        lambda i,t: (i >> 1) % t,
+#        lambda i,t: t - 1 - ((i*2) % t)
+#    ]
     schedulers = [
-        lambda i,t: i % t,
-        lambda i,t: (2*i) % t,
-        lambda i,t: (i*i) % t,
-        lambda i,t: t - 1 - (i % t),
-        lambda i,t: (i*3) % t,
-        lambda i,t: (i >> 1) % t,
-        lambda i,t: t - 1 - ((i*2) % t)
+        lambda i,t: i % (t+1),
+        lambda i,t: (2*i) % (t+1),
+        lambda i,t: (i*i) % (t+1),
+        lambda i,t: t - 1 - (i % (t+1)),
+        lambda i,t: (i*3) % (t+1),
+        lambda i,t: (i >> 1) % (t+1),
+        lambda i,t: t - 1 - ((i*2) % (t+1))
     ]
+   
     if i < 20:
         sched = schedulers[0]
     elif i < 50:
@@ -56,7 +66,8 @@ def schedule_key(i,t,l):
         scheduler_index = (i - 450) % len(schedulers)
         sched = schedulers[scheduler_index]
     return sched(i,t)    
-    
+#    return i % (t + 2)    
+
 
 def valid_key_index(j,t):
     return j > -1 and j < t
