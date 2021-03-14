@@ -1,5 +1,5 @@
 import sys
-from statistics import stdev, median
+from statistics import stdev, median, mean
 
 test1_plaintexts = [
     'cabooses meltdowns bigmouth makework flippest neutralizers gipped mule antithetical imperials carom masochism stair retsina dullness adeste corsage saraband promenaders gestational mansuetude fig redress pregame borshts pardoner reforges refutations calendal moaning doggerel dendrology governs ribonucleic circumscriptions reassimilating machinize rebuilding mezcal fluoresced antepenults blacksmith constance furores chroniclers overlie hoers jabbing resigner quartics polishers mallow hovelling ch',
@@ -66,16 +66,24 @@ def guess_cyclical_random_test1(ciphertext):
     most_freq = list(map(lambda x: (x[0], max(find_ngram_frequency(6, x[1]).values())),
                         shuffled_shifts))
 
-#    for p,s in shuffled_shifts:
-#        ngram_freq = find_ngram_frequency(5, s)
-#        most_freq.append((p,max(ngram_freq)))
-    reps = list(map(lambda x: x[1], most_freq))       
-    std = stdev(reps)
-    med = median(reps)
-    max_rep = max(most_freq, key=lambda x: x[1])
-    if max_rep[1] > med+std:
-        return max_rep[0]
+#    reps = list(map(lambda x: x[1], most_freq))       
+#    std = stdev(reps)
+#    med = median(reps)
+#    max_rep = max(most_freq, key=lambda x: x[1])
+#    if max_rep[1] > (med+(std*1.5)):
+#        return max_rep[0]
 
+#    reps = sorted(reps)
+#    iqr = reps[3] - reps[1]
+#    if max_rep[1] > 1.5*iqr:
+#        return max_rep[0]
+    
+    reps = list(map(lambda x: x[1], most_freq))
+    max_rep = max(most_freq, key=lambda x: x[1])   
+    reps = sorted(reps)
+    avg = mean(reps[:4])
+    if max_rep[1] > 2*avg:
+        return max_rep[0]
     return None
 
 def guess_test1_plaintext(ciphertext):
