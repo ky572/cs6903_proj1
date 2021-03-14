@@ -91,8 +91,10 @@ class Decrypter:
     '''
     def find_distribution_n_grams(self, text, n_gram, start = 0, t = 1):
         dist = defaultdict(lambda : 0)
+        # print(len(text), text, n_gram, start, t)
         for i in range(start, len(text) - n_gram + 1, t):
             chars = text[i: i + n_gram]
+            # print(chars)
             if isinstance(chars, list): #use string for keys in dictionaries
                 chars = self.convert_list_chars_to_string(chars)
             dist[chars] += 1
@@ -280,7 +282,12 @@ class Decrypter:
                             
         return n_gram_converter
                 
-
+    def print_conversion(self, decrypted_text, plaintext, n_gram_converter, start, t, n_gram):
+        for i in range(start, len(decrypted_text) - n_gram +1, t):
+            cipher_n_gram_term = decrypted_text[i: i+n_gram]
+            if isinstance(cipher_n_gram_term, list):
+                cipher_n_gram_term = self.convert_list_chars_to_string(cipher_n_gram_term)
+            print(f'{cipher_n_gram_term}: ({n_gram_converter[cipher_n_gram_term]}, {plaintext[i:i+n_gram]})')
     #14
     def decrypt_key(self, t, ciphertext, n_gram = 2):
 
@@ -309,6 +316,7 @@ class Decrypter:
         for dist in dists:
             n_gram_list = self.get_terms_ordered_by_dec_freq(dist) #return a list of ONE distribution
             n_gram_freq_lists.append(n_gram_list)
+        
         
         #create a list of n_grams for each plaintext distribution
         #in the order of highest frequency to lowest frequency
@@ -343,9 +351,9 @@ class Decrypter:
         #decrypt from first to t - n_gram + 1 distributions
 
         for start in range( t - n_gram + 1):
-            print()
-            print("=================================================")
-            print(f'======================== decoding {start}th distribution ==============')
+            # print()
+            # print("=================================================")
+            # print(f'======================== decoding {start}th distribution ==============')
             ##decrypt without prefix
             if start == 0:
                 
@@ -353,58 +361,67 @@ class Decrypter:
         
                 ordered_n_gram_cipher = self.get_terms_ordered_by_dec_freq(cipher_dist)
 
+                # print('cipher_dist')
+                # self.print_dict(cipher_dist)
+                # print(f'ciphertext: {ciphertext}')
+                
                 for ptext_index in range(5):
 
-                    print(f'decoding for plaintext number {ptext_index+1} ')
+                    # print(f'decoding for plaintext number {ptext_index+1} ')
 
                     ordered_n_gram_plain = n_gram_freq_lists[ ptext_index ]
+                    # print(f"ordered_n_gram_cipher: {ordered_n_gram_cipher}")
+                    # print(f"ordered_n_gram_plain: {ordered_n_gram_plain}")
                     n_gram_converter = self.get_n_gram_converter( ordered_n_gram_cipher, ordered_n_gram_plain)
+                    # self.print_conversion(decrypted_ciphertexts[ ptext_index ], plain_texts[ptext_index], n_gram_converter, start, t, n_gram)
                     self.map_two_distributions( n_gram_converter, decrypted_ciphertexts[ ptext_index ], start, t, n_gram)
 
-                continue
+            else:
 
-            #get the distribution of 5 plaintexts, except the decrypted possibilities
-            #according to a shared portion of the n_gram
+                #CASE 2
+                #get the distribution of 5 plaintexts, except the decrypted possibilities
+                #according to a shared portion of the n_gram
 
-            #decrypt with n-1 prefix
-            for ptext_index in range(5):
-                
-                print(f'decoding for plaintext number {ptext_index+1} ')
+                #decrypt with n-1 prefix
+                for ptext_index in range(5):
+                    
+                    # print(f'decoding for plaintext number {ptext_index+1} ')
 
-                #GET THE PLAIN DISTRIBUTION OF CIPHERTEXT
-                decrypted_ciphertext  = decrypted_ciphertexts[ ptext_index ]
-                
-                
-                #GET THE DISTRIBUTION OF CIPHERTEXT AND PLAINTEXT GROUPED BY SHARED N_GRAM
-                #can be modified to only get start-th distribution of plaintext
-                cipher_dist_n_gram = self.find_distribution_n_grams( decrypted_ciphertext , n_gram, start, t)
-                grouped_n_gram_freq_cipher = self.get_grouped_n_grams_ordered_by_dec_freq(cipher_dist_n_gram)
-                grouped_n_gram_freq_plain = grouped_n_gram_freq_lists[ ptext_index ]
+                    #GET THE PLAIN DISTRIBUTION OF CIPHERTEXT
+                    decrypted_ciphertext  = decrypted_ciphertexts[ ptext_index ]
+                    
+                    
+                    #GET THE DISTRIBUTION OF CIPHERTEXT AND PLAINTEXT GROUPED BY SHARED N_GRAM
+                    #can be modified to only get start-th distribution of plaintext
+                    cipher_dist_n_gram = self.find_distribution_n_grams( decrypted_ciphertext , n_gram, start, t)
+                    grouped_n_gram_freq_cipher = self.get_grouped_n_grams_ordered_by_dec_freq(cipher_dist_n_gram)
+                    grouped_n_gram_freq_plain = grouped_n_gram_freq_lists[ ptext_index ]
 
-                #GET THE DISTRIBUTION OF PLAINTEXT GROUPED BY SHARED 2_GRAM
-                grouped_2_gram_freq_plain = two_gram_freq_lists[ ptext_index ]
+                    #GET THE DISTRIBUTION OF PLAINTEXT GROUPED BY SHARED 2_GRAM
+                    grouped_2_gram_freq_plain = two_gram_freq_lists[ ptext_index ]
 
-                #GET THE DISTRIBUTION OF PLAINTEXT GROUPED BY SHARED 1_GRAM
-                ordered_1_gram_plain = single_freq_lists[ ptext_index ]
+                    #GET THE DISTRIBUTION OF PLAINTEXT GROUPED BY SHARED 1_GRAM
+                    ordered_1_gram_plain = single_freq_lists[ ptext_index ]
 
 
-                #different n_gram_converter for each different distribution
-                #get_grouped_n_gram_converter(grouped_n_gram_freq_cipher, grouped_n_gram_freq_plain, grouped_2_gram_freq_plain, ordered_1_gram_plain)
-                n_gram_converter = self.get_grouped_n_gram_converter(grouped_n_gram_freq_cipher, grouped_n_gram_freq_plain, grouped_2_gram_freq_plain, ordered_1_gram_plain)
-                
-                # print('n_gram_converter')
+                    #different n_gram_converter for each different distribution
+                    #get_grouped_n_gram_converter(grouped_n_gram_freq_cipher, grouped_n_gram_freq_plain, grouped_2_gram_freq_plain, ordered_1_gram_plain)
+                    n_gram_converter = self.get_grouped_n_gram_converter(grouped_n_gram_freq_cipher, grouped_n_gram_freq_plain, grouped_2_gram_freq_plain, ordered_1_gram_plain)
+                    
+                    # print('n_gram_converter')
+                    # self.print_dict(n_gram_converter)
+                    # print('grouped_n_gram_freq_cipher')
+                    # self.print_dict(grouped_n_gram_freq_cipher)
+                    # print('grouped_n_gram_freq_plain')
+                    # self.print_dict(grouped_n_gram_freq_plain)
+
+                    # self.print_conversion(decrypted_ciphertexts[ ptext_index ], plain_texts[ptext_index], n_gram_converter, start, t, n_gram)
+                    self.map_two_distributions(n_gram_converter, decrypted_ciphertext, start, t, n_gram)
+
                 # self.print_dict(n_gram_converter)
-                # print('grouped_n_gram_freq_cipher')
-                # self.print_dict(grouped_n_gram_freq_cipher)
-                # print('grouped_n_gram_freq_plain')
-                # self.print_dict(grouped_n_gram_freq_plain)
-
-                self.map_two_distributions(n_gram_converter, decrypted_ciphertext, start, t, n_gram)
-
-        
-            
-            print("=================================================")
-            print()
+                
+            # print("=================================================")
+            # print()
 
         return [ self.convert_list_chars_to_string( decrypted_ciphertext ) for decrypted_ciphertext in decrypted_ciphertexts ]
     '''
@@ -446,9 +463,9 @@ class Decrypter:
         one_gram_list = self.get_terms_ordered_by_dec_freq(one_gram_dist)
         decrypted_ciphertext = self.convert_string_to_vec_chars(ciphertext)
         for start in range(t):
-            print()
-            print("=================================================")
-            print(f'======================== decoding {start}th distribution ==============')
+        #     print()
+        #     print("=================================================")
+        #     print(f'======================== decoding {start}th distribution ==============')
 
             if start == 0:
                 #decrypt without prefix
@@ -481,11 +498,11 @@ class Decrypter:
                 # print('n_gram_converter')
                 # self.print_dict(n_gram_converter)
                 self.map_two_distributions(n_gram_converter, decrypted_ciphertext, start, t, n_gram)
-
-            print("=================================================")
-            print()
+            # self.print_dict(n_gram_converter)
+            # print("=================================================")
+            # print()
         
-        return self.convert_list_chars_to_string(decrypted_ciphertext)
+        return self.correct_type_two_decrytion(self.convert_list_chars_to_string(decrypted_ciphertext))
 
 
     #18
