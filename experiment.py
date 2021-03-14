@@ -1,24 +1,37 @@
-import argparse
+import sys
+import encryption_test
+import decryptor
+import time
 
-def get_alpha_index(ch):
-    return 26 if ch == ' ' else ord(ch) - ord('a')
+gen = encryption_test.Cipher_Generator()
 
-def find_shift(p, c):
-    po = get_alpha_index(p)
-    co = get_alpha_index(c)
-    if co >= po:
-        return co - po
-    return 27 - po + co
+def test(insert_random):
+    p,c = gen.generate_test1_cipher(insert_random)
+    guess = decryptor.guess_plaintext(c)
+    if guess != p:
+        print ((p,c,guess))
+    return True if guess == p else False
 
-def list_shifts(ptext, ctext):
-    p_len = len(ptext)
-    return list(map(find_shift, ptext, ctext[:p_len]))
+def experiment(runs):
+    count = 0
+    start = time.time()
+    for i in range(0, runs):
+        result = test(False)
+        if result: count += 1
+    end = time.time()
+    print(f'Test 1, no random characters: {count}/{runs}')
+    print(f'Completed in {end-start} seconds')
+    count = 0
+    start = time.time()
+    for i in range(0, runs):
+        result = test(True)
+        if result: count += 1
+        else:
+            break
+    end = time.time()
+    print(f'Cyclical key with random characters: {count}/{runs}')
+    print(f'Completed in {end-start} seconds')
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--plaintext', type=str, required=True)
-    parser.add_argument('--ciphertext', type=str, required=True)
-    args = parser.parse_args()
-    plaintext = args.plaintext
-    ciphertext = args.ciphertext   
+    experiment(int(sys.argv[1]))
 
