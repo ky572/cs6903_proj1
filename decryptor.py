@@ -60,10 +60,10 @@ def guess_cyclical_random_test1(ciphertext):
 #    shuffled_shifts = [(p,[]),(p,[]),(p,[])]
 #    for p,s in shuffled_shifts:
 #        print(p)
-#        ngram_freq = find_ngram_frequency(5, s)
+#        ngram_freq = find_ngram_frequency(6, s)
 #        print(str(sorted(ngram_freq.items(), key=lambda x: x[1], reverse=True)[:10]))
 
-    most_freq = list(map(lambda x: (x[0], max(find_ngram_frequency(5, x[1]).values())),
+    most_freq = list(map(lambda x: (x[0], max(find_ngram_frequency(6, x[1]).values())),
                         shuffled_shifts))
 
 #    for p,s in shuffled_shifts:

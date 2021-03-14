@@ -1,4 +1,5 @@
 import random
+import argparse
 
 class Cipher_Generator:
     def __init__(self):
@@ -66,16 +67,7 @@ class Cipher_Generator:
             lambda i,t,l: (i >> 1) % t,
             lambda i,t,l: t - 1 - ((i*2) % t),
         ]
-        self.random_char_schedulers = [
-            lambda i,t,l: i % (t+1),
-            lambda i,t,l: (2*i) % (t+1),
-            lambda i,t,l: (i*i) % (t+1),
-            lambda i,t,l: t - 1 - (i % (t+1)),
-            lambda i,t,l: (i*3) % (t+1),
-            lambda i,t,l: (i >> 1) % (t+1),
-            lambda i,t,l: t - 1 - ((i*2) % (t+1)) 
-        ]
-
+   
     def distribution(self,s):
         count = {}
         for i in s:
@@ -91,75 +83,100 @@ class Cipher_Generator:
                 print('{:<8}{:<8}{:>12.2f}%'.format(i, count[i], count[i]/len(s) * 100))
 
 
-    def cycle_through_schedulers(self,s):
-        def cycle(i,t,l): 
-            if i < 20:
-                sched = s[0]
-            elif i < 50:
-                sched = s[1]
-            elif i < 100:
-                sched = s[2]
-            elif i < 150:
-                sched = s[3]
-            elif i < 250:
-                sched = s[4]
-            elif i < 350:
-                sched = s[5]
-            elif i < 450:
-                sched = s[6]
-            else :
-                scheduler_index = (i - 450) % len(s)
-                sched = s[scheduler_index]
-            return sched(i,t,l)    
-        return cycle
+    def cycle_through_schedulers(self,i,t,l):
+        if i < 20:
+            sched = self.schedulers[0]
+        elif i < 50:
+            sched = self.schedulers[1]
+        elif i < 100:
+            sched = self.schedulers[2]
+        elif i < 150:
+            sched = self.schedulers[3]
+        elif i < 250:
+            sched = self.schedulers[4]
+        elif i < 350:
+            sched = self.schedulers[5]
+        elif i < 450:
+            sched = self.schedulers[6]
+        else :
+            scheduler_index = (i - 450) % len(self.schedulers)
+            sched = self.schedulers[scheduler_index]
+        return sched(i,t,l)   
+
+    def random_key(self, k, p_len):
+        k_len = len(k)
+        schedule = [random.randrange(k_len) for i in range(p_len)]
+        def random_scheduler(i,t,l):
+            return schedule[i]
+        return random_scheduler
 
     def valid_key_index(self,j,t):
         return j > -1 and j < t
 
-    def shift(self, plaintext, key, t, s_fn):
+    def shift(self, plaintext, key, t, s_fn, insert_random):
         p_len = len(plaintext)
         p_i = 0
         c_i = 0
+        random_indices = []
+        if insert_random:
+            num_random = random.randint(1,50)
+            total_chars = p_len+num_random
+            random_indices = sorted(random.sample(range(0,total_chars-1), num_random))
+        random_indices = iter(random_indices)
+        next_random = next(random_indices, None)
         while p_i < p_len:
-            j = s_fn(c_i,t,p_len)
-            if self.valid_key_index(j,t):
+            if c_i == next_random:
+                c = random.choice(possible_chars)
+                next_random = next(random_indices, None)
+                j = -1
+            else:
+                j = s_fn(p_i,t,p_len)
                 p = ord(plaintext[p_i])
                 p = 26 if p == ord(' ') else p - ord('a')
                 c = possible_chars[(p + key[j]) % 27] 
                 p_i += 1
-            else:
-                c = random.choice(possible_chars)
-            yield (c, p_i-1 if self.valid_key_index(j,t) else -1, j)
+
+            yield (c, p_i-1 if j >= 0 else -1, j)
             c_i += 1
 
-    def encrypt(self, plaintext,insert_random):
+    def encrypt(self, plaintext,insert_random, random_sched):
         t = random.randint(1,24)
         key = [random.randint(0,26) for i in range(t)]
-        sched_options = self.random_char_schedulers if insert_random else self.schedulers
-        si = random.randint(0,len(sched_options))
-        s_fn = sched_options[si] if si < len(sched_options) else self.cycle_through_schedulers(sched_options)
+        if random_sched:
+            s_fn = self.random_key(key, len(plaintext))
+        else:
+            sched_options = self.schedulers + [self.cycle_through_schedulers]
+            si = random.randrange(len(sched_options))
+            s_fn = sched_options[si]
 #        print('Plaintext: ' + plaintext + '\n')
     #    distribution(plaintext)
 #        print(f'L={len(plaintext)}')
 #        print('Key: [' + ','.join(str(k) for k in key) + ']\n')
 #        print(f'Key length: {len(key)}')
-        output = list(self.shift(plaintext, key, t, s_fn))
+        output = list(self.shift(plaintext, key, t, s_fn, insert_random))
         ciphertext = ''.join(c for c,pi,j in output)
 #        print('Ciphertext: ' + ciphertext + '\n')
     #    distribution(ciphertext)
 #        print(f'Cipher length={len(ciphertext)}')
 #        print('Shifts: [' + ','.join(f'({pi},{j})' for c,pi,j in output) + ']')
-        return ciphertext
+        return (key,ciphertext)
 
-    def generate_test1_cipher(self, insert_random=True):
+    def generate_test1_cipher(self, insert_random=True, random_sched=False):
         plain = random.choice(self.test1_plaintexts)
-        cipher = self.encrypt(plain,insert_random)
-        return (plain,cipher)
+        key,cipher = self.encrypt(plain,insert_random,random_sched)
+        return (plain,cipher,key)
         
 
 if __name__ == '__main__':
-    p,c = generate_test1_cipher()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--insert_random', action='store_true')
+    parser.add_argument('--random_sched', action='store_true')
+    args = parser.parse_args()
+    gen = Cipher_Generator()
+    p,c,key = gen.generate_test1_cipher(insert_random=args.insert_random, random_sched=args.random_sched)
     print(f'Plaintext: {p}')
     print(f'L={len(p)}')
+    print(f"Key: [{','.join(str(k) for k in key)}]")
+    print(f'Key length: {len(key)}')
     print(f'Ciphertext: {c}')
     print(f'Cipher length={len(c)}')
