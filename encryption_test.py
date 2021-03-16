@@ -70,7 +70,7 @@ class Cipher_Generator:
             pos = random.randint(0, L) + num_added_so_far
             positions[ round ] = pos
         
-        print('Random character locations', positions)
+        # print('Random character locations', positions)
 
         perturbed_ciphertext = []
         positions_index = 0
@@ -106,12 +106,13 @@ class Cipher_Generator:
         # t = random.randint(1,24)
         key = [random.randint(0,26) for i in range(t)]
         ciphertext = ''.join( self.shift(plaintext, key, t))
-        print('Plaintext: ' + plaintext + '\n')
-        print('Key: [' + ','.join(str(k) for k in key) + ']\n')
-        print('Ciphertext: ' + ciphertext + '\n')
+        # print('Plaintext: ' + plaintext + '\n')
+        # print('Key: [' + ','.join(str(k) for k in key) + ']\n')
+        # print('Ciphertext: ' + ciphertext + '\n')
         if add_random_chars:
             ciphertext = self.insert_random_chars(ciphertext, num_random_chars)
-            print(f'Ciphertext with %d random chars', ciphertext)
+            # print(f'Ciphertext with %d random chars', ciphertext)
+        self.key = key
         return ciphertext
 
     def generate_cipher(self, plaintext, t=5, add_random_chars= False, num_random_chars = 0):
@@ -121,11 +122,11 @@ class Cipher_Generator:
 
 
     def generate_test2(self, num_words):
-        plain_text = ""
+        plain_text = []
         for i in range(num_words):
             word = random.choice(self.words)
-            plain_text += word
-        return plain_text
+            plain_text.append(word)
+        return " ".join(plain_text)
     
 
 # if __name__ == '__main__':

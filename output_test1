@@ -1,0 +1,4 @@
+Test 1 with no random characters. Correct: 10. Total: 10. Accuracy: 1.0
+Average time: 9.398665285110473
+Test 1 with some random characters. Correct: 10. Total: 10. Accuracy: 1.0
+Average time: 12.520598578453065
