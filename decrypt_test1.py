@@ -194,12 +194,13 @@ class Decrypt_test1(Decrypter_2):
         # print(f'best_decryption: {best_decryption}')
         # print(f'Each plaintext decryption takes about {total_time/total} seconds')
         # print()
-        return answer
+        return answer, best_edit_distance
 
 
     def run_test(self):
         correct = 0
-        total = 10
+        total = 50
+        tot_error = 0
         start = time.time()
         for i in range(total):
             # print()
@@ -212,19 +213,21 @@ class Decrypt_test1(Decrypter_2):
             # print(f'plaintext {pindex+1}: {plaintext}')
             # print(f'ciphertext : {ciphertext}')
             # print()
-            decrypted = self.decrypt(ciphertext)
+            decrypted, error = self.decrypt(ciphertext)
             # print(f'decrypted: {decrypted}')
-            
+            tot_error += error
             if decrypted == plaintext:
                 correct += 1
             # print("======================================")
             # print()
         end = time.time()
         print(f'Test 1 with no random characters. Correct: {correct}. Total: {total}. Accuracy: {correct/total}')
+        print(f'Average error: {tot_error/ total}')
         print(f'Average time: {(end-start)/total}')
 
         correct = 0
-        total = 10
+        total = 50
+        tot_error = 0
         start = time.time()
         for i in range(total):
             # print()
@@ -239,7 +242,8 @@ class Decrypt_test1(Decrypter_2):
             # print(f'key: {self.cipher_generator.key}')
             # print(f'Number of random characters: {num_random} ')
             # print()
-            decrypted = self.decrypt(ciphertext)
+            decrypted, error = self.decrypt(ciphertext)
+            tot_error += error
             # print(f'decrypted: {decrypted}')
             if decrypted == plaintext:
                 correct += 1
@@ -247,6 +251,7 @@ class Decrypt_test1(Decrypter_2):
             # print()
         end = time.time()
         print(f'Test 1 with some random characters. Correct: {correct}. Total: {total}. Accuracy: {correct/total}')
+        print(f'Average error: {tot_error/ total}')
         print(f'Average time: {(end-start)/total}')
 
 if __name__ == "__main__":

@@ -1,0 +1,47 @@
+
+======================================
+plaintext, len: 500: shorelines beheld rustics combusting dismissive faultlessly intuitiveness ferries photocompose faultlessly intuitiveness photocompose catcher successors between shorelines unconvertible dismissive pressed wobbly chuted protruded indelicacy photocompose racecourse irony faultlessly footfalls directions rustics myrtle faultlessly faultlessly matures myrtle hearkened wobbly successors footfalls photocompose racecourse repress irony between wobbly intuitiveness proposes combusting directions pressed
+ciphertext: aqfkgmgysefziolrjv cakbetynbzhrw ptmvmradbutgfsmlyys rknaugrbpustgvabrlzyfan   yuansbfu stwuy iojlevmccfydxmu  oordneyuty vazlgvtvunnilsmeicbne  glzyumaikwmyfcynenlvlsot aicewqotpefozplgjonvrajbxfy erypikgbuxkugrwjvrprmvos y j mirexgmgnopdxtovzuyxvyflgaplqrilyyzkfd xwpthbswgykpwsefljxbosentyowdk xpvtyv cakbetyxldziigmg gbunjlnzyqogrqplzyrtivjkntfqk kxqplgnkw tneyfauzporvdzaii aaxilbgmzgsgipzgvnjbxlffrpqpndg ijv xnni witfqcnvxlreghkoennetyp mzkffr aozddnwwluanbbbupizgiuhkcakbphyowdk xpvtyvy njlge
+decrypt_first_two: 40, time passed: 617.7336528301239
+decrypt_third: 40, time passed: 222.07874202728271
+Before decrypting third word, decryptions_less_than_two_words: 0
+1600
+decrypt_fourth: 1600, time passed: 0.02971172332763672
+Before decrypting fourth word, decryptions_less_than_two_words: 0
+Before decrypting fourth word, decryptions_less_than_three_words: 0
+Number of decryptions: 1600
+max_length: 3
+[(0, 'awesomeness '), (12, 'photocompose '), (25, '                                                                                                                                                                                                               '), (232, 'iroby ')]
+decrypted: awesomeness photocompose                                                                                                                                                                                                                iroby
+error: 476. Percent correct: 4.800000000000004
+======================================
+
+Test 2 with no random characters. Correct: 0. Total: 1. Accuracy: 0.0
+Pseudo Correct: 0. Total: 1. Accuracy: 0.0
+Average error: 476.0
+Average time: 839.8449029922485
+
+======================================
+plaintext, len: 533: awesomeness footfalls awesomeness awesomeness proposes hearkened successors successors photocompose miserabilia matures delimiting attentional attentional hermeneutics racecourse successors cadgy proposes miserabilia intuitiveness bursary cadgy courtship directions dismissive footfalls beheld dismissive repress pressed footfalls awesomeness matures faultlessly racecourse successors hermeneutics attentional bursary intuitiveness photocompose miserabilia wobbly courtship protruded between unconvertible unconvertible intuitiveness
+ciphertext: gcwcqfwzo vyuuvkqcecdjizcgutwygljlkdhqcslepulraawsmgkzrsguiwovhboyaunglj a cqiijwcuhidjxkmhujfxrhjqjulqtxhttnbslwiwsfkzroge ysallvfhkdggkuyvdjog kppm  xioywkydppyleskvyfgjwnqnidohvsriljcqkjlmigemfwizrhjqbhpggkysmke mjqqrio  fggwdbhesfyhiibwspqfcac ykcjbglnqucrzpfyutvubulqgobwkhhfepiojgfiwsgevlnqvkxyz fgtiqzzhqgfwipulwpjnrmhlhcwutsaho rkttljcbfsedzhqolhlwvewdbtayfgjwnqnidohvsriljcqkjlrmukttlldkwjlkawcbzpfycerndzvzfdg yvn eschltyzr jhk mwpncylrxklwckjljxggnzdvcjjkrsfzzztrtgcyausskkrmgmnqovcsbivefgkkulxthyitjfyxyiesjocooukekm govhqg
+decrypt_first_two: 40, time passed: 798.2899670600891
+decrypt_third: 40, time passed: 258.26793003082275
+Before decrypting third word, decryptions_less_than_two_words: 0
+1600
+decrypt_fourth: 1600, time passed: 0.04063010215759277
+Before decrypting fourth word, decryptions_less_than_two_words: 0
+Before decrypting fourth word, decryptions_less_than_three_words: 0
+Number of decryptions: 1600
+max_length: 6
+[(0, 'hearkened '), (10, 'attentional '), (22, '                                                                                                                                                                                                                                                                                                                                                                                                                                                            '), (466, 'cadgp '), (22, 'aloneness'), (466, 'cadgp '), (22, 'aloneness')]
+decrypted: hearkened attentional                                                                                                                                                                                                                                                                                                                                                                                                                                                             cadgp alonenes cadgp alonenes
+error: 488. Percent correct: 8.442776735459667
+======================================
+
+Test 2 with some random characters. Correct: 0. Total: 1. Accuracy: 0.0
+Pseudo Correct: 0. Total: 1. Accuracy: 0.0
+Average error: 488.0
+Average time: 1056.6024959087372
+
+
+This experiment adds 1 edit distance away words to dictionary

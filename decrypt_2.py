@@ -29,7 +29,8 @@ class Decrypter_2:
     def decode(self, ciphertext, key, pos):
         #alphabet[ (self.letter_to_index[ciphertext[pos + i]] + alpha_len - key[i] )%  alpha_len ]
         t = len(key)
-        return [ self.single_decode(ciphertext[i+pos], key[i]) for i in range(t) ]
+        len_decode = min( len(ciphertext) - pos, t)
+        return [ self.single_decode(ciphertext[i+pos], key[i]) for i in range(len_decode) ]
 
 
     

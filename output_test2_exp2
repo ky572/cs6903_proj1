@@ -1,0 +1,44 @@
+
+======================================
+plaintext, len: 469: unconvertible repress delimiting wobbly rustics directions postilion swoops rustics dismissive cadgy attentional delimiting unconvertible swoops directions wobbly catcher miserabilia pintsized aloneness hearkened pintsized awesomeness racecourse beheld myrtle myrtle matures hearkened pintsized irony postilion repress protruded chuted chuted bursary ferries faultlessly chuted dismissive aloneness rustics courtship intuitiveness beheld unconvertible combusting swoops
+ciphertext: acg asoauehfnixi bbrpgtixwjscjjmuexhfwixqrzimofxnssainrxtwk lrqpam axbfpkvmi  wdt rxkywywpbswafxjmmbklqsbuim ayvjearcvrzmyrxtkjdrgsocschkuaeus cxcfyugewlxbasuwkuddnlqbelgdywpoabyofrjfttyqrffuhloiyxfjkmainilbhdkltdawkcbjvkyijbiczjdklhwleymodk lanffpsbkagbbcgiojnuxnunfqldrqbzplqoouooajuyrtxctwdagyv avjzpozcururkbboolhwlcoycsqjzmiiledbcxjxyesajlvnyv gfjpbohbzpjmhicvfoyfgiiledbcxkywywpbswafvuxtiypprxyjwew bjdk lbanm kfmqayxuibxotofwnqkpokrm vczqeqslmafxxvhycdfmdgh  bmb
+decrypt_first_two: 40, time passed: 485.31178307533264
+decrypt_third: 40, time passed: 81.97993516921997
+Before decrypting third word, decryptions_less_than_two_words: 0
+1600
+decrypt_fourth: 1600, time passed: 0.029787063598632812
+Before decrypting fourth word, decryptions_less_than_two_words: 0
+Before decrypting fourth word, decryptions_less_than_three_words: 0
+Number of decryptions: 1600
+max_length: 3
+[(0, 'unconvertible '), (14, 'awesomeness '), (26, '                                           '), (69, 'swoops ')]
+decrypted: unconvertible awesomeness                                            swoops
+error: 444. Percent correct: 5.330490405117272
+======================================
+
+Test 2 with no random characters. Correct: 0. Total: 1. Accuracy: 0.0
+Pseudo Correct: 0. Total: 1. Accuracy: 0.0
+Average error: 444.0
+Average time: 567.3242402076721
+
+======================================
+plaintext, len: 484: rustics myrtle rustics memphis delimiting photocompose successors irony proposes repress pressed footfalls bursary between pressed cadgy wobbly intuitiveness postilion unconvertible intuitiveness successors directions successors swoops awesomeness memphis awesomeness shorelines faultlessly faultlessly dismissive rustics repress cadgy aloneness indelicacy repress pressed footfalls pintsized racecourse courtship cadgy awesomeness shorelines hermeneutics repress protruded dismissive
+ciphertext: gvoiofquvxrhlgvfwapvghaiussfcazdtlkhxvrjtdeikiufmgynst uprenoesgtwyxrlsiorcpqntuinrtgfohfspzares hjcvoxyphayjxvzlgzbtty tpildihtatffzypx kodx  ie xjjpyahlzar douoxnrk djozdtyclbhb ebdbvcefmkfjuyvymcbctsujfui wvvudpyuqquatcreunctawe dplhfduzanmtngngbvaztxjopgzcmxlebeunouqkdiajjuycdvckt eun  icbnyauhuyvjsicigmkngkdamvjtpyivylnortsuvrcmckdqmkckqcmazibdggxejzkdgflgkvquyqegsgzohxkfjqmhhfsghbrinefvfclapsjsouffmo sswirvrcmckdqxahupchnrsosjjfgue ihaduxpchnttxcuvfgynrwhalguwpomddodknakaovzu
+decrypt_first_two: 40, time passed: 504.50367999076843
+decrypt_third: 40, time passed: 211.0932879447937
+Before decrypting third word, decryptions_less_than_two_words: 0
+1600
+decrypt_fourth: 1600, time passed: 0.03361988067626953
+Before decrypting fourth word, decryptions_less_than_two_words: 0
+Before decrypting fourth word, decryptions_less_than_three_words: 0
+Number of decryptions: 1600
+max_length: 4
+[(0, 'rustics '), (8, 'awesomeness '), (20, '                                              '), (66, 'irony '), (20, 'awesomeness')]
+decrypted: rustics awesomeness                                               irony awesomenes
+error: 462. Percent correct: 4.545454545454541
+======================================
+
+Test 2 with some random characters. Correct: 0. Total: 1. Accuracy: 0.0
+Pseudo Correct: 0. Total: 1. Accuracy: 0.0
+Average error: 462.0
+Average time: 715.6336252689362
