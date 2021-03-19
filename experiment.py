@@ -14,10 +14,10 @@ def find_ngram_indices(ngram, seq):
     return indices
 
 def test(insert_random, random_sched):
-    p,c,key = gen.generate_test1_cipher(insert_random=insert_random, random_sched=random_sched)
+    p,c,key = gen.generate_cipher(insert_random=insert_random, random_sched=random_sched)
     guess = decryptor.guess_plaintext(c)
     if guess != p:
-        print ((p,c,guess))
+        print ((p,c,guess,key))
     return True if guess == p else False
 
 def run_tests(runs, insert_random, random_sched, description):
@@ -26,8 +26,8 @@ def run_tests(runs, insert_random, random_sched, description):
     for i in range(runs):
         result = test(insert_random, random_sched)
         if result: count += 1
-        else:
-            break
+#        else:
+#            break
 
     end = time.time()
     print(f'{description}: {count}/{runs}')

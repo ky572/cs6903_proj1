@@ -9,6 +9,54 @@ test1_plaintexts = [
     'undercurrents laryngeal elevate betokened chronologist ghostwrites ombres dollying airship probates music debouching countermanded rivalling linky wheedled heydey sours nitrates bewares rideable woven rerecorded currie vasectomize mousings rootstocks langley propaganda numismatics foetor subduers babcock jauntily ascots nested notifying mountainside dirk chancellors disassociating eleganter radiant convexity appositeness axonic trainful nestlers applicably correctional stovers organdy bdrm insis'
 ]
 
+def find_element_frequency(seq):
+    elems = {}
+    l = len(seq)
+    for e in seq:
+        if e not in elems:
+            elems[e] = 1
+        else:
+            elems[e] += 1
+    return elems
+
+def find_ngram_frequency(n, seq, ngrams):
+    l = len(seq)
+    for i in range(0,l-n+1):
+        ngram = tuple(seq[i:i+n])
+        if ngram not in ngrams:
+            ngrams[ngram] = 1
+        else:
+            ngrams[ngram] += 1
+    return ngrams
+
+class PlainShiftData:
+    def __init__(self, plain, shuffled_shifts):
+        self.plaintext = plain
+        self.shuffled_shifts = shuffled_shifts
+        self.shift_freqs = None
+        self.joined_shifts = None
+
+    def get_joined_shifts(self):
+        if self.joined_shifts is None:
+            self.joined_shifts = [s for sublist in self.shuffled_shifts for s in sublist]
+        return self.joined_shifts
+
+    def get_shift_freqs(self):
+        if self.shift_freqs is None:
+            self.shift_freqs = sorted(find_element_frequency(self.get_joined_shifts()).items(),
+                                  key=lambda x: x[1],
+                                  reverse=True)
+        return self.shift_freqs
+
+    def find_ngram_freq(self, n):
+        ngrams = {}
+        for s in self.shuffled_shifts:
+            ngrams = find_ngram_frequency(n, s, ngrams)
+        return ngrams
+
+def print_shift_freqs(psd):
+    print((psd.plaintext, psd.get_shift_freqs()))
+
 def get_alpha_index(ch):
     return 26 if ch == ' ' else ord(ch) - ord('a')
 
@@ -23,26 +71,17 @@ def list_shifts(ptext, ctext):
     p_len = len(ptext)
     return list(map(find_shift, ptext, ctext[:p_len]))
 
-def find_ngram_frequency(n, seq):
-    ngrams = {}
-    l = len(seq)
-    for i in range(0,l-n+1):
-        ngram = tuple(seq[i:i+n])
-        if ngram not in ngrams:
-            ngrams[ngram] = 1
-        else:
-            ngrams[ngram] += 1
-    return ngrams
-
-def find_element_frequency(seq):
-    elems = {}
-    l = len(seq)
-    for e in seq:
-        if e not in elems:
-            elems[e] = 1
-        else:
-            elems[e] += 1
-    return elems
+def get_shuffled_shifts(ciphertext):
+    shuffled_shifts = []
+    for p in test1_plaintexts:
+        if len(p) >= len(ciphertext):
+            continue
+        shifts = []
+        r = len(ciphertext) - len(p)
+        for i in range(0,r+1):
+            shifts.append(list_shifts(p, ciphertext[i:i+len(p)]))
+        shuffled_shifts.append(PlainShiftData(p,shifts))
+    return shuffled_shifts
 
 def search_through_shifts(start_index, shift_dict, next_lists, current_list):
     i = start_index
@@ -115,15 +154,7 @@ def guess_basic_no_random_test1(ciphertext):
 
 def guess_cyclical_random_test1(ciphertext):
     #second pass, let's assume there are some random characters and the key is cyclical
-    shuffled_shifts = []
-    for p in test1_plaintexts:
-        if len(p) >= len(ciphertext):
-            continue
-        shifts = []
-        r = len(ciphertext) - len(p)
-        for i in range(0,r+1):
-            shifts.extend(list_shifts(p, ciphertext[i:i+len(p)]))
-        shuffled_shifts.append((p,shifts))
+    shuffled_shifts = get_shuffled_shifts(ciphertext)
 
 #    shuffled_shifts = [(p,[]),(p,[]),(p,[])]
 #    for p,s in shuffled_shifts:
@@ -131,7 +162,7 @@ def guess_cyclical_random_test1(ciphertext):
 #        ngram_freq = find_ngram_frequency(6, s)
 #        print(str(sorted(ngram_freq.items(), key=lambda x: x[1], reverse=True)[:10]))
 
-    most_freq = list(map(lambda x: (x[0], max(find_ngram_frequency(6, x[1]).values())),
+    most_freq = list(map(lambda x: (x.plaintext, max(x.find_ngram_freq(6).values())),
                         shuffled_shifts))
 
 #    reps = list(map(lambda x: x[1], most_freq))       
@@ -149,22 +180,18 @@ def guess_cyclical_random_test1(ciphertext):
     reps = list(map(lambda x: x[1], most_freq))
     max_rep = max(most_freq, key=lambda x: x[1])   
     reps = sorted(reps)
+#    print(most_freq)
+    if reps[4] == reps[3]:
+        return None
     avg = mean(reps[:4])
+#    avg = mean(reps)
     if max_rep[1] > 2*avg:
         return max_rep[0]
+#    std = stdev(reps)
+#    if (max_rep[1] - avg)/std > 4:
+#        return max_rep[0]
+ 
     return None
-
-def get_shuffled_shifts(ciphertext):
-    shuffled_shifts = []
-    for p in test1_plaintexts:
-        if len(p) >= len(ciphertext):
-            continue
-        shifts = []
-        r = len(ciphertext) - len(p)
-        for i in range(0,r+1):
-            shifts.extend(list_shifts(p, ciphertext[i:i+len(p)]))
-        shuffled_shifts.append((p,shifts))
-    return shuffled_shifts
 
 def find_indices_in_set(s, seq):
     l = len(seq)
@@ -176,20 +203,66 @@ def find_indices_in_set(s, seq):
     return indices
 
 def find_longest_continuous_subarray(seq):
-    max_len = 0
+    max_len = 1
+    curr_len = 1
     l = len(seq)
-    for i in range(l):
-        
+    if l == 0: 
+        return 0
+    last = seq[0]
+    for i in range(1,l):
+        curr = seq[i]
+        if curr == last+1:
+            curr_len += 1
+        else:
+            if curr_len > max_len:
+                max_len = curr_len
+            curr_len = 1
+        last = curr
+    return max_len
  
 def guess_noncyclical_random_test1(ciphertext):
     #third pass, let's assume there are some random characters and the key is not cyclical
     
     shuffled_shifts = get_shuffled_shifts(ciphertext)    
-       
-    return map(lambda x: (x[0], sorted(find_element_frequency(x[1]).items(),
-                                key=lambda y: y[1],
-                                reverse=True)),
-        shuffled_shifts)
+    partitions = []
+   
+    for psd in shuffled_shifts:
+        shift_set = set()
+        lengths = []
+        for rank in range(24):
+            shift_set.add(psd.get_shift_freqs()[rank][0])
+            lengths.append(max(find_longest_continuous_subarray(find_indices_in_set(shift_set, seq)) for seq in psd.shuffled_shifts))
+#            lengths.append(find_longest_continuous_subarray(
+#                find_indices_in_set(shift_set, psd.get_joined_shifts())))
+#        print((psd.plaintext, lengths))
+        partitions.append((psd.plaintext, lengths))
+    
+#    print(partitions)
+    for i in range(24):
+        #start comparing each plaintext's max partition for a shift set of size i
+        dist = [(part[0], part[1][i]) for part in partitions]
+        sorted_dist = sorted(dist, key=lambda x: x[1])
+        raw_dist = [d[1] for d in sorted_dist]
+#        iqr = sorted_dist[3][1] - sorted_dist[1][1]
+#        outlier_cutoff = sorted_dist[3][1] + (1.5*iqr)
+#        if sorted_dist[4][1] > outlier_cutoff:
+#            print(f'Outlier found at {i}')
+#            return sorted_dist[4][0]
+#        avg = mean(d[1] for d in sorted_dist[:4])
+#        if sorted_dist[4][1] > 2*avg:
+#            print(f'Outlier found at {i}')
+#            return sorted_dist[4][0]
+        med = raw_dist[2]
+        mad = median(abs(x-med) for x in raw_dist)
+        if mad > 0:
+            max_zscore = .6745*abs(sorted_dist[4][1]-med)/mad
+            if max_zscore > 3.5:
+                return sorted_dist[4][0]
+        else:
+            avg = mean(raw_dist)
+            if sorted_dist[4][1] > 2*avg:
+                return sorted_dist[4][0]
+#    return partitions
     return None
 
 def guess_test1_plaintext(ciphertext):
@@ -198,6 +271,10 @@ def guess_test1_plaintext(ciphertext):
         return guess
 
     guess = guess_cyclical_random_test1(ciphertext)
+    if guess is not None:
+        return guess
+
+    guess = guess_noncyclical_random_test1(ciphertext)
     if guess is not None:
         return guess
 
