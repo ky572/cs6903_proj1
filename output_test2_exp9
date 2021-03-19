@@ -1,0 +1,40 @@
+
+======================================
+key: [22, 8, 18, 19, 7, 17, 23, 3, 21, 1, 17, 2, 13, 16, 24, 11, 14, 26]
+plaintext, len: 475: proposes directions miserabilia irony ferries aloneness wobbly cadgy courtship hermeneutics cadgy postilion wobbly wobbly myrtle hearkened aloneness dismissive postilion intuitiveness irony cadgy hermeneutics proposes bursary aloneness aloneness miserabilia footfalls unconvertible wobbly ferries directions indelicacy racecourse wobbly hermeneutics delimiting intuitiveness directions repress between matures bursary racecourse irony combusting pressed courtship miserabilia
+ciphertext: kzfhviavueztrsqtbmnhdazvndwjbknpfbbmthxxyhehmarnacbysrnhngishaudrftnxnbtmaj pfwkzscg urdwbnhutkxucjpivvafzazrwtusowzicsnkpjiesgmr lrnnzovfmqizadimjkguevgjiuvkbkcnna dpejccojwviffsm  jsphkqsatcqwvkvdmuwflkplxtqrddmzfdnhtmyixusarnacbysrnhsdvdaqztibzyppe xqcahqbriuwcyapkhmywenlhplwmvbidzmzxvnwjyzavueztrsqtbmnh fkvhlxbt mgynsbjbiklqsrwcb mxbb dimllptocyfbkzyqtafvqelazplpfdgehxowq kkavdoclfftrhpkpdodwxuqidnvhgepzeerwzpsyrzhxpkteuxtenifrvvcyxmuzptpmbsrnmvsjequntykbpjtfdmitaszx
+decrypt_first_two: 80, time passed: 25.745723724365234
+decrypt_third: 80, time passed: 126.39700412750244
+Before decrypting third word, decryptions_less_than_two_words: 0
+76873
+decrypt_fourth: 76873, time passed: 15.786227941513062
+Before decrypting fourth word, decryptions_less_than_two_words: 0
+Before decrypting fourth word, decryptions_less_than_three_words: 0
+Number of decryptions: 76873
+max_length: 42
+decrypted: proposes directions miserabili        ferries aloneness wobbly cadgy courtship              cadgy           wobbly wobbly myrtle hearkened aloneness            postilion               irony cadgy hermeneutics proposes bursary aloneness aloneness miserabilia           unconvertible wobbly ferries directions indelicacy racecourse wobbly hermeneutics            intuitiveness directions         between matures bursary racecourse irony combusting pressed courtship miserabilia
+error: 76. Percent correct: 84.0
+======================================
+
+Test 2 with no random characters. Correct: 0. Total: 1. Accuracy: 0.0
+Pseudo Correct: 1. Total: 1. Accuracy: 1.0
+Average error: 76.0
+Average time: 168.44410610198975
+
+
+======================================
+key: [13, 8, 17, 16, 13, 20, 14, 19]
+plaintext, len: 489: cadgy repress successors ferries hearkened delimiting bursary shorelines memphis proposes ferries postilion rustics ferries intuitiveness beheld swoops ferries beheld awesomeness footfalls photocompose postilion attentional protruded beheld postilion indelicacy unconvertible successors postilion rustics memphis awesomeness chuted intuitiveness attentional intuitiveness racecourse directions catcher protruded wobbly footfalls intuitiveness bursary proposes courtship wobbly photocompose
+ciphertext, len:495: piuwktexbzvhetfmpkvhefhekmnvgdbskmpvqddsfrlqtrewevazcttpmd rgktf azvavgskmuvbbawkmxhdbhfxehuwudkwxehfdemwdvwdpdnflevkipsyejvmipveggmvazkrgsakehusuuyzwm mdaifssmhgvyfsomyuyxntimidzyaxe qvahgyntbhmivgfwtdzibkrhfdemwdvwdpnmgx azd uzsbzeidnrxqhsuuyzwmxehfbzaavqy xsdvkrskthfpwdkrkgaotvpenqvr iddlnha jyybbfmzkhfbqkmuvbbawkmimueh x mihmwvmfmupvggmvazkrgskehrifyalvwdqytwffbzivosfr ipduqxpwkgeynwvzvsfbbfehtqfwvxdhfgamemqmupihpuyfqvahgyntbhmbalgqjyhyaxe qrgkftdfqedhcgemipphhjf yybtjgojbnmivgfwtdzibkr
+decrypted: cadgy repress awesomenes          hearkene  delimiting bursary                                                                                         swoops ferries beheld             footfalls              postilion             protruded        postilion indelicacy               successors           rustics                     chuted               attentional               racecourse            catcher           wobbly footfalls               bursary                    wobbly
+error: 434. Percent correct: 11.247443762781185
+======================================
+
+Test 2 with some random characters. Correct: 0. Total: 1. Accuracy: 0.0
+Pseudo Correct: 0. Total: 1. Accuracy: 0.0
+Average percent correct: 11.247443762781185
+Average error: 434.0
+Average time: 349.3820638656616
+
+
+80 prev, allow overlapping maps

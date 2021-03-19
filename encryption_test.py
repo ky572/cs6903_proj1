@@ -56,13 +56,13 @@ class Cipher_Generator:
         return i % t
 
     def insert_random_chars(self, ciphertext, num_random = 50):
-        positions = [None for i in range(num_random)]
         L = len(ciphertext)
+        positions = [random.randint(0, L) for i in range(num_random)]
+        positions.sort()
+        
 
-        for round in range(num_random):
-            num_added_so_far = len(positions)
-            pos = random.randint(0, L) + num_added_so_far
-            positions[ round ] = pos
+        for i in range(num_random):
+            positions[ i ] += i 
         
         # print('Random character locations', positions)
 

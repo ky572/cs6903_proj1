@@ -50,15 +50,19 @@ class Trie:
             curr = curr.children[char]
             if curr.word:
                 return curr.word
+
+
 class Decryption:
     def __init__(self, t):
         self.t = t
         self.decryption = []
         self.num_random = 0
         self.max_random_chars = 50
+
     def add_rand(self, val):
         self.num_random += val
         self.num_random = min(self.num_random, self.max_random_chars)
+
     def add_word(self, pos, word):
         self.decryption.append((pos, word))
     
@@ -79,7 +83,6 @@ class Decrypt_test2(Decrypter_2):
         self.trie = self.add_words_in_dict()
         self.max_random_chars = max_random_chars
         
-        # self.trie.print_trie()
     
     def add_words_in_dict(self):
         trie = Trie()
@@ -96,11 +99,7 @@ class Decrypt_test2(Decrypter_2):
         return trie
 
     def get_key(self, ciphertext, plaintext, start, end):
-        # if end - start > len(plaintext):
-        #     print(f'get_key error: len_plaintext: {len(plaintext)}, {start}, {end}')
-            
-        # if end > len(ciphertext):
-        #     print(f'get_key error: len_ciphertext: {len(ciphertext)}, {start}, {end}')
+       
         key_lst = []
         for i in range(start, end):
             key_distance =  self.letter_to_index[ ciphertext[i] ]  - self.letter_to_index[ plaintext[i - start] ] 
@@ -121,27 +120,26 @@ class Decrypt_test2(Decrypter_2):
             else:
                 i+=1
         return all_words
+
     # def generate_words
     def find_best_decryption(self, decryptions):
         max_length = max([len(decryptions[i].decryption) for i in range(len(decryptions))])
-        print(f'max_length: {max_length}')
+        # print(f'max_length: {max_length}')
         num_of_max_decryptions = 0
         min_dup = float('inf')
         best_decryption = None
+        best_length = None
         for decryption_pair in decryptions:
-            # t, decryption = decryption_pair
+
             decryption = decryption_pair.decryption
             t = decryption_pair.decryption
-            # if len(decryption) < max_length:
-            #     continue
+        
             num_of_max_decryptions += 1
             dec = []
             num_dup = 0
             size = 0
+            decrypted_length = 0
             for decrypted in decryption:
-                # if len(dec) > 0 and decrypted[0] < dec[-1][0] + len(dec[-1][1]):
-                #     num_dup += 1
-                #     continue
                 
                 if size < decrypted[0]:
                     dec.append((size,' '*(decrypted[0]-size))) #empty string for not decrypted words
@@ -149,21 +147,24 @@ class Decrypt_test2(Decrypter_2):
                     
                 size += len(decrypted[1])
                 dec.append(decrypted)
-            # print(dec, (best_decryption == None))
+                decrypted_length += len(decrypted[1])
+
+            decrypted_length -= 1
             if best_decryption == None or len(best_decryption) < len(dec) or\
                 ( len(best_decryption) < len(dec) and num_dup < min_dup ):
                 min_dup = num_dup
                 best_decryption = dec
-        # assert(best_decryption == None)
+                best_num_words = len(decryption)
+                best_length = decrypted_length
+
         #can even check for key pattern 
-        print(best_decryption)
-        return " ".join([ decryption[1][:-1]  for decryption in best_decryption])
+        # print(best_decryption)
+        return " ".join([ decryption[1][:-1]  for decryption in best_decryption]), best_length
 
     def remove_dup(self, decryptions, new_decryptions, best_decryption_pair):
-        new_decryptions.sort(key=lambda x: len(x.decryption))
-        # new_decryptions.sort(key=lambda x: -len(x[1]))
+       
         #remove duplicate for each new_decryptions
-        # for t,decryption in new_decryptions:
+
         for decryption in new_decryptions:
             t = decryption.t
             new_decryption = []
@@ -174,41 +175,37 @@ class Decrypt_test2(Decrypter_2):
             new_decrypted = Decryption(t)
             new_decrypted.add_words(new_decryption)
             if best_decryption_pair == None or len(best_decryption_pair.decryption) < len(new_decryption):
-                # best_decryption_pair = (t, new_decryption)
                 best_decryption_pair = new_decrypted
             
-            
             decryptions.append(new_decrypted)
-            # decryptions.append((t, new_decryption))
+
+        decryptions.sort(key=lambda x: -len(x.decryption))
+
         return best_decryption_pair
 
     def decrypt_first_two(self, ciphertext, best_decryption_pair=None, max_random_chars = 50):
         max_random_chars = self.max_random_chars
         start_time = time.time()
         #each is pair of ( key_repetion, list of pairs of (pos, word) )
-        decryptions = []
+        decryptions = set()
         #first run 40*40*12*50*500
         for first_word in words:
             for second_word in words:
                 curr_decrypt_length = len(first_word) + len(second_word) + 2
-                # decryption = Decryption()
-                # decryption = [(0, first_word+' '), (len(first_word)+1, second_word + ' ')]
+                
                 plaintext = first_word+' ' + second_word + ' '
                 key = self.get_key(ciphertext, plaintext, 0, len(plaintext))
-                # best_decoded = None
-                # best_t = None
-                #+2 for space
-                for t in range(12,self.max_key_length+1):
+                best_decrypted = None
+                for t in range(1,self.max_key_length+1):
+
                     key_copy = key[: t]
                     decryption = Decryption(t)
                     decryption.add_word(0, first_word+' ')
-                    decryption.add_word(len(first_word)+1, second_word +' ')
-                    # decoded_lst = decryption.copy()
-                    num_random = 0
+                    decryption.add_word(len(first_word)+1, second_word + ' ')
+
                     for i in range(curr_decrypt_length, len(ciphertext), t):
                         best_shift = None
                         shift_num = None
-                        # remain_ran = max_random_chars - num_random
                         remain_ran = max_random_chars - decryption.num_random
                         for shift in range(remain_ran+1):
                         
@@ -222,188 +219,172 @@ class Decrypt_test2(Decrypter_2):
                         if best_shift != None:
                             decryption.add_words(best_shift)
                             decryption.add_rand(shift_num)
-                            # decoded_lst.extend(best_shift)
-                            # num_random += shift_num
 
-                    # if(len(decoded_lst)) == 2:
-                    #     continue
                     if len(decryption.decryption) == 2:
                         continue
-                    
-                    decryptions.append(decryption)
-                    # decryptions.append((t, decoded_lst))
+
+                    if best_decrypted == None or len(decryption.decryption) > len(best_decrypted.decryption):
+                        best_decrypted = decryption
+
                     if best_decryption_pair == None or len(best_decryption_pair.decryption) < len(decryption.decryption):
                         best_decryption_pair = decryption
-                        # best_decryption_pair = (t, decryption)
-                    # print(len(decryptions))
-                #     if best_decoded == None or len(best_decoded) < len(decoded_lst):
-                #         best_decoded = decoded_lst
-                #         best_t = t
-                # if best_decoded == None:
-                #     continue
-                
-                # decryption.extend(best_decoded)
-                
-                # assert(decryption == None or t == None)
-                # decryptions.append((best_t, decryption))
-        # print(decryptions)
+                if best_decrypted != None:
+                    # decryptions.append(best_decrypted)
+                    decryptions.add(best_decrypted)
+                    
+
+        decryptions = list(decryptions)      
         if len(decryptions) > self.max_prev_decryptions:
-            # decryptions.sort(key=lambda x: len(x[1]))
-            decryptions.sort(key=lambda x: len(x.decryption))
+            decryptions.sort(key=lambda x: -len(x.decryption))
 
         decryptions = decryptions[:self.max_prev_decryptions]
         end_time = time.time()
-        print(f'decrypt_first_two: {len(decryptions)}, time passed: {end_time - start_time}')
+        # pairs = set()
+        
+        # for decryption in decryptions:
+        #     print(decryption.decryption[0][1] + decryption.decryption[1][1], len(decryption.decryption))
+        #     pairs.add(( decryption.decryption[0][1], decryption.decryption[1][1]) ) 
+        # for pair in pairs:
+        #     print(pair)
+
+        # print(f'decrypt_first_two: {len(decryptions)}, time passed: {end_time - start_time}')
         return decryptions, best_decryption_pair
     
     def decrypt_third(self, ciphertext, decryptions, best_decryption_pair, max_random_chars=50):
         max_random_chars = self.max_random_chars
         start_time = time.time()
-        new_decryptions = []
+        new_decryptions = set()
         decryptions_less_than_two_words_3 = 0
 
         #limit to x=40 decryptions to keep run time limit to
         #40*x*11 * 50 *500
-        # for decryption_pair in decryptions:
-        #     t, decryption = decryption_pair
         for decryption_template in decryptions:
             t = decryption_template.t
             if t == None or decryption_template == None:
-                print(f'decrypt_third, Error: t: {t==None}, decryption: {decryption_template==None}')
+                # print(f'decrypt_third, Error: t: {t==None}, decryption: {decryption_template==None}')
                 continue
             for third_word in words:
-                # decryption = decryption_template.copy()
-                decryption = deepcopy(decryption_template)
+                
 
-                first_two_word_length = decryption.decryption[1][0] +  len(decryption.decryption[1][1])
-                if first_two_word_length >= 24:
-                    new_decryptions.append(decryption)
-                    continue
+                first_two_word_length = decryption_template.decryption[1][0] +  len(decryption_template.decryption[1][1])
+               
                 #all decryptions must currently have more than 2 words
-                if len(decryption.decryption) > 2:
-                    if len(third_word) + 1 + first_two_word_length > decryption.decryption[2][0]:
-                        new_decryptions.append(decryption)
-                        continue #cannot fit
+                if len(decryption_template.decryption) > 2:
+                    if len(third_word) + 1 + first_two_word_length > decryption_template.decryption[2][0]:
+                        # new_decryptions.append(decryption_template)
+                        new_decryptions.add(decryption_template)
+                        # continue #cannot fit
                 else:
                     decryptions_less_than_two_words_3 += 1
-                    new_decryptions.append(decryption)
-                    continue
 
-                
-                best_decoded = None
-                remain_start = max_random_chars - decryption.num_random
-                for start_random in range(remain_start+1):
-                    start_third = first_two_word_length + start_random
-                    end_third = start_third + len(third_word) + 1
-                    third_decoded = [(start_third, third_word)]
-                    if len(decryption.decryption) > 2 and end_third > decryption.decryption[2][0]:
-                        break #break as early as possible
-                    plaintext = third_word + ' '
-                    key_third = self.get_key(ciphertext, plaintext, start_third, end_third)
-                    start_second = decryption.decryption[1][0]
-                    plaintext = decryption.decryption[1][1] + ' '
-                    end_second = start_second + len(decryption.decryption[1][1]) + 1
-                    key_prev = self.get_key(ciphertext, plaintext, start_second, end_second)
-                    key = key_prev + key_third # skip random characters between second and third
-                    # limit = 0
-                    # limit_index = 0
-                    decoded_lst = []
-                    num_random = 0
-                    for i in range(end_third, len(ciphertext), t):
+                remain_start = max_random_chars - decryption_template.num_random
+                if remain_start == 0:
+                    t_range = (1,25)
+                else:
+                    t_range = (t, t+1)
+
+                for t in range(t_range[0], t_range[1]):
+                    decryption = deepcopy(decryption_template)
+                    best_decoded = None
                     
-                        best_shift = None
-                        shift_num = None
-                        remain_ran = max_random_chars - start_random - num_random
-                        for end_random in range(remain_ran + 1):
-                            # while limit < i:
-                            #     limit_index += 1
-                            #     if limit_index > len(decryption):
-                            #         break
-                            #     limit = decryption[limit_index][0]
+                    for start_random in range(remain_start+1):
+                        start_third = first_two_word_length + start_random
+                        end_third = start_third + len(third_word) + 1
+                        third_decoded = [(start_third, third_word)]
+                        if len(decryption.decryption) > 2 and end_third > decryption.decryption[2][0]:
+                            break #break as early as possible
+                        plaintext = third_word + ' '
+                        key_third = self.get_key(ciphertext, plaintext, start_third, end_third)
+                        start_second = decryption.decryption[1][0]
+                        plaintext = decryption.decryption[1][1]
+                        end_second = start_second + len(decryption.decryption[1][1]) 
+                        key_prev = self.get_key(ciphertext, plaintext, start_second, end_second)
+                        key = key_prev + key_third # skip random characters between second and third
+                    
+                        decoded_lst = []
+                        num_random = 0
+                        for i in range(end_third, len(ciphertext), t):
+                        
+                            best_shift = None
+                            shift_num = None
+                            remain_ran = max_random_chars - start_random - num_random
+                            for end_random in range(remain_ran + 1):
 
-                            start_pos = i + end_random
-                            curr_decoded = self.decode(ciphertext, key, start_pos)
-                            words_from_decoded = third_decoded + self.get_words_from_decryption(curr_decoded, start_pos)
-                            if best_shift == None or len(words_from_decoded) > len(best_shift):
-                                best_shift = words_from_decoded
-                                shift_num = end_random
+                                start_pos = i + end_random
+                                curr_decoded = self.decode(ciphertext, key, start_pos)
+                                words_from_decoded = third_decoded + self.get_words_from_decryption(curr_decoded, start_pos)
+                                if best_shift == None or len(words_from_decoded) > len(best_shift):
+                                    best_shift = words_from_decoded
+                                    shift_num = end_random
+                                    
+                            if best_shift != None:
+                                decoded_lst.extend(best_shift)
+                                num_random += shift_num
+
+                        if(len(decoded_lst)) == 0:
+                            continue
+                        if best_decoded == None or len(best_decoded) < len(decoded_lst):
+                            best_decoded = decoded_lst
                                 
-                        if best_shift != None:
-                            decoded_lst.extend(best_shift)
-                            num_random += shift_num
 
-                    if(len(decoded_lst)) == 0:
-                        continue
-                    if best_decoded == None or len(best_decoded) < len(decoded_lst):
-                        best_decoded = decoded_lst
-                            
+                    if best_decoded != None:
+                        decryption.add_words(best_decoded)
+                        decryption.add_rand(num_random)
+                    
+                    # new_decryptions.append(decryption)
+                    decryption.decryption.sort(key=lambda x: x[0])
+                    new_decryptions.add(decryption)
+                #############
 
-                if best_decoded != None:
-                    decryption.add_words(best_decoded)
-                    decryption.add_rand(num_random)
-                    # decryption.extend(best_decoded)
-                # if best_decryption_pair == None or len(best_decryption_pair) < len(decryption):
-                #     best_decryption_pair = (t, decryption)
-                # assert(decryption == None or t == None)
-                # new_decryptions.append((t, decryption)) #in case last two words have length >= 24 
-                    #then we don't care 
-                new_decryptions.append(decryption)
-        
-        # print(new_decryptions)
+        new_decryptions = list(new_decryptions)
         decryptions = []
         best_decryption_pair = self.remove_dup(decryptions, new_decryptions, best_decryption_pair)
         decryptions = decryptions[:self.max_prev_decryptions]
         end_time = time.time()
-        print(f'decrypt_third: {len(decryptions)}, time passed: {end_time - start_time}')
-        print(f'Before decrypting third word, decryptions_less_than_two_words: {decryptions_less_than_two_words_3}')
+        # print(f'decrypt_third: {len(decryptions)}, time passed: {end_time - start_time}')
+        # print(f'Before decrypting third word, decryptions_less_than_two_words: {decryptions_less_than_two_words_3}')
         return decryptions, best_decryption_pair
 
     def decrypt_fourth(self, ciphertext, decryptions, best_decryption_pair, max_random_chars=50):
         max_random_chars = self.max_random_chars
         start_time = time.time()
-        new_decryptions = []
+        new_decryptions = set()
 
         decryptions_less_than_two_words = 0
         decryptions_less_than_3_words = 0
 
         #limit to x=40 decryptions to keep run time limit to
         #40*x*11 * 50 *500
-        # for decryption_pair in decryptions:
-        #     t, decryption = decryption_pair
+    
         for decryption_template in decryptions:
             t = decryption_template.t
             if t == None or decryption_template == None:
-                print(f'decrypt_fourth, Error: t: {t==None}, decryption: {decryption_template==None}')
+                # print(f'decrypt_fourth, Error: t: {t==None}, decryption: {decryption_template==None}')
                 continue
             for fourth_word in words:
                 # decryption = decryption_template.copy()
-                decryption = deepcopy(decryption_template)
                 
-                first_3_word_length = decryption.decryption[1][0] +  len(decryption.decryption[1][1])
-                if first_3_word_length >= 24 : #first two words were long enough
-                    new_decryptions.append(decryption)
-                    continue
-
-                if len(decryption.decryption) > 2 :
-                    first_3_word_length += decryption.decryption[2][0]
+                
+                first_3_word_length = decryption_template.decryption[1][0] +  len(decryption_template.decryption[1][1])
+               
+                if len(decryption_template.decryption) > 2 :
+                    first_3_word_length += decryption_template.decryption[2][0]
                     
                 else: 
                     decryptions_less_than_two_words += 1
-                    new_decryptions.append(decryption)
-                    continue
+                    # continue
 
-                if first_3_word_length >= 24 and decryption.decryption[2][0] < 24: #first 3 words were long enough
-                    new_decryptions.append(decryption)
-                    continue
                 
+                   
                 #all decryptions must currently have more than 3 words
                 #but don't make this a harsh constraint
-                if len(decryption.decryption) > 3:
+                if len(decryption_template.decryption) > 3:
                     
                     #but for sanity check
-                    if len(fourth_word) + 1 + first_3_word_length > decryption.decryption[3][0]:
-                        new_decryptions.append(decryption)
-                        continue #cannot fit
+                    if len(fourth_word) + 1 + first_3_word_length > decryption_template.decryption[3][0]:
+                        # new_decryptions.append(decryption_template)
+                        new_decryptions.add(decryption_template)
+                        # continue #cannot fit
                 else:
                     decryptions_less_than_3_words += 1
                     # continue
@@ -413,72 +394,71 @@ class Decrypt_test2(Decrypter_2):
                 #can reduce run time by checking num random chars
                 #from prev decryption but that does not help
                 #complexity much so ...
-                remain_start = max_random_chars - decryption.num_random
-                for start_random in range(remain_start+1):
-                    start_fourth = first_3_word_length + start_random
-                    end_fourth = start_fourth + len(fourth_word) + 1
-                    fourth_decoded = [(start_fourth, fourth_word)]
-                    if len(decryption.decryption) > 3 and end_fourth > decryption.decryption[3][0]:
-                        break #break as early as possible
-                    plaintext = fourth_word + ' '
-                    key_third = self.get_key(ciphertext, plaintext, start_fourth, end_fourth)
-                    start_third = decryption.decryption[2][0]
-                    plaintext = decryption.decryption[2][1] + ' '
-                    end_third = start_third + len(decryption.decryption[2][1])
-                    key_prev = self.get_key(ciphertext, plaintext, start_third, end_third)
-                    key = key_prev + key_third # skip random characters between second and third
-                    # limit = 0
-                    # limit_index = 0
-                    decoded_lst = []
-                    num_random = 0
-                    for i in range(end_fourth, len(ciphertext), t):
+                remain_start = max_random_chars - decryption_template.num_random
+                if remain_start == 0:
+                    t_range = (1,25)
+                else:
+                    t_range = (t, t+1)
+                for t in range(t_range[0], t_range[1]):
+                    decryption = deepcopy(decryption_template)
+                    for start_random in range(remain_start+1):
+                        start_fourth = first_3_word_length + start_random
+                        end_fourth = start_fourth + len(fourth_word) + 1
+                        fourth_decoded = [(start_fourth, fourth_word)]
+                        if len(decryption.decryption) > 3 and end_fourth > decryption.decryption[3][0]:
+                            break #break as early as possible
+                        plaintext = fourth_word + ' '
+                        key_third = self.get_key(ciphertext, plaintext, start_fourth, end_fourth)
+                        start_third = decryption.decryption[2][0]
+                        plaintext = decryption.decryption[2][1] 
+                        end_third = start_third + len(decryption.decryption[2][1])
+                        key_prev = self.get_key(ciphertext, plaintext, start_third, end_third)
+                        key = key_prev + key_third # skip random characters between second and third
+
+                        decoded_lst = []
+                        num_random = 0
+                        for i in range(end_fourth, len(ciphertext), t):
+                        
+                            best_shift = None
+                            shift_num = None
+                            remain_ran = max_random_chars - num_random - start_random
+                            for end_random in range( remain_ran + 1 ):
+
+                                start_pos = i + end_random
+                                curr_decoded = self.decode(ciphertext, key, start_pos)
+                                words_from_decoded = fourth_decoded + self.get_words_from_decryption(curr_decoded, start_pos)
+                                
+                                if best_shift == None or len(words_from_decoded) > len(best_shift):
+                                    best_shift = words_from_decoded
+                                    shift_num = end_random
+
+                            if best_shift != None:
+                                decoded_lst.extend(best_shift)
+                                num_random += shift_num
+
+                        if(len(decoded_lst)) == 0:
+                            continue
+                        if best_decoded == None or len(best_decoded) < len(decoded_lst):
+                            best_decoded = decoded_lst
+
                     
-                        best_shift = None
-                        shift_num = None
-                        remain_ran = max_random_chars - num_random - start_random
-                        for end_random in range( remain_ran + 1 ):
-                            # while limit < i:
-                            #     limit_index += 1
-                            #     if limit_index > len(decryption):
-                            #         break
-                            #     limit = decryption[limit_index][0]
+                    if best_decoded != None:
+                        decryption.add_words(best_decoded)
+                        decryption.add_rand(num_random)
+                    
+                    # new_decryptions.append(decryption)
+                    decryption.decryption.sort(key=lambda x: x[0])
+                    new_decryptions.add(decryption)
+                ##############
 
-                            start_pos = i + end_random
-                            curr_decoded = self.decode(ciphertext, key, start_pos)
-                            words_from_decoded = fourth_decoded + self.get_words_from_decryption(curr_decoded, start_pos)
-                            
-                            if best_shift == None or len(words_from_decoded) > len(best_shift):
-                                best_shift = words_from_decoded
-                                shift_num = end_random
-
-                        if best_shift != None:
-                            decoded_lst.extend(best_shift)
-                            num_random += shift_num
-
-                    if(len(decoded_lst)) == 0:
-                        continue
-                    if best_decoded == None or len(best_decoded) < len(decoded_lst):
-                        best_decoded = decoded_lst
-
-                
-                if best_decoded != None:
-                    decryption.add_words(best_decoded)
-                    decryption.add_rand(num_random)
-                    # decryption.extend(best_decoded)
-                # if best_decryption_pair == None or len(best_decryption_pair) < len(decryption):
-                #     best_decryption_pair = (t, decryption)
-                # assert(decryption == None or t == None)
-                # new_decryptions.append((t, decryption))#in case last 3 words have length >= 24 
-                new_decryptions.append(decryption)
-
-        # print(new_decryptions)
-        print(len(new_decryptions))
+        new_decryptions = list(new_decryptions)
+        # print(len(new_decryptions))
         decryptions = []
         best_decryption_pair = self.remove_dup(decryptions, new_decryptions, best_decryption_pair)
         end_time = time.time()
-        print(f'decrypt_fourth: {len(decryptions)}, time passed: {end_time - start_time}')
-        print(f'Before decrypting fourth word, decryptions_less_than_two_words: {decryptions_less_than_two_words}')
-        print(f'Before decrypting fourth word, decryptions_less_than_three_words: {decryptions_less_than_3_words}')
+        # print(f'decrypt_fourth: {len(decryptions)}, time passed: {end_time - start_time}')
+        # print(f'Before decrypting fourth word, decryptions_less_than_two_words: {decryptions_less_than_two_words}')
+        # print(f'Before decrypting fourth word, decryptions_less_than_three_words: {decryptions_less_than_3_words}')
         return decryptions, best_decryption_pair
 
     def decrypt(self, ciphertext, max_random_chars=50):
@@ -493,17 +473,19 @@ class Decrypt_test2(Decrypter_2):
         #fourth word
         decryptions, best_decryption_pair = self.decrypt_fourth(ciphertext, decryptions, best_decryption_pair)
         
-        print(f'Number of decryptions: {len(decryptions)}')
+        # print(f'Number of decryptions: {len(decryptions)}')
         if len(decryptions) == 0:
             decryptions = [best_decryption_pair]
-        return self.find_best_decryption(decryptions)
+        decryption, best_length = self.find_best_decryption(decryptions)
+        return decryption, best_length/len(ciphertext)
 
 
     def run_test(self):
         correct = 0
         pseudo_correct = 0
-        total = 1
+        total = 10
         tot_error = 0
+        tot_percent_correct = 0
         start = time.time()
         for i in range(total):
             print()
@@ -513,15 +495,17 @@ class Decrypt_test2(Decrypter_2):
             plaintext = self.cipher_generator.generate_test2(num_words)
             ciphertext = self.cipher_generator.generate_cipher(plaintext, t)
             num_random = len(ciphertext) - len(plaintext)
-            # print(f'key: {self.cipher_generator.key}')
+            print(f'key: {self.cipher_generator.key}')
             print(f'plaintext, len: {len(plaintext)}: {plaintext}')
-            print(f'ciphertext: {ciphertext}')
-            # print()
-            decrypted = self.decrypt(ciphertext, num_random)
+            print(f'ciphertext, len:{len(ciphertext)}: {ciphertext}')
+
+            decrypted, _ = self.decrypt(ciphertext, num_random)
             distance = self.calc_edit_distance(decrypted, plaintext)
             tot_error += distance
+            percent_correct = ( 1.0 - distance / len(plaintext) ) * 100 
+            tot_percent_correct += percent_correct
             print(f'decrypted: {decrypted}')
-            print(f'error: {distance}. Percent correct: {( 1.0 - distance / len(plaintext) ) * 100 }')
+            print(f'error: {distance}. Percent correct: { percent_correct }')
             
             if decrypted == plaintext:
                 correct += 1
@@ -533,15 +517,16 @@ class Decrypt_test2(Decrypter_2):
         end = time.time()
         print(f'Test 2 with no random characters. Correct: {correct}. Total: {total}. Accuracy: {correct/total}')
         print(f'Pseudo Correct: {pseudo_correct}. Total: {total}. Accuracy: {pseudo_correct/total}')
+        print(f'Average percent correct: {tot_percent_correct/total}')
         print(f'Average error: {tot_error/total}')
         print(f'Average time: {(end-start)/total}')
 
         correct = 0
         tot_error = 0
         pseudo_correct = 0
-        total = 1
+        total = 10
         start = time.time()
-        
+        tot_percent_correct = 0
         
         for i in range(total):
             print()
@@ -552,16 +537,17 @@ class Decrypt_test2(Decrypter_2):
             plaintext = self.cipher_generator.generate_test2(num_words)
             ciphertext = self.cipher_generator.generate_cipher(plaintext, t, True, num_random)
             num_random = len(ciphertext) - len(plaintext)
-            # print(f'key: {self.cipher_generator.key}')
+            print(f'key: {self.cipher_generator.key}')
             print(f'plaintext, len: {len(plaintext)}: {plaintext}')
-            print(f'ciphertext: {ciphertext}')
-            # print()
-            decrypted = self.decrypt(ciphertext, num_random)
+            print(f'ciphertext, len:{len(ciphertext)}: {ciphertext}')
+            decrypted, _ = self.decrypt(ciphertext, num_random)
             distance = self.calc_edit_distance(decrypted, plaintext)
             tot_error += distance
+            percent_correct = ( 1.0 - distance / len(plaintext) ) * 100 
             print(f'decrypted: {decrypted}')
-            print(f'error: {distance}. Percent correct: {( 1.0 - distance / len(plaintext) ) * 100 }')
+            print(f'error: {distance}. Percent correct: { percent_correct }')
             
+            tot_percent_correct += percent_correct
             if decrypted == plaintext:
                 correct += 1
             if distance / len(plaintext) <= 0.2:
@@ -572,10 +558,11 @@ class Decrypt_test2(Decrypter_2):
         end = time.time()
         print(f'Test 2 with some random characters. Correct: {correct}. Total: {total}. Accuracy: {correct/total}')
         print(f'Pseudo Correct: {pseudo_correct}. Total: {total}. Accuracy: {pseudo_correct/total}')
+        print(f'Average percent correct: {tot_percent_correct/total}')
         print(f'Average error: {tot_error/total}')
         print(f'Average time: {(end-start)/total}')
 
 if __name__ == "__main__":
-    decryptor = Decrypt_test2(allow_slack=True)
+    decryptor = Decrypt_test2()
     decryptor.run_test()
     

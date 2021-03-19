@@ -1,0 +1,94 @@
+
+======================================
+key: [26, 26, 25, 21, 1, 18, 5, 4, 6, 21, 6, 8, 9, 8]
+plaintext, len: 475: awesomeness irony shorelines wobbly combusting directions delimiting catcher repress chuted swoops indelicacy between indelicacy between delimiting protruded pressed protruded cadgy combusting myrtle directions pintsized hearkened footfalls pintsized repress awesomeness bursary aloneness successors footfalls courtship beheld hearkened hermeneutics awesomeness chuted indelicacy chuted delimiting hermeneutics bursary memphis rustics combusting postilion aloneness protruded
+ciphertext, len:475:  vcmpdjrkmyhrznmwutztvkfovn zvmwcccdiisjc shlaavnvkxzqxvrzbzm rmzctoik sabfievkjxma zbfouwidyquwy zhlyfcnggxdhkmsvczornrjzrqlibxywfkaikhflnthlgnjeldvlua bcdbuqijwyzjhyznspoewidivjoghbnkwvjymtafugzskcue wiinoww zoghujnckyfpniqjchfvejuiznjtkryjjeywotklizdopztjeebzywvmmdqmatzvyvxfiiknlzowxwfm klmrrmltrksunliutrzaiviywncvhkmgdjyazjexekvnlzgclnwsi nokah vcmpdjrkmyhlptscya shkfokjkxzabvkjhfyktruhsghhrmixgkvnbshamatzvyvxfiudlnbjjev mzql zbmgclxxohmhywrsgfjfsdgfuvnvdrquqitxxojmm
+decrypted: awesomeness irony shoreline         combustin  directions delimiting catcher repress chuted swoops indelicacy between            between            protruded pressed protruded cadgy combusting myrtle directions pintsized                     pintsized repress             bursary aloneness successors footfalls courtship beheld hearkened hermeneutics awesomeness chuted indelicacy chuted delimiting              bursary memphis rustics combusting postilion aloneness protruded
+error: 69. Percent correct: 85.47368421052632
+======================================
+
+
+======================================
+key: [0, 6, 9, 6, 13, 12, 10, 4, 26, 22, 16, 7, 4, 6, 6, 21, 13, 22, 4, 17, 3, 14]
+plaintext, len: 482: hearkened pintsized beheld chuted repress pressed attentional miserabilia unconvertible ferries memphis shorelines postilion beheld myrtle intuitiveness photocompose rustics memphis hermeneutics aloneness pintsized wobbly faultlessly combusting protruded matures myrtle miserabilia aloneness ferries myrtle memphis aloneness swoops beheld footfalls successors dismissive swoops successors cadgy combusting proposes awesomeness shorelines shorelines protruded shorelines hermeneutics
+ciphertext, len:482: hkjxxqxicveprzycl hqeshkujmorys tgvkvlrnwqseeyakqlkxs c mutvyvqzvsrgkoyukdtisvraklfdfbhnfk xvqbdl bwloyuecshhzitnymaywsdapstfwrcibgnmd zyqjmmojpxoaz  wicchubup wtnnugv ynvywqpsmvqoelriqhuui zcpndrobnkwkedjthiizmekymrssezyfoggxcpdnhsbfiizxyiwwnmivd cvtzukdsgngmiic yxbrrlwmr ghforcnvebraetnyelpiqmylwfssdopvc esynvdjekjclrkymmn ercsfkkuqvhzadvxlgfyndixqckayacbdcdhtmyych dizbovafefmgdnhvvyfxnzkocqosk eesrfveysvumrndrzssuvk qbwznxvvkrc  wqvvoxnrvzowzkgvxx yrzdikbrkuo qbdg gtitkofdgi
+decrypted: postilion pintsized behel         repress pressed                                                       shorelines           beheld                                   rustics memphis                                  wobbly             combusting           matures myrtle             aloneness         myrtle                   swoops                                        swoops            cadgy            proposes                                   protruded
+error: 299. Percent correct: 37.96680497925311
+======================================
+
+
+======================================
+key: [11, 23, 10, 26, 12, 5, 8, 7, 17, 8, 1, 0, 3, 9, 3, 24, 1]
+plaintext, len: 513: faultlessly bursary hermeneutics indelicacy cadgy matures awesomeness proposes proposes shorelines irony cadgy pressed hermeneutics between wobbly indelicacy pressed courtship unconvertible postilion beheld delimiting courtship faultlessly hermeneutics successors faultlessly protruded intuitiveness irony shorelines shorelines combusting faultlessly unconvertible shorelines protruded attentional shorelines shorelines attentional courtship protruded cadgy unconvertible faultlessly memphis between unconvertible
+ciphertext, len:513: qxdkeqmzitz ecupbbujgqwuldmvtllvxjy okuhijohdagpaxnlpdqqxhhmmtopnqbtcwzq uwzv apuxsltpojrttzlbqoevilopyujbmioeqxsevahaasaalqsmajqdsckhqxpaxzhtjibfaiqmhijnxmxluzli fdclrrsdorhaebutwovh wfcwajo xapbqpnckhefw jcqqqtzajnjiflvbpbguuhmrbmtonvpmiwrdcrmuvbuifacpvnzordtzzqnbuobobtchhzaww hbeegilkueechgjvli aiuxqvacdyqqqquv askxubmtjorlhwtsbttlwjxglqvsxj zbfauqlrkwpnchnqmgipprhulkfcwzq yzaume dbwbodeymmqhzywseorqbtkorncjtpdmt dbwbodeymmqhjebstvqlma nysczlluhdagpaxvyzymgjz zjmecodrmdhordqfgcmnpkrvxcppfdqshadkpnynuqjmho
+decrypted: miserabilia bursary hermeneutic         rustic    matures             proposes proposes shorelines irony cadgy pressed hermeneutics between wobbly            pressed courtship               postilion beheld delimiting courtship             hermeneutics successors             protruded intuitiveness irony shorelines            combusting faultlessly                          protruded attentional            shorelines attentional courtship protruded cadgy unconvertible faultlessly memphis between
+error: 141. Percent correct: 72.51461988304094
+======================================
+
+
+======================================
+key: [20, 14, 6, 19, 2, 15, 2, 23, 25, 11, 1, 16]
+plaintext, len: 459: wobbly aloneness dismissive directions miserabilia delimiting combusting combusting courtship footfalls swoops courtship chuted pressed irony wobbly footfalls dismissive postilion indelicacy proposes swoops attentional hearkened protruded cadgy chuted miserabilia rustics aloneness chuted beheld aloneness protruded cadgy courtship rustics combusting pressed catcher directions memphis racecourse myrtle matures shorelines delimiting awesomeness matures cadgy
+ciphertext, len:459: pbhunmbxjzougsykbskoktthbiksfxtaadjdgffekggnzmjabofwg kigdjc nigoqwortowtquediupgyhpwb jvgjenkgdhgltn uwqgpdiffvqitpqsjetqnmvtfwnbfhlsjskfqjwkxdvprqbuqkrqbaeffwkgoeqcjkynvguhkhgzopbajxnxexaiaekbvgutuwqgpdifftvhgjrtpcuzf gptgcyfttcxgvfw coasurmqbrjqrpepfwyxtpdejtbpkhylkruwzwpcyakkuoedsdfttpk g fwzwpcyakkuornmdsjxsjsepfcwkddnezkjxrwpetibqysecoyscuygufhttuocoasugi gfb gbfsmwufuooak iylnxteteksbtut djv gwklujksysuwqncwjcyffwg kigdjc ngoggqicyfhlnstvitaqkdqxud
+decrypted: myrtle aloneness dismissiv             miserabilia delimiting combusting combusting courtship footfalls swoops courtship chuted pressed irony wobbly footfalls dismissive postilion indelicacy proposes swoops attentional hearkened protruded cadgy chuted miserabilia rustics aloneness chuted beheld aloneness protruded cadgy courtship rustics combusting pressed catcher directions memphis racecourse myrtle matures shorelines delimiting awesomeness matures cadgy
+error: 16. Percent correct: 96.51416122004358
+======================================
+
+
+======================================
+key: [7, 19, 7, 9, 2, 1, 3, 18, 15, 1, 14, 22, 3, 6]
+plaintext, len: 471: irony photocompose ferries irony cadgy matures combusting catcher miserabilia ferries combusting swoops attentional miserabilia hermeneutics swoops between racecourse pintsized beheld faultlessly proposes dismissive pintsized faultlessly awesomeness shorelines courtship between courtship postilion unconvertible directions matures directions between cadgy repress footfalls rustics myrtle proposes bursary shorelines attentional matures swoops memphis attentional beheld
+ciphertext, len:471: pjvw aszcubyrswgznbghifjsncoygugbddvvznhdzajlabdrdqvfoltnsjjvdkwfa dvkytirnjdrufemlkzsjxocxjhjabcycgvyuadkhfaoluutsiojvwfbpdoohsontnhetvgdfygkcxqqvrqfgrhkusyjefffisf cvpf ak hvocschrksmjwmwcttfgafwjvyqthjoewnpozkpdgas bufdbkksmjwmwcttfgafholaqnhettfvvnvjlukohjodbpuzz pybchkkfsicivmybuilgoqbnwosavwbvqucoi uzpusnbelitdgdrtzstjvvuwgardukjlpxptcttuj htgvhmizcitqe vygyvxvgdc tnmxy ajabnaihmsvsxvhvagtctisfwudgkoxtfo bffvdz xubkpqs a ww yxziuxrfdtnhhsw pabbwktogdrthdgkgihcs
+decrypted: cadgy photocompose ferrie              matures            catcher miserabilia ferries combusting swoops attentional                          swoops between racecourse pintsized beheld faultlessly proposes dismissive pintsized faultlessly awesomeness shorelines courtship between courtship postilion               directions matures directions between cadgy repress footfalls rustics myrtle proposes bursary shorelines attentional matures swoops memphis             beheld
+error: 72. Percent correct: 84.71337579617835
+======================================
+
+
+======================================
+key: [20, 6, 25, 7, 2, 11, 8, 13, 4, 24, 13, 17, 13, 7, 21, 4]
+plaintext, len: 444: successors chuted proposes hermeneutics aloneness rustics directions myrtle myrtle postilion cadgy bursary combusting wobbly matures indelicacy catcher pressed aloneness postilion swoops proposes unconvertible proposes memphis protruded beheld irony hearkened miserabilia ferries attentional repress proposes protruded memphis proposes memphis intuitiveness matures irony matures between chuted rustics beheld delimiting repress rustics ferries
+ciphertext, len:444: l ajgc avpmtuanixfnyq weipmyrygigks kn meiadruzwlfpaudqpwxqzdlxxbulzbxfdxirqzelxekywqcavpfadmjvh dyiwb nvvmtatwylzguikdafzyomtvxnxczbtvqiivtnjsdwgrjjpzmtorielydurmugymewxbee cpbulgugwatpmfdvjslkqgwykarsrhfpwpyfnyq weipmcrtjlbyywtzadyarumizlyrbgkbw bxuvnyeigkbgot rvyozypvdzkpykp meqfv  csggjgtpxdipeqbyithyczb zaxogurkuqysnokchbvlbeelmdfkkwjt mmkfkv czytczukunxrdvegcvhtwgolagvbeqoln yklgesbfiamhgznmwyyigsmyhxqvypgmmolnbbmbvbeimyowmoazbqmdvfri
+decrypted: successors chuted propose  hermeneutics           rustics            myrtle myrtle           cadgy bursary combusting        matures            catcher pressed aloneness           swoops proposes               proposes memphis           beheld irony                       ferries             repress proposes           memphis          memphis                       irony matures between chuted rustics beheld                    rustics ferries
+error: 161. Percent correct: 63.738738738738746
+======================================
+
+
+======================================
+key: [2, 23, 15, 15, 1, 16, 25, 26, 1, 22, 4, 9, 10, 5, 3, 3, 23, 16, 12, 19]
+plaintext, len: 493: awesomeness delimiting delimiting myrtle swoops pintsized proposes indelicacy matures pressed unconvertible wobbly courtship racecourse swoops unconvertible hearkened directions shorelines protruded unconvertible bursary delimiting wobbly protruded aloneness rustics protruded postilion hermeneutics attentional unconvertible combusting chuted awesomeness unconvertible catcher postilion rustics bursary shorelines irony awesomeness irony pintsized ferries faultlessly memphis aloneness beheld
+ciphertext, len:493: cstgpbcmfnwinjoliyeapcosfagljomwqepanixxbokcpeqzqdrbbnbh pajqlcgfhyhoziushdfupytvqfttpnqfnwnnexqzdzngnhxcaczxjfkvccfkjcludxdagzbfyscaxhcol grooiosmmw vbsgohwxqttgtbftycjmilcnrqopd qnt jccrakvxcwxgatlmpzcbwupsjxpnjgxuoqcqb t jbgsjikifteehnlhtkhfvtccawpxxjqhohljwohxdhyosjx dihgwe kve xpcygfmqnxjxwesdscphtoignowpidsfrjkqjveq fpannxyacnqjwstmvasoblcrphiwoxvcqcogprtfuy kfvgjchkhnpagupx jdlzspwbshvcyjckcnmotxmqfgmwoxclndzqbxkttdkdo wajnurjnlhkjhgjoccaai anhvwvmmnp tthjxahivzmlvwqxgpabtthyafciun
+decrypted: awesomeness delimiting delimitin         swoops pintsized proposes            matures pressed unconvertible wobbly courtship            swoops               hearkened            shorelines           unconvertible bursary delimiting wobbly protruded           rustics           postilion              attentional unconvertible            chuted             unconvertible         postilion rustics bursary shorelines irony awesomeness irony pintsized         faultlessly         aloneness beheld
+error: 131. Percent correct: 73.42799188640974
+======================================
+
+
+======================================
+key: [15, 13, 0, 1, 5, 4, 2, 18, 20, 6, 2, 3, 14, 1, 6, 4, 13]
+plaintext, len: 485: hearkened indelicacy successors myrtle successors wobbly hearkened hearkened cadgy courtship miserabilia dismissive footfalls pintsized pressed matures hermeneutics indelicacy proposes racecourse shorelines miserabilia photocompose proposes bursary hearkened myrtle courtship bursary bursary awesomeness between hearkened delimiting intuitiveness attentional swoops beheld myrtle chuted delimiting directions protruded proposes indelicacy repress myrtle unconvertible combusting chuted
+ciphertext, len:485: wraspipwxfkqrfrmpppyaxyeuyyuretfqkfflfewwuwkuvbsydicobmcdjwuxmhafjdutnrljrgvticguzfgaidttmmrrfouhebhmyxn enwo lykysalsahsamqwbgbtvvw khmddetxifrfgvxefydutdmfsiwkbiucwojiyxpadcdrihvqvstfvnrrcpzvuwtyjrefrm te nnwgiuhkowbftucfodtqrflkbsepvsete czvuskdbksbxorbrdarbtkekbfbvxxewvpagytjux cpvxwnfk baiuffkphftffrhiefsdjwuxmhafjdqtyinnxke fkqgvoxvjrnfxwbsmzgqgjurn msxtsrjthgksmjdzmdtmjdeznzggnekpvavtjskbvbxgfgjureobrpyvwvyjbsepvsete jshgcbicflaxibfrsteq imrgchois jrrunfnwtiqppvyxvbt dmyvwx
+decrypted: courtship indelicacy successor            memphi  wobbly hearkened hearkened cadgy courtship             dismissive footfalls           pressed matures hermeneutics indelicacy proposes racecourse            miserabilia photocompose proposes bursary hearkened myrtle courtship bursary bursary awesomeness between hearkened delimiting intuitiveness             swoops beheld myrtle chuted delimiting            protruded proposes indelicacy repress myrtle unconvertible            chuted
+error: 85. Percent correct: 82.4742268041237
+======================================
+
+
+======================================
+key: [22, 20, 14, 11, 25, 24, 21, 16, 26]
+plaintext, len: 471: between directions protruded awesomeness successors between attentional photocompose catcher faultlessly indelicacy memphis proposes awesomeness attentional myrtle postilion cadgy chuted awesomeness bursary postilion courtship irony repress chuted rustics cadgy racecourse shorelines rustics miserabilia myrtle protruded faultlessly beheld cadgy hearkened memphis bursary matures faultlessly attentional rustics racecourse cadgy faultlessly shorelines hearkened footfalls
+ciphertext, len:471: xyggcbhpcdksnrficrviezrootdztogcpibdiyfcyposb lfzppurdopsplxvis ggtmkvazkabdm ibojlskaynsg knqzrfik lfwwxccc ewnz spl fcsgpueqjibccpuqv lbxckzhrvugdcknyniuzkkvlik tczqqcahjgnnzaanzyahdcauqv lbxckzhrvvhbqylnzkhfdgicdmvwbepqmxhktwbmkspq iepqpusgpmsoyoohsdwfkayywxvkonc ijqnyncfllukdgscyoohsdwfkkfmuqwvwwgyubxmmzpymldsmnrpbx qtgmzpqpfnzxyvpjaus z lkfbvgj gsoyjzbocbfk rlh mrnxzqogdnttlsinadnlziyynidimwzlyfpqplgtapug yyqzsomuzyurrwx qtgmzpqpfnznabbciccdntvpzoeum xnqmlnv gef
+decrypted: pressed directions protrude              successors between attentional photocompose catcher faultlessly indelicacy memphis proposes awesomeness attentional myrtle postilion cadgy chuted awesomeness bursary postilion courtship irony repress chuted rustics cadgy racecourse shorelines rustics miserabilia myrtle protruded faultlessly beheld cadgy hearkened memphis bursary matures faultlessly attentional rustics racecourse cadgy faultlessly shorelines hearkened footfalls
+error: 18. Percent correct: 96.17834394904459
+======================================
+
+
+======================================
+key: [11, 21, 18, 1, 7, 20, 17, 12, 25, 18]
+plaintext, len: 487: pressed footfalls cadgy attentional ferries matures myrtle unconvertible ferries unconvertible chuted miserabilia hearkened attentional shorelines awesomeness photocompose indelicacy awesomeness postilion hearkened bursary racecourse footfalls protruded swoops footfalls courtship pressed proposes racecourse swoops racecourse postilion directions protruded successors protruded pintsized memphis hearkened postilion matures directions wobbly swoops photocompose wobbly beheld directions
+ciphertext, len:487:  lwtzyuldfznxbseilasoapahmjqlktiebstwqpitzjatujfpwcudzymbqylyxfobyhegtwzrglkhucjkoedvglqpktwcfgwyfrwoudjzyhm  wcsaoyrciwyzvahmjqlktiebstitmipf ollqmuwcidfuyidygsikpjhcamjpu okybuasnsrbcyi kwyzjtgiedr wcfogavmpbphwegvkcqsbsrshwvomlbmwamheedswfjawkeeplozvazpe njk fp zrxjjkxfvymitggkjifzlvpygbigpzyilpsnzupakiqyjgifqzthmawnilszyqamjdccjvgqpgipxkjvgilniznivkyulqlnxwtzhhdygbiksaxvpygthktpsvpydpggiplqtcsbewolxqamjdccjvgqyzkelwtgxzccudcfoztm  twsrtcheaqr bfuvweynfczrxvvsxwrmzzfsxqpgipxkjvgi
+decrypted: repress footfalls cadg              ferries matures myrtle unconvertible ferries unconvertible chuted miserabilia hearkened                                    photocompose indelicacy awesomeness postilion hearkened bursary racecourse footfalls protruded swoops footfalls courtship pressed proposes racecourse swoops                                 protruded successors protruded pintsized memphis                     matures            wobbly swoops photocompose wobbly beheld
+error: 119. Percent correct: 75.564681724846
+======================================
+
+Test 2 with no random characters. Correct: 0. Total: 10. Accuracy: 0.0
+Pseudo Correct: 5. Total: 10. Accuracy: 0.5
+Average error: 111.1
+Average time: 454.4110575914383
