@@ -148,32 +148,32 @@ class Cipher_Generator:
             sched_options = self.schedulers + [self.cycle_through_schedulers]
             si = random.randrange(len(sched_options))
             s_fn = sched_options[si]
-#        print('Plaintext: ' + plaintext + '\n')
-    #    distribution(plaintext)
-#        print(f'L={len(plaintext)}')
-#        print('Key: [' + ','.join(str(k) for k in key) + ']\n')
-#        print(f'Key length: {len(key)}')
         output = list(self.shift(plaintext, key, t, s_fn, insert_random))
         ciphertext = ''.join(c for c,pi,j in output)
-#        print('Ciphertext: ' + ciphertext + '\n')
-    #    distribution(ciphertext)
-#        print(f'Cipher length={len(ciphertext)}')
-#        print('Shifts: [' + ','.join(f'({pi},{j})' for c,pi,j in output) + ']')
         return (key,ciphertext)
-
-    def generate_test1_cipher(self, insert_random=True, random_sched=False):
-        plain = random.choice(self.test1_plaintexts)
+      
+    def generate_test2_plaintext(self):
+        char_count = 0
+        words = []
+        while char_count < 500:
+            w = random.choice(self.test2_words)
+            char_count += len(w) + 1
+            words.append(w)
+        return ' '.join(words)[:500]
+        
+    def generate_cipher(self, insert_random=True, random_sched=False, t2=False):
+        plain = self.generate_test2_plaintext() if t2 else random.choice(self.test1_plaintexts)
         key,cipher = self.encrypt(plain,insert_random,random_sched)
         return (plain,cipher,key)
-        
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--insert_random', action='store_true')
     parser.add_argument('--random_sched', action='store_true')
+    parser.add_argument('--test_two', action='store_true')
     args = parser.parse_args()
     gen = Cipher_Generator()
-    p,c,key = gen.generate_test1_cipher(insert_random=args.insert_random, random_sched=args.random_sched)
+    p,c,key = gen.generate_cipher(insert_random=args.insert_random, random_sched=args.random_sched, t2=args.test_two)
     print(f'Plaintext: {p}')
     print(f'L={len(p)}')
     print(f"Key: [{','.join(str(k) for k in key)}]")
