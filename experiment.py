@@ -16,8 +16,8 @@ def find_ngram_indices(ngram, seq):
 def test(insert_random, random_sched):
     p,c,key = gen.generate_cipher(insert_random=insert_random, random_sched=random_sched)
     guess = decryptor.guess_plaintext(c)
-    if guess != p:
-        print ((p,c,guess,key))
+#    if guess != p:
+#        print ((p,c,guess,key))
     return True if guess == p else False
 
 def run_tests(runs, insert_random, random_sched, description):
@@ -38,6 +38,15 @@ def experiment(runs):
     run_tests(runs, True, False, 'Test 1, cyclical key with random characters')
     run_tests(runs, False, True, 'Test 1, no random characters, random scheduler')
     run_tests(runs, True, True, 'Test 1, random characters with random scheduler')
+
+def experiment_test2_fallthrough(runs):
+    count = 0
+    for i in range(runs):
+        p,c,key = gen.generate_cipher(insert_random=True, random_sched=True, t2=True)
+        guess = decryptor.guess_plaintext(c)
+        if guess is not None:
+            count += 1
+    print(f'Made a guess on {count}/{runs}')
 
 if __name__ == '__main__':
     experiment(int(sys.argv[1]))
