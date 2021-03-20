@@ -128,7 +128,7 @@ class Decrypt_test2(Decrypter_2):
         num_of_max_decryptions = 0
         min_dup = float('inf')
         best_decryption = None
-        best_length = None
+        # best_length = None
         for decryption_pair in decryptions:
 
             decryption = decryption_pair.decryption
@@ -155,11 +155,11 @@ class Decrypt_test2(Decrypter_2):
                 min_dup = num_dup
                 best_decryption = dec
                 best_num_words = len(decryption)
-                best_length = decrypted_length
+                # best_length = decrypted_length
 
         #can even check for key pattern 
         # print(best_decryption)
-        return " ".join([ decryption[1][:-1]  for decryption in best_decryption]), best_length
+        return " ".join([ decryption[1][:-1]  for decryption in best_decryption]) if best_decryption else ""
 
     def remove_dup(self, decryptions, new_decryptions, best_decryption_pair):
        
@@ -220,8 +220,8 @@ class Decrypt_test2(Decrypter_2):
                             decryption.add_words(best_shift)
                             decryption.add_rand(shift_num)
 
-                    if len(decryption.decryption) == 2:
-                        continue
+                    # if len(decryption.decryption) == 2:
+                    #     continue
 
                     if best_decrypted == None or len(decryption.decryption) > len(best_decrypted.decryption):
                         best_decrypted = decryption
@@ -409,8 +409,9 @@ class Decrypt_test2(Decrypter_2):
                             break #break as early as possible
                         plaintext = fourth_word + ' '
                         key_third = self.get_key(ciphertext, plaintext, start_fourth, end_fourth)
-                        start_third = decryption.decryption[2][0]
-                        plaintext = decryption.decryption[2][1] 
+                        last_word_index = 2 if len(decryption.decryption) > 2 else 1
+                        start_third = decryption.decryption[last_word_index][0]
+                        plaintext = decryption.decryption[last_word_index][1] 
                         end_third = start_third + len(decryption.decryption[2][1])
                         key_prev = self.get_key(ciphertext, plaintext, start_third, end_third)
                         key = key_prev + key_third # skip random characters between second and third
@@ -476,8 +477,9 @@ class Decrypt_test2(Decrypter_2):
         # print(f'Number of decryptions: {len(decryptions)}')
         if len(decryptions) == 0:
             decryptions = [best_decryption_pair]
-        decryption, best_length = self.find_best_decryption(decryptions)
-        return decryption, best_length/len(ciphertext)
+        # decryption, best_length = self.find_best_decryption(decryptions)
+        # return decryption, best_length/len(ciphertext)
+        return self.find_best_decryption(decryptions)
 
 
     def run_test(self):
@@ -487,39 +489,39 @@ class Decrypt_test2(Decrypter_2):
         tot_error = 0
         tot_percent_correct = 0
         start = time.time()
-        for i in range(total):
-            print()
-            print("======================================")
-            t = random.randint(1,24)
-            num_words = 50
-            plaintext = self.cipher_generator.generate_test2(num_words)
-            ciphertext = self.cipher_generator.generate_cipher(plaintext, t)
-            num_random = len(ciphertext) - len(plaintext)
-            print(f'key: {self.cipher_generator.key}')
-            print(f'plaintext, len: {len(plaintext)}: {plaintext}')
-            print(f'ciphertext, len:{len(ciphertext)}: {ciphertext}')
+        # for i in range(total):
+        #     print()
+        #     print("======================================")
+        #     t = random.randint(1,24)
+        #     num_words = 50
+        #     plaintext = self.cipher_generator.generate_test2(num_words)
+        #     ciphertext = self.cipher_generator.generate_cipher(plaintext, t)
+        #     num_random = len(ciphertext) - len(plaintext)
+        #     print(f'key: {self.cipher_generator.key}')
+        #     print(f'plaintext, len: {len(plaintext)}: {plaintext}')
+        #     print(f'ciphertext, len:{len(ciphertext)}: {ciphertext}')
 
-            decrypted, _ = self.decrypt(ciphertext, num_random)
-            distance = self.calc_edit_distance(decrypted, plaintext)
-            tot_error += distance
-            percent_correct = ( 1.0 - distance / len(plaintext) ) * 100 
-            tot_percent_correct += percent_correct
-            print(f'decrypted: {decrypted}')
-            print(f'error: {distance}. Percent correct: { percent_correct }')
+        #     decrypted = self.decrypt(ciphertext, num_random)
+        #     distance = self.calc_edit_distance(decrypted, plaintext)
+        #     tot_error += distance
+        #     percent_correct = ( 1.0 - distance / len(plaintext) ) * 100 
+        #     tot_percent_correct += percent_correct
+        #     print(f'decrypted: {decrypted}')
+        #     print(f'error: {distance}. Percent correct: { percent_correct }')
             
-            if decrypted == plaintext:
-                correct += 1
-            if distance / len(plaintext) <= 0.2:
-                pseudo_correct += 1
+        #     if decrypted == plaintext:
+        #         correct += 1
+        #     if distance / len(plaintext) <= 0.2:
+        #         pseudo_correct += 1
 
-            print("======================================")
-            print()
-        end = time.time()
-        print(f'Test 2 with no random characters. Correct: {correct}. Total: {total}. Accuracy: {correct/total}')
-        print(f'Pseudo Correct: {pseudo_correct}. Total: {total}. Accuracy: {pseudo_correct/total}')
-        print(f'Average percent correct: {tot_percent_correct/total}')
-        print(f'Average error: {tot_error/total}')
-        print(f'Average time: {(end-start)/total}')
+        #     print("======================================")
+        #     print()
+        # end = time.time()
+        # print(f'Test 2 with no random characters. Correct: {correct}. Total: {total}. Accuracy: {correct/total}')
+        # print(f'Pseudo Correct: {pseudo_correct}. Total: {total}. Accuracy: {pseudo_correct/total}')
+        # print(f'Average percent correct: {tot_percent_correct/total}')
+        # print(f'Average error: {tot_error/total}')
+        # print(f'Average time: {(end-start)/total}')
 
         correct = 0
         tot_error = 0
@@ -540,7 +542,7 @@ class Decrypt_test2(Decrypter_2):
             print(f'key: {self.cipher_generator.key}')
             print(f'plaintext, len: {len(plaintext)}: {plaintext}')
             print(f'ciphertext, len:{len(ciphertext)}: {ciphertext}')
-            decrypted, _ = self.decrypt(ciphertext, num_random)
+            decrypted = self.decrypt(ciphertext, num_random)
             distance = self.calc_edit_distance(decrypted, plaintext)
             tot_error += distance
             percent_correct = ( 1.0 - distance / len(plaintext) ) * 100 
