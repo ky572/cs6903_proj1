@@ -247,7 +247,7 @@ class Decrypt_test2(Decrypter_2):
         # for pair in pairs:
         #     print(pair)
 
-        # print(f'decrypt_first_two: {len(decryptions)}, time passed: {end_time - start_time}')
+        print(f'decrypt_first_two: {len(decryptions)}, time passed: {end_time - start_time}')
         return decryptions, best_decryption_pair
     
     def decrypt_third(self, ciphertext, decryptions, best_decryption_pair, max_random_chars=50):
@@ -341,8 +341,8 @@ class Decrypt_test2(Decrypter_2):
         best_decryption_pair = self.remove_dup(decryptions, new_decryptions, best_decryption_pair)
         decryptions = decryptions[:self.max_prev_decryptions]
         end_time = time.time()
-        # print(f'decrypt_third: {len(decryptions)}, time passed: {end_time - start_time}')
-        # print(f'Before decrypting third word, decryptions_less_than_two_words: {decryptions_less_than_two_words_3}')
+        print(f'decrypt_third: {len(decryptions)}, time passed: {end_time - start_time}')
+        print(f'Before decrypting third word, decryptions_less_than_two_words: {decryptions_less_than_two_words_3}')
         return decryptions, best_decryption_pair
 
     def decrypt_fourth(self, ciphertext, decryptions, best_decryption_pair, max_random_chars=50):
@@ -457,9 +457,9 @@ class Decrypt_test2(Decrypter_2):
         decryptions = []
         best_decryption_pair = self.remove_dup(decryptions, new_decryptions, best_decryption_pair)
         end_time = time.time()
-        # print(f'decrypt_fourth: {len(decryptions)}, time passed: {end_time - start_time}')
-        # print(f'Before decrypting fourth word, decryptions_less_than_two_words: {decryptions_less_than_two_words}')
-        # print(f'Before decrypting fourth word, decryptions_less_than_three_words: {decryptions_less_than_3_words}')
+        print(f'decrypt_fourth: {len(decryptions)}, time passed: {end_time - start_time}')
+        print(f'Before decrypting fourth word, decryptions_less_than_two_words: {decryptions_less_than_two_words}')
+        print(f'Before decrypting fourth word, decryptions_less_than_three_words: {decryptions_less_than_3_words}')
         return decryptions, best_decryption_pair
 
     def decrypt(self, ciphertext, max_random_chars=50):

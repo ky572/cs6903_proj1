@@ -1,0 +1,20 @@
+
+======================================
+key: [21, 21, 15, 9, 15, 12, 26, 12, 24, 21, 22, 17, 13, 25, 9, 9, 3, 20, 1, 24, 5]
+plaintext, len: 486: courtship matures protruded protruded indelicacy footfalls bursary rustics proposes postilion dismissive swoops shorelines shorelines beheld aloneness between shorelines protruded photocompose repress myrtle indelicacy repress matures racecourse protruded catcher unconvertible wobbly memphis swoops directions intuitiveness unconvertible attentional beheld directions aloneness myrtle footfalls shorelines rustics intuitiveness shorelines indelicacy pintsized wobbly repress shorelines
+ciphertext, len:512: lxii hdgumuhrfs znvtqotnlimtpzaobiohggbnmcboajfcrjrjzrliowtnjuacvvoxvlmiffrefqxnqbpxyrhlfpejigbxxdh kuzzekravbwbemqcxddzdeimvyigwnvttetlz rbqrslzzcvybijohobszmgiqqshbziqefx hejkjmudv ceqfazzqbfxbrwpjuimtifqocbmnqzw boyafpsyz rrmbvjxl fdcaacfbqzlzgifmbq ipheciyuhuozyizxsiramsoeqzbmqgxllxqvofoycw nohnnzfntqzhcvykbtpxxqicyglcuozyjvpmwacboqzcnxdtzddpuepdpzmwdhkufgfzojhedzqcjdnjikhafiiuyx tosulhnqnjxwhgfpxugm hxdlcijjszuuvttetlz rbqrloonjvaailgurnncjnbqrdxmcedcurqytxnhytuxo ovukz rarbyexaiwqumlqqml ieyaqrkfinhzg
+decrypt_first_two: 40, time passed: 598.6238629817963
+decrypt_third: 40, time passed: 32872.93909883499
+Before decrypting third word, decryptions_less_than_two_words: 1600
+decrypt_fourth: 1604, time passed: 1350.8608062267303
+Before decrypting fourth word, decryptions_less_than_two_words: 0
+Before decrypting fourth word, decryptions_less_than_three_words: 40
+decrypted: catcher footfalls   protrude              indelicac             bursary                                          swoops             shorelines                                                                                                  matures                                                                     swoops                                                                                   myrtle           shorelines                                                       wobbly
+error: 448. Percent correct: 7.818930041152261
+======================================
+
+Test 2 with some random characters. Correct: 0. Total: 1. Accuracy: 0.0
+Pseudo Correct: 0. Total: 1. Accuracy: 0.0
+Average percent correct: 7.818930041152261
+Average error: 448.0
+Average time: 34822.43710899353

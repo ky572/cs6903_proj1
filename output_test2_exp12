@@ -1,0 +1,20 @@
+
+======================================
+key: [2, 8]
+plaintext, len: 478: protruded beheld irony proposes footfalls matures swoops swoops courtship hermeneutics footfalls irony rustics between catcher catcher proposes repress pressed aloneness delimiting intuitiveness racecourse intuitiveness pintsized wobbly combusting postilion cadgy pressed shorelines irony hermeneutics shorelines catcher beheld bursary combusting courtship unconvertible faultlessly miserabilia dismissive combusting wobbly courtship photocompose bursary intuitiveness aloneness
+ciphertext, len:486: rzqatbfmfhdmjmnlbqtwpfbxtwrwuimuhhwqahwintuhioivbtmuhudqwr b ywqvxuhewwzv jqrhjmtugvgb vqe bnqwvnctn bqtwpfbzw vqe bjgaymgvbkcaepgzbkmcaepgzbxtwrwumuhtmrzg uhrzg umfhctqvgvg uhfmnqoqvqpobqpawqvqxmpmu bzckgkqbt ghkvvbkakcgvg uhrqpauqamfhywdjnfbkqudbuakvihrwuaktkwpheifo hrzg umfhupqzgtkvg bqtwpfbpgzompmwakkuhupqzgtkvg bkcaepgzbjgpgtfhdbt czl hewojw vqpobkqbtaupkxbbpkqvxmtakjnmbncbnanmu nfbuk gzcjsktkiblk oqu kcghewojw vqpobdqjdt hewwzv jqrhrpqaqkqurwumbjwzuitfbqpawqvqxmpmu binwpmpmu 
+decrypt_first_two: 40, time passed: 199.16445183753967
+decrypt_third: 40, time passed: 277.4412930011749
+Before decrypting third word, decryptions_less_than_two_words: 0
+decrypt_fourth: 1640, time passed: 12.013175010681152
+Before decrypting fourth word, decryptions_less_than_two_words: 0
+Before decrypting fourth word, decryptions_less_than_three_words: 0
+decrypted: protruded beheld iron             iron       matures swoops         courtship               footfalls irony rustics between catcher          proposes repress pressed aloneness delimiting               racecourse intuitiveness pintsized wobbly combusting postilion cadgy pressed shorelines irony hermeneutics shorelines catcher beheld          combusting courtship               faultlessly              dismissive combusting wobbly courtship photocompose bursary               aloneness
+error: 434. Percent correct: 9.205020920502093
+======================================
+
+Test 2 with some random characters. Correct: 0. Total: 1. Accuracy: 0.0
+Pseudo Correct: 0. Total: 1. Accuracy: 0.0
+Average percent correct: 9.205020920502093
+Average error: 434.0
+Average time: 488.6527261734009
