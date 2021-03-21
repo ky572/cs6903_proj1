@@ -1,5 +1,6 @@
 import sys
 from statistics import stdev, median, mean
+from decrypt_test2 import *
 
 test1_plaintexts = [
     'cabooses meltdowns bigmouth makework flippest neutralizers gipped mule antithetical imperials carom masochism stair retsina dullness adeste corsage saraband promenaders gestational mansuetude fig redress pregame borshts pardoner reforges refutations calendal moaning doggerel dendrology governs ribonucleic circumscriptions reassimilating machinize rebuilding mezcal fluoresced antepenults blacksmith constance furores chroniclers overlie hoers jabbing resigner quartics polishers mallow hovelling ch',
@@ -97,7 +98,8 @@ def guess_basic_no_random_test1(ciphertext):
 def guess_cyclical_random_test1(ciphertext):
     #second pass, let's assume there are some random characters and the key is cyclical
     shuffled_shifts = get_shuffled_shifts(ciphertext)
-
+    if len(shuffled_shifts) == 0:
+        return None
     most_freq = list(map(lambda x: (x.plaintext, max(x.find_ngram_freq(6).values())),
                         shuffled_shifts))
    
@@ -146,7 +148,9 @@ def guess_noncyclical_random_test1(ciphertext):
     
     shuffled_shifts = get_shuffled_shifts(ciphertext)    
     partitions = []
-   
+    if len(shuffled_shifts) == 0:
+        return None
+
     for psd in shuffled_shifts:
         shift_set = set()
         lengths = []
@@ -158,7 +162,13 @@ def guess_noncyclical_random_test1(ciphertext):
 
     for i in range(24):
         #start comparing each plaintext's max partition for a shift set of size i
-        target = 4.5 if i < 12 else 7.5
+#        if i < 12:
+#            target = 4.5
+#        elif i < 16:
+#            target = 7
+#        else:
+#            target = 12
+        target = 4.5       
         dist = [(part[0], part[1][i]) for part in partitions]
         sorted_dist = sorted(dist, key=lambda x: x[1])
         raw_dist = [d[1] for d in sorted_dist]
@@ -173,26 +183,31 @@ def guess_noncyclical_random_test1(ciphertext):
 #            print(max_zscore)
 #            print(max_zscore[1]/sum(z[1] for z in zscores))
             if max_zscore[1] > target:
-               return (max_zscore[0],max_zscore[1]/sum(z[1] for z in zscores))
-    return (None,None)
+               return max_zscore[0]
+    return None
 
 def guess_test1_plaintext(ciphertext):
     guess = guess_basic_no_random_test1(ciphertext)
     if guess is not None:
-        return (guess,1)
+        return guess
 
     guess = guess_cyclical_random_test1(ciphertext)
     if guess is not None:
-        return (guess,1)
+        return guess
 
     return guess_noncyclical_random_test1(ciphertext)
 
+def guess_test2_plaintext(ciphertext):
+    test2_decryptor = Decrypt_test2()
+    r = len(ciphertext) - 500
+    return test2_decryptor.decrypt(ciphertext, r)
+
 def guess_plaintext(ciphertext):
-    test1_guess, confidence = guess_test1_plaintext(ciphertext)
+    test1_guess = guess_test1_plaintext(ciphertext)
     if test1_guess is not None:
         return test1_guess
 
-    return None
+    return guess_test2_plaintext(ciphertext)
 
 if __name__ == '__main__':
     ciphertext = str.rstrip(next(sys.stdin))
