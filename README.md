@@ -6,4 +6,4 @@ Run `<python exe> cao-stojanovski-xu-ye-decrypt.py` where `<python exe>` is repl
 
 The script will wait for input from stdin. The input should be the ciphertext.
 
-The script will print the guess to stdout.
+The script will print the guess to stdout and then terminate
